@@ -4,22 +4,12 @@ class Home extends MY_Controller {
 
     public function __construct() {
         parent::__construct();
-		parent::list_cate();
-		parent::count_cart();
-		parent::load_faq();
-		parent::load_header();
-		parent::load_yahoo();
-		parent::about();
-		parent::rand_image();
+		$this->load->model('newshomemodel');
     }
 
     public function index() {
-		$this->load->model('catehomemodel');
-		$this->load->model('producthomemodel');
-		$this->load->model('faqhomemodel');
-		$this->data['list_product_random'] = $this->producthomemodel->list_random_product();
-		$this->data['list_cate_home']=$this->catehomemodel->list_cate_home();
-		$this->load->view('home/layout_home_index',$this->data);
+		$this->data['news_slide'] = $this->newshomemodel->list_new_slide();
+		$this->load->view('home_layout/home_index_layout',$this->data);
     }
 
     public function check_email() {

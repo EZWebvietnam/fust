@@ -128,7 +128,7 @@ article.type-post table{
 	padding-left: 20px;
 }
 .cls_headr .cls_headr_bottom{	
-	background:url("../_images/bg-dobong-headr.png") no-repeat center #2d3588;
+	background:url("../_images/bg-dobong-headr.png") no-repeat center #6b1687;
 }
 .cls_headr .cls_headr_bottom .cls_headr_bg
 {
@@ -257,7 +257,7 @@ article.type-post table{
 	left:0;
 	background: #fff;
 	padding: 8px 0px;
-	border-bottom: 5px solid #1f73b0;
+	border-bottom: 5px solid #6b1687;
 	box-shadow: -2px 2px 7px 0px #828488;
 }
 .cls_top_menu_inner > div > ul li ul li a{
@@ -309,12 +309,12 @@ article.type-post table{
 	.cls_home_slideshows_wrapper ul.cls-bx-pager li.cls-item .cls-pager-description {
 		width: 300px;
 		height:71.1px;
-		background: #1f73b0;		
-		border-left: 10px solid #384395;						
+		background: #E7ACFA;		
+		border-left: 10px solid #6b1687;						
 	}
 	.cls_home_slideshows_wrapper ul.cls-bx-pager li.cls-item.active .cls-pager-description,
 	.cls_home_slideshows_wrapper ul.cls-bx-pager li.cls-item.hover .cls-pager-description {
-		background: #258ad3;		
+		background: #6b1687;		
 		border-left: 10px solid #f8d527;						
 	}
 	.cls_home_slideshows_wrapper ul.cls-bx-pager li.cls-item .cls-pager-description {display: table-cell; vertical-align: middle;}

@@ -203,11 +203,11 @@ if (defined('ENVIRONMENT'))
  if($_SERVER['SERVER_NAME'] == 'localhost')
  {
       define('HOST','localhost'); 
-     define('DB_NAME','tibimart');
+     define('DB_NAME','fust');
      define('DB_USER','root');
      define('DB_PASS','');
-     define('ROT_DIR','/tibimart/');
-     define('BASE_URL','http://localhost/tibimart/');
+     define('ROT_DIR','/fust/');
+     define('BASE_URL','http://localhost/fust/');
      define('MAIL_ADMIN','giangbeoit@gmail.com');
      define('PATH_FOLDER',$_SERVER['DOCUMENT_ROOT']);
  }
@@ -218,7 +218,7 @@ if (defined('ENVIRONMENT'))
     define('DB_USER','vietmong_vmc');
     define('DB_PASS','a123456');
     define('ROT_DIR','/');
-    define('BASE_URL','http://vietmongco.vn/');
+    define('BASE_URL','http://futsalunitedsaigon.vn/');
     define('MAIL_ADMIN','giangbeoit@gmail.com');
     define('PATH_FOLDER',$_SERVER['DOCUMENT_ROOT']);
  }
