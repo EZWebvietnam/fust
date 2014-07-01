@@ -446,128 +446,228 @@
 															<div class="cls_box_content_row cls_first_content">
 																<div class="cls-post-listing clearfix">
 																	<ul class="non-ajax clearfix">
-																		<li class="cls-item-no0 cls-row0 cls-item cls-first-in-line clearfix">
+																	<?php 
+																	$list_new_content = array_chunk($list_new_content,2,true);		
+																	$i = 0;
+																	if(isset($list_new_content[0]))
+																	{
+																		
+																		foreach($list_new_content[0] as $content_0)
+																		{
+																			if($i%2!=0)
+																			{
+																				$class = "cls-item clearfix cls-last-in-line";
+																			}
+																			else
+																			{
+																				$class="cls-item cls-first-in-line clearfix";
+																			}
+																	?>
+																		<li class="cls-item-no<?php echo $i;?> cls-row0 <?php echo $class;?>">
 																			<div class="cls-field-image">
-																				<div class="cls-item-value"><a href="http://www.futsalunitedsaigon.com/2014/06/giai-vo-dich-futsal-tphcm-2014-cac-doi-dau-bang-toan-thang/" title="Giải vô địch futsal TPHCM 2014: Các đội đầu bảng toàn thắng"><img width="300" height="168" src="http://www.futsalunitedsaigon.com/wp-content/uploads/2014/06/DatVinhTien_29-6-14-300x168.jpg" class="attachment-ths_thumb wp-post-image" alt="Giải vô địch futsal TPHCM 2014: Các đội đầu bảng toàn thắng" title="Giải vô địch futsal TPHCM 2014: Các đội đầu bảng toàn thắng" /></a></div>
+																				<div class="cls-item-value">
+																				<a href="http://www.futsalunitedsaigon.com/2014/06/giai-vo-dich-futsal-tphcm-2014-cac-doi-dau-bang-toan-thang/" title="<?php echo $content_0['title_new']?>">
+																				<?php 
+																				if(file_exists(PATH_FOLDER.ROT_DIR.'file/uploads/new/'.$content_0['image_new']) && is_file(PATH_FOLDER.ROT_DIR.'file/uploads/new/'.$content_0['image_new']) && $content_0['image_new']!='')
+																				{
+																				
+																				?>
+																				<img width="300" height="168" src="<?php echo base_url();?>file/uploads/new/<?php echo $content_0['image_new']?>" class="attachment-ths_thumb wp-post-image" alt="<?php echo $content_0['title_new']?>" title="<?php echo $content_0['title_new']?>" />
+																				<?php } else {  ?>
+																				<img width="300" height="168" src="<?php echo base_url();?>file/uploads/no_image.gif" class="attachment-ths_thumb wp-post-image" alt="<?php echo $content_0['title_new']?>" title="<?php echo $content_0['title_new']?>" />
+																				<?php } ?>
+																				</a>
+																				</div>
 																			</div>
 																			<div class="group group cls_post_data clearfix ">
 																				<div class="cls-field-title">
-																					<div class="cls-item-value"><a href="http://www.futsalunitedsaigon.com/2014/06/giai-vo-dich-futsal-tphcm-2014-cac-doi-dau-bang-toan-thang/" title="Giải vô địch futsal TPHCM 2014: Các đội đầu bảng toàn thắng">Giải vô địch futsal TPHCM 2014: Các đội đầu bảng toàn...</a></div>
+																					<div class="cls-item-value"><a href="http://www.futsalunitedsaigon.com/2014/06/giai-vo-dich-futsal-tphcm-2014-cac-doi-dau-bang-toan-thang/" title="Giải vô địch futsal TPHCM 2014: Các đội đầu bảng toàn thắng"><?php echo $content_0['title_new']?></a></div>
 																				</div>
 																			</div>
 																		</li>
-																		<li class="cls-item-no1 cls-row0 cls-item clearfix cls-last-in-line">
+																		
+																		<?php $i++;} } ?>
+																		
+																		<?php 
+																			
+																	if(isset($list_new_content[1]))
+																	{
+																		
+																		foreach($list_new_content[1] as $content_1)
+																		{
+																			if($i%2!=0)
+																			{
+																				$class = "cls-item clearfix cls-last-in-line";
+																			}
+																			else
+																			{
+																				$class="cls-item cls-first-in-line clearfix";
+																			}
+																	?>
+																		<li class="cls-item-no<?php echo $i;?> cls-row1 <?php echo $class;?>">
 																			<div class="cls-field-image">
-																				<div class="cls-item-value"><a href="http://www.futsalunitedsaigon.com/2014/06/giai-vo-dich-futsal-tphcm-2014-tan-hiep-hung-chac-ngoi-dau-thai-son-nam-lai-say-chan/" title="Giải vô địch futsal TPHCM 2014: Tân Hiệp Hưng chắc ngôi đầu, Thái Sơn Nam lại sẩy chân"><img width="300" height="168" src="http://www.futsalunitedsaigon.com/wp-content/uploads/2014/06/Metasol_28-6-141-300x168.jpg" class="attachment-ths_thumb wp-post-image" alt="Giải vô địch futsal TPHCM 2014: Tân Hiệp Hưng chắc ngôi đầu, Thái Sơn Nam lại sẩy chân" title="Giải vô địch futsal TPHCM 2014: Tân Hiệp Hưng chắc ngôi đầu, Thái Sơn Nam lại sẩy chân" /></a></div>
+																				<div class="cls-item-value">
+																				<a href="http://www.futsalunitedsaigon.com/2014/06/giai-vo-dich-futsal-tphcm-2014-cac-doi-dau-bang-toan-thang/" title="<?php echo $content_1['title_new']?>">
+																				<?php 
+																				if(file_exists(PATH_FOLDER.ROT_DIR.'file/uploads/new/'.$content_1['image_new']) && is_file(PATH_FOLDER.ROT_DIR.'file/uploads/new/'.$content_1['image_new']) && $content_1['image_new']!='')
+																				{
+																				
+																				?>
+																				<img width="300" height="168" src="<?php echo base_url();?>file/uploads/new/<?php echo $content_1['image_new']?>" class="attachment-ths_thumb wp-post-image" alt="<?php echo $content_1['title_new']?>" title="<?php echo $content_1['title_new']?>" />
+																				<?php } else {  ?>
+																				<img width="300" height="168" src="<?php echo base_url();?>file/uploads/no_image.gif" class="attachment-ths_thumb wp-post-image" alt="<?php echo $content_1['title_new']?>" title="<?php echo $content_1['title_new']?>" />
+																				<?php } ?>
+																				</a>
+																				</div>
 																			</div>
 																			<div class="group group cls_post_data clearfix ">
 																				<div class="cls-field-title">
-																					<div class="cls-item-value"><a href="http://www.futsalunitedsaigon.com/2014/06/giai-vo-dich-futsal-tphcm-2014-tan-hiep-hung-chac-ngoi-dau-thai-son-nam-lai-say-chan/" title="Giải vô địch futsal TPHCM 2014: Tân Hiệp Hưng chắc ngôi đầu, Thái Sơn Nam lại sẩy chân">Giải vô địch futsal TPHCM 2014: Tân Hiệp Hưng chắc...</a></div>
+																					<div class="cls-item-value"><a href="http://www.futsalunitedsaigon.com/2014/06/giai-vo-dich-futsal-tphcm-2014-cac-doi-dau-bang-toan-thang/" title="Giải vô địch futsal TPHCM 2014: Các đội đầu bảng toàn thắng"><?php echo $content_1['title_new']?></a></div>
 																				</div>
 																			</div>
 																		</li>
-																		<li class="cls-item-no2 cls-row1 cls-item cls-first-in-line clearfix">
+																		
+																		<?php $i++;} } ?>
+																		
+																		<?php 
+																			
+																	if(isset($list_new_content[2]))
+																	{
+																		
+																		foreach($list_new_content[2] as $content_2)
+																		{
+																			if($i%2!=0)
+																			{
+																				$class = "cls-item clearfix cls-last-in-line";
+																			}
+																			else
+																			{
+																				$class="cls-item cls-first-in-line clearfix";
+																			}
+																	?>
+																		<li class="cls-item-no<?php echo $i;?> cls-row1 <?php echo $class;?>">
 																			<div class="cls-field-image">
-																				<div class="cls-item-value"><a href="http://www.futsalunitedsaigon.com/2014/06/giai-vo-dich-futsal-tphcm-2014-tan-hiep-hung-giu-vung-ngoi-dau/" title="Giải vô địch futsal TPHCM 2014: Tân Hiệp Hưng giữ vững ngôi đầu"><img width="300" height="168" src="http://www.futsalunitedsaigon.com/wp-content/uploads/2014/06/TanHiepHung_25-6-14-300x168.jpg" class="attachment-ths_thumb wp-post-image" alt="Giải vô địch futsal TPHCM 2014: Tân Hiệp Hưng giữ vững ngôi đầu" title="Giải vô địch futsal TPHCM 2014: Tân Hiệp Hưng giữ vững ngôi đầu" /></a></div>
+																				<div class="cls-item-value">
+																				<a href="http://www.futsalunitedsaigon.com/2014/06/giai-vo-dich-futsal-tphcm-2014-cac-doi-dau-bang-toan-thang/" title="<?php echo $content_2['title_new']?>">
+																				<?php 
+																				if(file_exists(PATH_FOLDER.ROT_DIR.'file/uploads/new/'.$content_2['image_new']) && is_file(PATH_FOLDER.ROT_DIR.'file/uploads/new/'.$content_2['image_new']) && $content_2['image_new']!='')
+																				{
+																				
+																				?>
+																				<img width="300" height="168" src="<?php echo base_url();?>file/uploads/new/<?php echo $content_2['image_new']?>" class="attachment-ths_thumb wp-post-image" alt="<?php echo $content_2['title_new']?>" title="<?php echo $content_2['title_new']?>" />
+																				<?php } else {  ?>
+																				<img width="300" height="168" src="<?php echo base_url();?>file/uploads/no_image.gif" class="attachment-ths_thumb wp-post-image" alt="<?php echo $content_2['title_new']?>" title="<?php echo $content_2['title_new']?>" />
+																				<?php } ?>
+																				</a>
+																				</div>
 																			</div>
 																			<div class="group group cls_post_data clearfix ">
 																				<div class="cls-field-title">
-																					<div class="cls-item-value"><a href="http://www.futsalunitedsaigon.com/2014/06/giai-vo-dich-futsal-tphcm-2014-tan-hiep-hung-giu-vung-ngoi-dau/" title="Giải vô địch futsal TPHCM 2014: Tân Hiệp Hưng giữ vững ngôi đầu">Giải vô địch futsal TPHCM 2014: Tân Hiệp Hưng giữ vững...</a></div>
+																					<div class="cls-item-value"><a href="http://www.futsalunitedsaigon.com/2014/06/giai-vo-dich-futsal-tphcm-2014-cac-doi-dau-bang-toan-thang/" title="Giải vô địch futsal TPHCM 2014: Các đội đầu bảng toàn thắng"><?php echo $content_2['title_new']?></a></div>
 																				</div>
 																			</div>
 																		</li>
-																		<li class="cls-item-no3 cls-row1 cls-item clearfix cls-last-in-line">
-																			<div class="cls-field-image">
-																				<div class="cls-item-value"><a href="http://www.futsalunitedsaigon.com/2014/06/thang-thai-son-nam-tan-hiep-hung-len-ngoi-dau-bang/" title="Thắng Thái Sơn Nam, Tân Hiệp Hưng lên ngôi đầu bảng"><img width="300" height="168" src="http://www.futsalunitedsaigon.com/wp-content/uploads/2014/06/TanHiepHung_22-6-14-300x168.jpg" class="attachment-ths_thumb wp-post-image" alt="Thắng Thái Sơn Nam, Tân Hiệp Hưng lên ngôi đầu bảng" title="Thắng Thái Sơn Nam, Tân Hiệp Hưng lên ngôi đầu bảng" /></a></div>
-																			</div>
-																			<div class="group group cls_post_data clearfix ">
-																				<div class="cls-field-title">
-																					<div class="cls-item-value"><a href="http://www.futsalunitedsaigon.com/2014/06/thang-thai-son-nam-tan-hiep-hung-len-ngoi-dau-bang/" title="Thắng Thái Sơn Nam, Tân Hiệp Hưng lên ngôi đầu bảng">Thắng Thái Sơn Nam, Tân Hiệp Hưng lên ngôi đầu bảng</a></div>
-																				</div>
-																			</div>
-																		</li>
-																		<li class="cls-item-no4 cls-row2 cls-item cls-first-in-line clearfix">
-																			<div class="cls-field-image">
-																				<div class="cls-item-value"><a href="http://www.futsalunitedsaigon.com/2014/06/khai-mac-giai-futsal-vo-dich-tphcm-2014-thai-son-nam-thang-tung-bung/" title="Khai mạc giải futsal vô địch TPHCM 2014: Thái Sơn Nam thắng tưng bừng"><img width="300" height="168" src="http://www.futsalunitedsaigon.com/wp-content/uploads/2014/06/khaimac_21-6-14-300x168.jpg" class="attachment-ths_thumb wp-post-image" alt="Khai mạc giải futsal vô địch TPHCM 2014: Thái Sơn Nam thắng tưng bừng" title="Khai mạc giải futsal vô địch TPHCM 2014: Thái Sơn Nam thắng tưng bừng" /></a></div>
-																			</div>
-																			<div class="group group cls_post_data clearfix ">
-																				<div class="cls-field-title">
-																					<div class="cls-item-value"><a href="http://www.futsalunitedsaigon.com/2014/06/khai-mac-giai-futsal-vo-dich-tphcm-2014-thai-son-nam-thang-tung-bung/" title="Khai mạc giải futsal vô địch TPHCM 2014: Thái Sơn Nam thắng tưng bừng">Khai mạc giải futsal vô địch TPHCM 2014: Thái Sơn Nam...</a></div>
-																				</div>
-																			</div>
-																		</li>
-																		<li class="cls-item-no5 cls-row2 cls-item clearfix cls-last-in-line">
-																			<div class="cls-field-image">
-																				<div class="cls-item-value"><a href="http://www.futsalunitedsaigon.com/2014/06/giai-vo-dich-futsal-tphcm-2014-lan-dau-co-doi-rot-hang/" title="Giải vô địch futsal TPHCM 2014: Lần đầu có đội rớt hạng"><img width="300" height="168" src="http://www.futsalunitedsaigon.com/wp-content/uploads/2014/06/TSN_20-6-14-300x168.jpg" class="attachment-ths_thumb wp-post-image" alt="Giải vô địch futsal TPHCM 2014: Lần đầu có đội rớt hạng" title="Giải vô địch futsal TPHCM 2014: Lần đầu có đội rớt hạng" /></a></div>
-																			</div>
-																			<div class="group group cls_post_data clearfix ">
-																				<div class="cls-field-title">
-																					<div class="cls-item-value"><a href="http://www.futsalunitedsaigon.com/2014/06/giai-vo-dich-futsal-tphcm-2014-lan-dau-co-doi-rot-hang/" title="Giải vô địch futsal TPHCM 2014: Lần đầu có đội rớt hạng">Giải vô địch futsal TPHCM 2014: Lần đầu có đội rớt...</a></div>
-																				</div>
-																			</div>
-																		</li>
+																		
+																		<?php $i++;} } ?>
 																	</ul>
 																</div>
 															</div>
 															<div class="cls_box_content_row cls_second_content cls_layout_content_pading">
 																<div class="cls-post-listing clearfix">
 																	<ul class="non-ajax clearfix">
-																		<li class="cls-item-no0 cls-row0 cls-item cls-first-in-line clearfix">
+																	<?php 
+																	$j = 0;
+																	if(!empty($list_new_li))
+																	{
+																	$list_new_li = array_chunk($list_new_li,2,TRUE);
+																	if(isset($list_new_li[0]))
+																	{
+																		foreach($list_new_li[0] as $list_new_li_0)
+																		{
+																			if($j%2!=0)
+																			{
+																				$class_li = "cls-item clearfix cls-last-in-line";	
+																			}
+																			else
+																			{
+																				$class_li = "cls-item cls-first-in-line clearfix";
+																			}
+																	?>
+																		<li class="cls-item-no<?php echo $j;?> cls-row0 <?php echo $class_li;?>">
 																			<div class="group group cls_post_data clearfix ">
 																				<div class="cls-field-title">
-																					<div class="cls-item-value"><a href="http://www.futsalunitedsaigon.com/2014/06/16-doi-nam-va-8-doi-nu-tham-du-giai-vo-dich-futsal-sinh-vien-the-gioi-2014/" title="16 đội nam và 8 đội nữ tham dự giải vô địch futsal sinh viên thế giới 2014">16 đội nam và 8 đội nữ tham dự giải vô...</a></div>
+																					<div class="cls-item-value"><a href="http://www.futsalunitedsaigon.com/2014/06/16-doi-nam-va-8-doi-nu-tham-du-giai-vo-dich-futsal-sinh-vien-the-gioi-2014/" title="<?php echo $list_new_li_0['title_new']?>"><?php echo $list_new_li_0['title_new']?></a></div>
 																				</div>
 																			</div>
 																		</li>
-																		<li class="cls-item-no1 cls-row0 cls-item clearfix cls-last-in-line">
+																		<?php $j++;} } ?>
+																		<?php 
+																	if(isset($list_new_li[1]))
+																	{
+																		foreach($list_new_li[1] as $list_new_li_1)
+																		{
+																			if($j%2!=0)
+																			{
+																				$class_li = "cls-item clearfix cls-last-in-line";	
+																			}
+																			else
+																			{
+																				$class_li = "cls-item cls-first-in-line clearfix";
+																			}
+																	?>
+																		<li class="cls-item-no<?php echo $j;?> cls-row1 <?php echo $class_li;?>">
 																			<div class="group group cls_post_data clearfix ">
 																				<div class="cls-field-title">
-																					<div class="cls-item-value"><a href="http://www.futsalunitedsaigon.com/2014/06/ket-thuc-giai-futsal-hoi-nha-bao-tphcm-cup-thai-son-nam-2014/" title="Kết thúc giải futsal Hội nhà báo TPHCM – cúp Thái Sơn Nam 2014">Kết thúc giải futsal Hội nhà báo TPHCM...</a></div>
+																					<div class="cls-item-value"><a href="http://www.futsalunitedsaigon.com/2014/06/16-doi-nam-va-8-doi-nu-tham-du-giai-vo-dich-futsal-sinh-vien-the-gioi-2014/" title="<?php echo $list_new_li_1['title_new']?>"><?php echo $list_new_li_1['title_new']?></a></div>
 																				</div>
 																			</div>
 																		</li>
-																		<li class="cls-item-no2 cls-row1 cls-item cls-first-in-line clearfix">
+																		<?php $j++;} } ?>
+																		<?php 
+																	if(isset($list_new_li[2]))
+																	{
+																		foreach($list_new_li[2] as $list_new_li_2)
+																		{
+																			if($j%2!=0)
+																			{
+																				$class_li = "cls-item clearfix cls-last-in-line";	
+																			}
+																			else
+																			{
+																				$class_li = "cls-item cls-first-in-line clearfix";
+																			}
+																	?>
+																		<li class="cls-item-no<?php echo $j;?> cls-row2 <?php echo $class_li;?>">
 																			<div class="group group cls_post_data clearfix ">
 																				<div class="cls-field-title">
-																					<div class="cls-item-value"><a href="http://www.futsalunitedsaigon.com/2014/06/xac-dinh-xong-4-cai-ten-vao-ban-ket-giai-futsal-hoi-nha-bao-tphcm-2014/" title="Xác định xong 4 cái tên vào bán kết giải futsal Hội nhà báo TPHCM - cúp Thái Sơn Nam 2014">Xác định xong 4 cái tên vào bán kết giải...</a></div>
+																					<div class="cls-item-value"><a href="http://www.futsalunitedsaigon.com/2014/06/16-doi-nam-va-8-doi-nu-tham-du-giai-vo-dich-futsal-sinh-vien-the-gioi-2014/" title="<?php echo $list_new_li_2['title_new']?>"><?php echo $list_new_li_2['title_new']?></a></div>
 																				</div>
 																			</div>
 																		</li>
-																		<li class="cls-item-no3 cls-row1 cls-item clearfix cls-last-in-line">
+																		<?php $j++;} } ?>
+																		<?php 
+																	if(isset($list_new_li[3]))
+																	{
+																		foreach($list_new_li[3] as $list_new_li_3)
+																		{
+																			if($j%2!=0)
+																			{
+																				$class_li = "cls-item clearfix cls-last-in-line";	
+																			}
+																			else
+																			{
+																				$class_li = "cls-item cls-first-in-line clearfix";
+																			}
+																	?>
+																		<li class="cls-item-no<?php echo $j;?> cls-row2 <?php echo $class_li;?>">
 																			<div class="group group cls_post_data clearfix ">
 																				<div class="cls-field-title">
-																					<div class="cls-item-value"><a href="http://www.futsalunitedsaigon.com/2014/06/1-cau-thu-futsal-viet-nam-bi-nghi-ngo-dinh-doping-o-giai-vo-dich-chau-a-2014/" title="1 cầu thủ futsal Việt Nam bị nghi ngờ dính doping ở giải vô địch châu Á 2014">1 cầu thủ futsal Việt Nam bị nghi ngờ dính...</a></div>
+																					<div class="cls-item-value"><a href="http://www.futsalunitedsaigon.com/2014/06/16-doi-nam-va-8-doi-nu-tham-du-giai-vo-dich-futsal-sinh-vien-the-gioi-2014/" title="<?php echo $list_new_li_3['title_new']?>"><?php echo $list_new_li_3['title_new']?></a></div>
 																				</div>
 																			</div>
 																		</li>
-																		<li class="cls-item-no4 cls-row2 cls-item cls-first-in-line clearfix">
-																			<div class="group group cls_post_data clearfix ">
-																				<div class="cls-field-title">
-																					<div class="cls-item-value"><a href="http://www.futsalunitedsaigon.com/2014/06/doi-tuyen-futsal-viet-nam-du-giai-quoc-te-tai-trung-quoc/" title="Đội tuyển futsal Việt Nam dự giải quốc tế tại Trung Quốc">Đội tuyển futsal Việt Nam dự giải quốc...</a></div>
-																				</div>
-																			</div>
-																		</li>
-																		<li class="cls-item-no5 cls-row2 cls-item clearfix cls-last-in-line">
-																			<div class="group group cls_post_data clearfix ">
-																				<div class="cls-field-title">
-																					<div class="cls-item-value"><a href="http://www.futsalunitedsaigon.com/2014/06/giai-futsal-hoi-nha-bao-tphcm-lan-thu-10-cup-thai-son-nam-2014/" title="Giải futsal Hội nhà báo TPHCM lần thứ 10 – cúp Thái Sơn Nam 2014">Giải futsal Hội nhà báo TPHCM lần thứ 10...</a></div>
-																				</div>
-																			</div>
-																		</li>
-																		<li class="cls-item-no6 cls-row3 cls-item cls-first-in-line clearfix">
-																			<div class="group group cls_post_data clearfix ">
-																				<div class="cls-field-title">
-																					<div class="cls-item-value"><a href="http://www.futsalunitedsaigon.com/2014/06/huyen-thoai-pham-huynh-tam-lang-vinh-vien-ra-di/" title="Huyền thoại Phạm Huỳnh Tam Lang vĩnh viễn ra đi">Huyền thoại Phạm Huỳnh Tam Lang vĩnh viễn...</a></div>
-																				</div>
-																			</div>
-																		</li>
-																		<li class="cls-item-no7 cls-row3 cls-item clearfix cls-last-in-line">
-																			<div class="group group cls_post_data clearfix ">
-																				<div class="cls-field-title">
-																					<div class="cls-item-value"><a href="http://www.futsalunitedsaigon.com/2014/06/tphcm-1-lan-dau-vo-dich-giai-futsal-tre-em-co-hoan-canh-dac-biet/" title="TPHCM 1 lần đầu vô địch giải futsal Trẻ em có hoàn cảnh đặc biệt">TPHCM 1 lần đầu vô địch giải futsal Trẻ...</a></div>
-																				</div>
-																			</div>
-																		</li>
+																		<?php $j++;} } ?>
+																		<?php } ?>
 																	</ul>
 																</div>
 															</div>

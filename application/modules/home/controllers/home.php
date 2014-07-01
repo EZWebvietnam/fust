@@ -9,6 +9,13 @@ class Home extends MY_Controller {
 
     public function index() {
 		$this->data['news_slide'] = $this->newshomemodel->list_new_slide();
+		$this->data['list_new_content'] = $this->newshomemodel->list_new_content();
+		$list_new = array();
+		foreach($this->data['list_new_content'] as $k=>$va)
+		{
+			$list_new[$va['id_new']] = $va['id_new'];
+		}
+		$this->data['list_new_li'] = $this->newshomemodel->list_new_li($list_new);
 		$this->load->view('home_layout/home_index_layout',$this->data);
     }
 
