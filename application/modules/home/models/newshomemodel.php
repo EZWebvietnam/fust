@@ -40,5 +40,42 @@ class Newshomemodel extends CI_Model
 		$query = $this->db->query($sql);
 		return $query->result_array();
 	}
+	public function get_last_new()
+	{
+		$sql="SELECT * FROM {$this->_name} ORDER BY id_new DESC LIMIT 1";
+		$query = $this->db->query($sql);
+		return $query->result_array();
+	}
+	public function list_new_list(array $id_last_new,$number,$offset)
+	{
+		$number = intval($number);
+		$offset = intval($offset);
+		if(empty($id_last_new))
+		{
+			$sql="SELECT * FROM {$this->_name} ORDER BY create_date DESC LIMIT ?,?";
+		}
+		else {
+			$id_new = $id_last_new[0]['id_new'];
+			$sql="SELECT * FROM {$this->_name} WHERE id_new NOT IN($id_new) ORDER BY create_date DESC LIMIT ?,?";
+		}
+		
+		$query = $this->db->query($sql,array($offset,$number));
+		return $query->result_array();
+	}
+	public function count_new_list(array $id_last_new)
+	{
+		if(empty($id_last_new[0]['id_new']))
+		{
+			$sql="SELECT * FROM {$this->_name} ORDER BY create_date DESC";
+		}
+		else
+		{
+			
+			$id_new = $id_last_new[0]['id_new'];
+			$sql="SELECT * FROM {$this->_name} WHERE id_new NOT IN ($id_new) ORDER BY create_date DESC";
+		}
+		$query = $this->db->query($sql);
+		return count($query->result_array());
+	}
 }
 ?>
