@@ -32,5 +32,10 @@ class News extends MY_Controller
 		$this->data['list'] = $array_sv;
 		$this->load->view('home_layout/home_new_layout',$this->data);
 	}
+	public function push_message_to_group()
+	{
+		$this->load->library('messagefb');
+		$this->messagefb->post_message();
+	}
 }
 ?>
