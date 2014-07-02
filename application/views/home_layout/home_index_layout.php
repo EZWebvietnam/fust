@@ -9,6 +9,7 @@
 		<link rel="shortcut icon" href="http://www.futsalunitedsaigon.com/wp-content/uploads/2013/12/favicon.ico" type="image/x-icon" />
 		<meta name='robots' content='noindex,nofollow' />
 		<link rel='stylesheet' id='bbp-child-bbpress-css'  href='<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-content/themes/futsalunitedsaigon.com/css/bbpress.css?ver=2.4.1' type='text/css' media='screen' />
+		<link rel='stylesheet'   href='<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-content/themes/futsalunitedsaigon.com/_stylesheets/match.css' type='text/css' media='screen' />
 		<link rel='stylesheet' id='bp-parent-css-css'  href='<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-content/themes/futsalunitedsaigon.com/buddypress/css/buddypress.css?ver=1.8.1' type='text/css' media='screen' />
 		
 		<link rel='stylesheet' id='tsnfc2013-style-css'  href='<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-content/themes/futsalunitedsaigon.com/style.css?ver=3.7.3' type='text/css' media='all' />
@@ -20,6 +21,9 @@
 		<link rel='stylesheet' id='tablepress-default-css'  href='<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-content/plugins/tablepress/css/default.min.css?ver=1.2' type='text/css' media='all' />
 		<script type='text/javascript' src='<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-includes/js/jquery/jquery.js?ver=1.10.2'></script>
 		<script type='text/javascript' src='<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+		<link rel="stylesheet" href="<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-content/themes/futsalunitedsaigon.com/_stylesheets/colorbox.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-content/themes/futsalunitedsaigon.com/_javascripts/jquery.colorbox.js"></script>
 		<script type='text/javascript'>
 			/* <![CDATA[ */
 			var BP_DTheme = {"my_favs":"My Favorites","accepted":"Accepted","rejected":"Rejected","show_all_comments":"Show all comments for this thread","show_x_comments":"Show all %d comments","show_all":"Show all","comments":"comments","close":"Close","view":"Xem","mark_as_fav":"Favorite","remove_fav":"Remove Favorite","unsaved_changes":"Your profile has unsaved changes. If you leave the page, the changes will be lost."};
@@ -683,122 +687,176 @@
 											<!--/cls_box_wrapper -->
 											<!-- /End box lastest news -->
 											<div class="cls_layout_wrapper two_col_layout clearfix">
-												<div class="cls_layout_inner col1">
+												
 													<!--box clus news-->
-													<div class="cls_box_wrapper clearfix cls_list_post_wrapper cls_club_news_wrapper clearfix">
-														<div class="cls_box_inner">
-															<div class="cls_box_header_wrapper clearfix">
-																<div  class="cls_box_header_inner_left">
-																	<div class="cls_box_header_inner_right">
-																		<div class="cls_box_header_left_wrapper">
-																			<div class="cls_box_header_left_inner">
-																				<a href="http://www.futsalunitedsaigon.com/category/tin-tuc/tin-cau-lac-bo/">Tin Câu lạc bộ</a>						
-																			</div>
-																		</div>
-																		<div class="cls_box_header_right_wrapper">
-																			<div class="cls_box_header_right_inner">
-																			</div>
-																		</div>
+													<div class="cls_box_wrapper clearfix cls_list_post_wrapper cls_list_news_wrapper cls_box_home_lastest_new_wrapper clearfix">
+												<div class="cls_box_inner">
+													<div class="cls_box_header_wrapper clearfix">
+														<div  class="cls_box_header_inner_left">
+															<div class="cls_box_header_inner_right">
+																<div class="cls_box_header_left_wrapper">
+																	<div class="cls_box_header_left_inner">
+																		<a href="http://www.futsalunitedsaigon.com/category/tin-tuc/">Tin FUST</a>						
 																	</div>
 																</div>
-																<!-- /cls_box_header_inner -->
-															</div>
-															<!-- /cls_box_header_wrapper -->
-															<div class="cls_box_content_wrapper">
-																<div class="cls_box_content_inner">
-																	<div class="cls_box_content_row cls_first_content">
-																		<div class="cls-post-listing clearfix">
-																			<ul class="non-ajax clearfix">
-																				<li class="cls-item-no0 cls-row0 cls-item cls-first-in-line clearfix cls-last-in-line cls-only-in-line">
-																					<div class="cls-field-image">
-																						<div class="cls-item-value"><a href="http://www.futsalunitedsaigon.com/2014/03/chu-tich-clb-thai-son-nam-chinh-thuc-tro-thanh-truong-ban-futsal-vff/" title="Chủ tịch CLB Thái Sơn Nam chính thức trở thành trưởng Ban futsal VFF"><img width="300" height="168" src="http://www.futsalunitedsaigon.com/wp-content/uploads/2014/03/BCHVFF_31-3-14-300x168.jpg" class="attachment-ths_thumb wp-post-image" alt="Chủ tịch CLB Thái Sơn Nam chính thức trở thành trưởng Ban futsal VFF" title="Chủ tịch CLB Thái Sơn Nam chính thức trở thành trưởng Ban futsal VFF" /></a></div>
-																					</div>
-																					<div class="group group cls_post_data clearfix ">
-																						<div class="cls-field-title">
-																							<div class="cls-item-value"><a href="http://www.futsalunitedsaigon.com/2014/03/chu-tich-clb-thai-son-nam-chinh-thuc-tro-thanh-truong-ban-futsal-vff/" title="Chủ tịch CLB Thái Sơn Nam chính thức trở thành trưởng Ban futsal VFF">Chủ tịch CLB Thái Sơn Nam chính thức trở thành trưởng Ban futsal VFF</a></div>
-																						</div>
-																					</div>
-																				</li>
-																			</ul>
-																		</div>
+																<div class="cls_box_header_right_wrapper">
+																	<div class="cls_box_header_right_inner">
 																	</div>
 																</div>
 															</div>
-															<!-- /cls_box_content_wrapper -->
-															<div class="cls_box_footer_wrapper">
-															</div>
-															<!--/cls_box_footer_wrapper -->
 														</div>
-														<!--/cls_box_inner -->
+														<!-- /cls_box_header_inner -->
 													</div>
+													<!-- /cls_box_header_wrapper -->
+													<div class="cls_box_content_wrapper">
+														<div class="cls_box_content_inner">
+															<div class="cls_box_content_row cls_first_content">
+																<div class="cls-post-listing clearfix">
+																	<ul class="non-ajax clearfix">
+																	<?php 
+																	$list_new_clb = array_chunk($list_new_clb,2,true);		
+																	$i = 0;
+																	if(isset($list_new_clb[0]))
+																	{
+																		
+																		foreach($list_new_clb[0] as $content_clb_0)
+																		{
+																			if($i%2!=0)
+																			{
+																				$class = "cls-item clearfix cls-last-in-line";
+																			}
+																			else
+																			{
+																				$class="cls-item cls-first-in-line clearfix";
+																			}
+																	?>
+																		<li class="cls-item-no<?php echo $i;?> cls-row0 <?php echo $class;?>">
+																			<div class="cls-field-image">
+																				<div class="cls-item-value">
+																				<a href="http://www.futsalunitedsaigon.com/2014/06/giai-vo-dich-futsal-tphcm-2014-cac-doi-dau-bang-toan-thang/" title="<?php echo $content_clb_0['title_new']?>">
+																				<?php 
+																				if(file_exists(PATH_FOLDER.ROT_DIR.'file/uploads/new/'.$content_clb_0['image_new']) && is_file(PATH_FOLDER.ROT_DIR.'file/uploads/new/'.$content_clb_0['image_new']) && $content_clb_0['image_new']!='')
+																				{
+																				
+																				?>
+																				<img width="300" height="168" src="<?php echo base_url();?>file/uploads/new/<?php echo $content_clb_0['image_new']?>" class="attachment-ths_thumb wp-post-image" alt="<?php echo $content_clb_0['title_new']?>" title="<?php echo $content_clb_0['title_new']?>" />
+																				<?php } else {  ?>
+																				<img width="300" height="168" src="<?php echo base_url();?>file/uploads/no_image.gif" class="attachment-ths_thumb wp-post-image" alt="<?php echo $content_clb_0['title_new']?>" title="<?php echo $content_clb_0['title_new']?>" />
+																				<?php } ?>
+																				</a>
+																				</div>
+																			</div>
+																			<div class="group group cls_post_data clearfix ">
+																				<div class="cls-field-title">
+																					<div class="cls-item-value"><a href="http://www.futsalunitedsaigon.com/2014/06/giai-vo-dich-futsal-tphcm-2014-cac-doi-dau-bang-toan-thang/" title="Giải vô địch futsal TPHCM 2014: Các đội đầu bảng toàn thắng"><?php echo $content_clb_0['title_new']?></a></div>
+																				</div>
+																			</div>
+																		</li>
+																		
+																		<?php $i++;} } ?>
+																		
+																		<?php 
+																			
+																	if(isset($list_new_clb[1]))
+																	{
+																		
+																		foreach($list_new_clb[1] as $content_clb_1)
+																		{
+																			if($i%2!=0)
+																			{
+																				$class = "cls-item clearfix cls-last-in-line";
+																			}
+																			else
+																			{
+																				$class="cls-item cls-first-in-line clearfix";
+																			}
+																	?>
+																		<li class="cls-item-no<?php echo $i;?> cls-row1 <?php echo $class;?>">
+																			<div class="cls-field-image">
+																				<div class="cls-item-value">
+																				<a href="http://www.futsalunitedsaigon.com/2014/06/giai-vo-dich-futsal-tphcm-2014-cac-doi-dau-bang-toan-thang/" title="<?php echo $content_clb_1['title_new']?>">
+																				<?php 
+																				if(file_exists(PATH_FOLDER.ROT_DIR.'file/uploads/new/'.$content_clb_1['image_new']) && is_file(PATH_FOLDER.ROT_DIR.'file/uploads/new/'.$content_clb_1['image_new']) && $content_clb_1['image_new']!='')
+																				{
+																				
+																				?>
+																				<img width="300" height="168" src="<?php echo base_url();?>file/uploads/new/<?php echo $content_clb_1['image_new']?>" class="attachment-ths_thumb wp-post-image" alt="<?php echo $content_clb_1['title_new']?>" title="<?php echo $content_clb_1['title_new']?>" />
+																				<?php } else {  ?>
+																				<img width="300" height="168" src="<?php echo base_url();?>file/uploads/no_image.gif" class="attachment-ths_thumb wp-post-image" alt="<?php echo $content_clb_1['title_new']?>" title="<?php echo $content_clb_1['title_new']?>" />
+																				<?php } ?>
+																				</a>
+																				</div>
+																			</div>
+																			<div class="group group cls_post_data clearfix ">
+																				<div class="cls-field-title">
+																					<div class="cls-item-value"><a href="http://www.futsalunitedsaigon.com/2014/06/giai-vo-dich-futsal-tphcm-2014-cac-doi-dau-bang-toan-thang/" title="Giải vô địch futsal TPHCM 2014: Các đội đầu bảng toàn thắng"><?php echo $content_clb_1['title_new']?></a></div>
+																				</div>
+																			</div>
+																		</li>
+																		
+																		<?php $i++;} } ?>
+																		
+																		<?php 
+																			
+																	if(isset($list_new_clb[2]))
+																	{
+																		
+																		foreach($list_new_clb[2] as $content_clb_2)
+																		{
+																			if($i%2!=0)
+																			{
+																				$class = "cls-item clearfix cls-last-in-line";
+																			}
+																			else
+																			{
+																				$class="cls-item cls-first-in-line clearfix";
+																			}
+																	?>
+																		<li class="cls-item-no<?php echo $i;?> cls-row1 <?php echo $class;?>">
+																			<div class="cls-field-image">
+																				<div class="cls-item-value">
+																				<a href="http://www.futsalunitedsaigon.com/2014/06/giai-vo-dich-futsal-tphcm-2014-cac-doi-dau-bang-toan-thang/" title="<?php echo $content_clb_2['title_new']?>">
+																				<?php 
+																				if(file_exists(PATH_FOLDER.ROT_DIR.'file/uploads/new/'.$content_clb_2['image_new']) && is_file(PATH_FOLDER.ROT_DIR.'file/uploads/new/'.$content_clb_2['image_new']) && $content_clb_2['image_new']!='')
+																				{
+																				
+																				?>
+																				<img width="300" height="168" src="<?php echo base_url();?>file/uploads/new/<?php echo $content_clb_2['image_new']?>" class="attachment-ths_thumb wp-post-image" alt="<?php echo $content_clb_2['title_new']?>" title="<?php echo $content_clb_2['title_new']?>" />
+																				<?php } else {  ?>
+																				<img width="300" height="168" src="<?php echo base_url();?>file/uploads/no_image.gif" class="attachment-ths_thumb wp-post-image" alt="<?php echo $content_clb_2['title_new']?>" title="<?php echo $content_clb_2['title_new']?>" />
+																				<?php } ?>
+																				</a>
+																				</div>
+																			</div>
+																			<div class="group group cls_post_data clearfix ">
+																				<div class="cls-field-title">
+																					<div class="cls-item-value"><a href="http://www.futsalunitedsaigon.com/2014/06/giai-vo-dich-futsal-tphcm-2014-cac-doi-dau-bang-toan-thang/" title="Giải vô địch futsal TPHCM 2014: Các đội đầu bảng toàn thắng"><?php echo $content_clb_2['title_new']?></a></div>
+																				</div>
+																			</div>
+																		</li>
+																		
+																		<?php $i++;} } ?>
+																	</ul>
+																</div>
+															</div>
+														
+														</div>
+													</div>
+													<!-- /cls_box_content_wrapper -->
+													<div class="cls_box_footer_wrapper">
+													</div>
+													<!--/cls_box_footer_wrapper -->
+												</div>
+												<!--/cls_box_inner -->
+											</div>
 													<!--/cls_box_wrapper -->
 													<!--end box clus news-->
-												</div>
-												<div class="cls_layout_inner col2">
-													<!--box forum-->
-													<div class="cls_box_wrapper clearfix cls_forum_wrapper clearfix">
-														<div class="cls_box_inner">
-															<div class="cls_box_header_wrapper clearfix">
-																<div  class="cls_box_header_inner_left">
-																	<div class="cls_box_header_inner_right">
-																		<div class="cls_box_header_left_wrapper">
-																			<div class="cls_box_header_left_inner">
-																				<a href="http://www.futsalunitedsaigon.com/forums/">Forum</a>
-																			</div>
-																		</div>
-																		<div class="cls_box_header_right_wrapper">
-																			<div class="cls_box_header_right_inner">
-																			</div>
-																		</div>
-																	</div>
-																</div>
-																<!-- /cls_box_header_inner -->
-															</div>
-															<!-- /cls_box_header_wrapper -->
-															<div class="cls_box_content_wrapper">
-																<div class="cls_box_content_inner">
-																	<div class="widget widget_display_replies">
-																		<div>
-																			<div class="cls_reply_item clearfix">
-																				<a href="http://www.futsalunitedsaigon.com/members/admin/" title="View admin&#039;s profile" class="bbp-author-avatar" rel="nofollow"><img src="http://www.futsalunitedsaigon.com/wp-content/uploads/avatars/1/b246104eb0bcf2d5ed3145ee566b24cb-bpthumb.jpg" class="avatar user-1-avatar avatar-14 photo" width="14" height="14" alt="Avatar of admin" /></a>&nbsp;<a href="http://www.futsalunitedsaigon.com/members/admin/" title="View admin&#039;s profile" class="bbp-author-name" rel="nofollow">admin</a> on <a class="bbp-reply-topic-title" href="http://www.futsalunitedsaigon.com/forums/topic/cach-danh-bong-bang-dau/#post-2094" title="minh đang chuan bi kiem them may bai hay de post&hellip;">Cách đánh bóng...</a>
-																				<div class="cls_reply_wrapper">
-																					minh đang chuan bi kiem them m&hellip;					
-																				</div>
-																			</div>
-																			<div class="cls_reply_item clearfix">
-																				<a href="http://www.futsalunitedsaigon.com/members/admin/" title="View admin&#039;s profile" class="bbp-author-avatar" rel="nofollow"><img src="http://www.futsalunitedsaigon.com/wp-content/uploads/avatars/1/b246104eb0bcf2d5ed3145ee566b24cb-bpthumb.jpg" class="avatar user-1-avatar avatar-14 photo" width="14" height="14" alt="Avatar of admin" /></a>&nbsp;<a href="http://www.futsalunitedsaigon.com/members/admin/" title="View admin&#039;s profile" class="bbp-author-name" rel="nofollow">admin</a> on <a class="bbp-reply-topic-title" href="http://www.futsalunitedsaigon.com/forums/topic/cach-danh-bong-bang-dau/#post-2093" title="Hehehe, khong co chi">Cách đánh bóng...</a>
-																				<div class="cls_reply_wrapper">
-																					Hehehe, khong co chi					
-																				</div>
-																			</div>
-																			<div class="cls_reply_item clearfix">
-																				<a href="http://www.futsalunitedsaigon.com/members/hyhy/" title="View Hyhy&#039;s profile" class="bbp-author-avatar" rel="nofollow"><img src="http://www.futsalunitedsaigon.com/wp-content/uploads/avatars/4/6270e320fdcd5109fa5bddf373ceb242-bpthumb.jpg" class="avatar user-4-avatar avatar-14 photo" width="14" height="14" alt="Avatar of Hyhy" /></a>&nbsp;<a href="http://www.futsalunitedsaigon.com/members/hyhy/" title="View Hyhy&#039;s profile" class="bbp-author-name" rel="nofollow">Hyhy</a> on <a class="bbp-reply-topic-title" href="http://www.futsalunitedsaigon.com/forums/topic/cach-danh-bong-bang-dau/#post-2091" title="Chia sẻ thật có ích &lt;3.">Cách đánh bóng...</a>
-																				<div class="cls_reply_wrapper">
-																					Chia sẻ thật có ích &lt;3.					
-																				</div>
-																			</div>
-																			<div class="cls_reply_item clearfix">
-																				<a href="http://www.futsalunitedsaigon.com/members/phuonghoangpicom-vn/" title="View Phuong Hoang&#039;s profile" class="bbp-author-avatar" rel="nofollow"><img src="http://www.futsalunitedsaigon.com/wp-content/uploads/avatars/2/6e2592c3f29ad7fb35a898637c04f855-bpthumb.jpg" class="avatar user-2-avatar avatar-14 photo" width="14" height="14" alt="Avatar of Phuong Hoang" /></a>&nbsp;<a href="http://www.futsalunitedsaigon.com/members/phuonghoangpicom-vn/" title="View Phuong Hoang&#039;s profile" class="bbp-author-name" rel="nofollow">Phuong Hoang</a> on <a class="bbp-reply-topic-title" href="http://www.futsalunitedsaigon.com/forums/topic/cach-danh-bong-bang-dau/#post-2090" title="Cảm ơn bạn!">Cách đánh bóng...</a>
-																				<div class="cls_reply_wrapper">
-																					Cảm ơn bạn!					
-																				</div>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-															</div>
-															<!-- /cls_box_content_wrapper -->
-															<div class="cls_box_footer_wrapper">
-															</div>
-															<!--/cls_box_footer_wrapper -->
-														</div>
-														<!--/cls_box_inner -->
-													</div>
-													<!--/cls_box_wrapper -->
-													<!--end forum-->
-												</div>
 											</div>
 											<!--box home images-->
+											<?php 
+											if(!empty($list_image))
+											{
+											?>
 											<div class="cls_box_wrapper clearfix cls_home_images_wrapper cls_home_media_wrapper">
 												<div class="cls_box_inner">
 													<div class="cls_box_header_wrapper clearfix">
@@ -823,36 +881,33 @@
 															<div class="cls_box_content_row cls_first_content">
 																<div class="cls-post-listing clearfix">
 																	<ul class="non-ajax clearfix">
-																		<li class="cls-item-no0 cls-row0 cls-item cls-first-in-line clearfix cls-last-in-line cls-only-in-line">
+																		<?php 
+																		$i = 0;
+																		foreach($list_image as $l_image)
+																		{
+																		?>
+																		<li class="cls-item-no<?php echo $i;?> cls-row<?php echo $i;?>  cls-item cls-first-in-line clearfix cls-last-in-line cls-only-in-line">
 																			<div class="cls-field-image">
-																				<div class="cls-item-value"><a href="http://www.futsalunitedsaigon.com/2013/11/nhung-hinh-anh-ve-giai-futsal-quoc-te-2013/" title="Những hình ảnh về giải futsal quốc tế 2013"><img width="300" height="167" src="http://www.futsalunitedsaigon.com/wp-content/uploads/2013/11/VNhang3_23-11-132-300x167.jpg" class="attachment-ths_thumb wp-post-image" alt="Những hình ảnh về giải futsal quốc tế 2013" title="Những hình ảnh về giải futsal quốc tế 2013" /></a></div>
+																				<div class="cls-item-value">
+																				<?php 
+																				if(file_exists(PATH_FOLDER.ROT_DIR.'file/uploads/fust_img/'.$l_image['image']) && is_file(PATH_FOLDER.ROT_DIR.'file/uploads/fust_img/'.$l_image['image']) && $l_image['image']!='')
+																				{
+																				
+																				?>
+																				<a class="group<?php echo $i;?> cboxElement" href="<?php echo base_url();?>file/uploads/fust_img/<?php echo $l_image['image']?>"><img width="300" height="167" src="<?php echo base_url();?>file/uploads/fust_img/<?php echo $l_image['image']?>" class="attachment-ths_thumb wp-post-image" alt="<?php echo $l_image['title_image']?>" title="<?php echo $l_image['title_image']?>" /></a>
+																				<?php } else { ?>
+																				<img width="300" height="167" src="<?php echo base_url();?>file/uploads/no_image.gif" class="attachment-ths_thumb wp-post-image" alt="<?php echo $l_image['title_image']?>" title="<?php echo $l_image['title_image']?>" />
+																				<?php } ?>
+																				</div>
 																			</div>
 																		</li>
-																		<li class="cls-item-no1 cls-row1 cls-item cls-first-in-line clearfix cls-last-in-line cls-only-in-line">
-																			<div class="cls-field-image">
-																				<div class="cls-item-value"><a href="http://www.futsalunitedsaigon.com/2013/09/thai-son-nam-tai-vck-giai-futsal-cac-clb-chau-a-2013/" title="Thái Sơn Nam tại VCK giải futsal các CLB châu Á 2013"><img width="300" height="168" src="http://www.futsalunitedsaigon.com/wp-content/uploads/2013/10/tsn3_27-8-131-300x168.jpg" class="attachment-ths_thumb wp-post-image" alt="Thái Sơn Nam tại VCK giải futsal các CLB châu Á 2013" title="Thái Sơn Nam tại VCK giải futsal các CLB châu Á 2013" /></a></div>
-																			</div>
-																		</li>
-																		<li class="cls-item-no2 cls-row2 cls-item cls-first-in-line clearfix cls-last-in-line cls-only-in-line">
-																			<div class="cls-field-image">
-																				<div class="cls-item-value"><a href="http://www.futsalunitedsaigon.com/2013/04/nhin-lai-hanh-trinh-cua-thai-son-nam-tai-vong-loai-giai-vo-dich-futsal-cac-clb-chau-a-2013-khu-vuc-dong-a/" title="Nhìn lại hành trình của Thái Sơn Nam tại vòng loại giải vô địch futsal các CLB châu Á 2013 - khu vực Đông Á"><img width="300" height="168" src="http://www.futsalunitedsaigon.com/wp-content/uploads/2013/11/TSNvaoVCK_17-4-131-300x168.jpg" class="attachment-ths_thumb wp-post-image" alt="Nhìn lại hành trình của Thái Sơn Nam tại vòng loại giải vô địch futsal các CLB châu Á 2013 - khu vực Đông Á" title="Nhìn lại hành trình của Thái Sơn Nam tại vòng loại giải vô địch futsal các CLB châu Á 2013 - khu vực Đông Á" /></a></div>
-																			</div>
-																		</li>
-																		<li class="cls-item-no3 cls-row3 cls-item cls-first-in-line clearfix cls-last-in-line cls-only-in-line">
-																			<div class="cls-field-image">
-																				<div class="cls-item-value"><a href="http://www.futsalunitedsaigon.com/2013/04/thai-son-nam-tai-vong-loai-cac-clb-chau-a-2013/" title="Thái Sơn Nam tại vòng loại các CLB châu Á 2013"><img width="300" height="168" src="http://www.futsalunitedsaigon.com/wp-content/uploads/2013/10/tsn_11-4-132-300x168.jpg" class="attachment-ths_thumb wp-post-image" alt="Thái Sơn Nam tại vòng loại các CLB châu Á 2013" title="Thái Sơn Nam tại vòng loại các CLB châu Á 2013" /></a></div>
-																			</div>
-																		</li>
-																		<li class="cls-item-no4 cls-row4 cls-item cls-first-in-line clearfix cls-last-in-line cls-only-in-line">
-																			<div class="cls-field-image">
-																				<div class="cls-item-value"><a href="http://www.futsalunitedsaigon.com/2012/12/khai-mac-thai-son-nam-cup-2012/" title="khai mạc Thái Sơn Nam Cup 2012"><img width="300" height="168" src="http://www.futsalunitedsaigon.com/wp-content/uploads/2013/10/img_28641-300x168.jpg" class="attachment-ths_thumb wp-post-image" alt="khai mạc Thái Sơn Nam Cup 2012" title="khai mạc Thái Sơn Nam Cup 2012" /></a></div>
-																			</div>
-																		</li>
-																		<li class="cls-item-no5 cls-row5 cls-item cls-first-in-line clearfix cls-last-in-line cls-only-in-line">
-																			<div class="cls-field-image">
-																				<div class="cls-item-value"><a href="http://www.futsalunitedsaigon.com/2012/12/ban-ket-thai-son-nam-cup-2012/" title="Bán kết Thái Sơn Nam Cup 2012"><img width="300" height="168" src="http://www.futsalunitedsaigon.com/wp-content/uploads/2013/10/img_29351-300x168.jpg" class="attachment-ths_thumb wp-post-image" alt="Bán kết Thái Sơn Nam Cup 2012" title="Bán kết Thái Sơn Nam Cup 2012" /></a></div>
-																			</div>
-																		</li>
+																		<script>
+																			$(".group"+<?php echo $i;?>).colorbox({rel:'group1'});
+																		</script>
+																		<?php } ?>
+																		
+																		
+																		
 																	</ul>
 																</div>
 															</div>
@@ -865,6 +920,7 @@
 												</div>
 												<!--/cls_box_inner -->
 											</div>
+											<?php } ?>
 											<!--/cls_box_wrapper -->
 											<script type="text/javascript">
 												jQuery(function(){
@@ -879,6 +935,11 @@
 											</script>
 											<!--end home images-->
 											<!--box home videos-->
+											<?php 
+											if(!empty($list_yoututbe))
+											{
+											
+											?>
 											<div class="cls_box_wrapper clearfix cls_home_videos_wrapper cls_home_media_wrapper">
 												<div class="cls_box_inner">
 													<div class="cls_box_header_wrapper clearfix">
@@ -903,66 +964,26 @@
 															<div class="cls_box_content_row cls_first_content">
 																<div class="cls-post-listing clearfix">
 																	<ul class="non-ajax clearfix">
-																		<li class="cls-item-no0 cls-row0 cls-item cls-first-in-line clearfix cls-last-in-line cls-only-in-line">
+																		<?php 
+																		$i = 0;
+																		foreach($list_yoututbe as $youtube)
+																		{
+																		
+																		?>
+																		<li class="cls-item-no<?php echo $i;?> cls-row<?php echo $i;?> cls-item cls-first-in-line clearfix cls-last-in-line cls-only-in-line">
 																			<div class="cls-field-video_thumb">
-																				<div class="cls-item-value"><a href="http://www.futsalunitedsaigon.com/2013/12/sea-games-27-futsal-man-viet-nam-vs-lao/" title="Sea Games 27: Futsal man Viet Nam vs Lao "><img src="http://img.youtube.com/vi/lp_igHHCnsk/mqdefault.jpg" alt="Sea Games 27: Futsal man Viet Nam vs Lao " title="Sea Games 27: Futsal man Viet Nam vs Lao " class=""></a></div>
+																				<div class="cls-item-value"><a class="video_layer<?php echo $i;?>" href="http://www.youtube.com/embed/<?php echo $youtube['code_youtube']?>?rel=0&amp;wmode=transparent" title="<?php echo $youtube['title_youtube']?> "><img src="http://img.youtube.com/vi/<?php echo $youtube['code_youtube']?>/0.jpg" alt="<?php echo $youtube['title_youtube']?> " title="<?php echo $youtube['title_youtube']?>" class=""></a></div>
 																			</div>
 																			<div class="group group cls_post_data clearfix ">
 																				<div class="cls-field-title">
-																					<div class="cls-item-value"><a href="http://www.futsalunitedsaigon.com/2013/12/sea-games-27-futsal-man-viet-nam-vs-lao/" title="Sea Games 27: Futsal man Viet Nam vs Lao ">Sea Games 27: Futsal man Viet Nam vs Lao </a></div>
+																					<div class="cls-item-value"><a class="video_layer<?php echo $i;?>" href="http://www.youtube.com/embed/<?php echo $youtube['code_youtube']?>?rel=0&amp;wmode=transparent" title="<?php echo $youtube['title_youtube']?>"><?php echo $youtube['title_youtube']?></a></div>
 																				</div>
+																				<script>
+																				$('.video_layer'+<?php echo $i;?>).colorbox({iframe:true, innerWidth:640, innerHeight:390});
+																				</script>
 																			</div>
 																		</li>
-																		<li class="cls-item-no1 cls-row1 cls-item cls-first-in-line clearfix cls-last-in-line cls-only-in-line">
-																			<div class="cls-field-video_thumb">
-																				<div class="cls-item-value"><a href="http://www.futsalunitedsaigon.com/2013/08/thai-son-nam-fc-vs-al-sadaka/" title="Thái Sơn Nam FC vs Al Sadaka "><img src="http://img.youtube.com/vi/OWjoiT72mfI/mqdefault.jpg" alt="Thái Sơn Nam FC vs Al Sadaka " title="Thái Sơn Nam FC vs Al Sadaka " class=""></a></div>
-																			</div>
-																			<div class="group group cls_post_data clearfix ">
-																				<div class="cls-field-title">
-																					<div class="cls-item-value"><a href="http://www.futsalunitedsaigon.com/2013/08/thai-son-nam-fc-vs-al-sadaka/" title="Thái Sơn Nam FC vs Al Sadaka ">Thái Sơn Nam FC vs Al Sadaka </a></div>
-																				</div>
-																			</div>
-																		</li>
-																		<li class="cls-item-no2 cls-row2 cls-item cls-first-in-line clearfix cls-last-in-line cls-only-in-line">
-																			<div class="cls-field-video_thumb">
-																				<div class="cls-item-value"><a href="http://www.futsalunitedsaigon.com/2013/08/thai-son-nam-fc-vs-nagoya-oceans/" title="Thai Son Nam FC vs Nagoya Oceans "><img src="http://img.youtube.com/vi/bo4sBSczzo4/mqdefault.jpg" alt="Thai Son Nam FC vs Nagoya Oceans " title="Thai Son Nam FC vs Nagoya Oceans " class=""></a></div>
-																			</div>
-																			<div class="group group cls_post_data clearfix ">
-																				<div class="cls-field-title">
-																					<div class="cls-item-value"><a href="http://www.futsalunitedsaigon.com/2013/08/thai-son-nam-fc-vs-nagoya-oceans/" title="Thai Son Nam FC vs Nagoya Oceans ">Thai Son Nam FC vs Nagoya Oceans </a></div>
-																				</div>
-																			</div>
-																		</li>
-																		<li class="cls-item-no3 cls-row3 cls-item cls-first-in-line clearfix cls-last-in-line cls-only-in-line">
-																			<div class="cls-field-video_thumb">
-																				<div class="cls-item-value"><a href="http://www.futsalunitedsaigon.com/2013/08/afc-futsal-club-thai-son-nam-vs-shenzhen-nanling/" title="[AFC Futsal Club]  Thai Son Nam vs Shenzhen Nanling"><img src="http://img.youtube.com/vi/w1TDAHr5c0Q/mqdefault.jpg" alt="[AFC Futsal Club]  Thai Son Nam vs Shenzhen Nanling" title="[AFC Futsal Club]  Thai Son Nam vs Shenzhen Nanling" class=""></a></div>
-																			</div>
-																			<div class="group group cls_post_data clearfix ">
-																				<div class="cls-field-title">
-																					<div class="cls-item-value"><a href="http://www.futsalunitedsaigon.com/2013/08/afc-futsal-club-thai-son-nam-vs-shenzhen-nanling/" title="[AFC Futsal Club]  Thai Son Nam vs Shenzhen Nanling">[AFC Futsal Club]  Thai Son Nam vs Shenzhen Nanling</a></div>
-																				</div>
-																			</div>
-																		</li>
-																		<li class="cls-item-no4 cls-row4 cls-item cls-first-in-line clearfix cls-last-in-line cls-only-in-line">
-																			<div class="cls-field-video_thumb">
-																				<div class="cls-item-value"><a href="http://www.futsalunitedsaigon.com/2012/05/mot-vai-tinh-huong-kem-nguoi-va-di-chuyen-cua-thai-son-nam-tai-giai-cac-clb/" title="Một vài tình huống kèm người và di chuyển của Thái Sơn Nam tại giải các CLB"><img src="http://img.youtube.com/vi/jsjsZw1TX_8/mqdefault.jpg" alt="Một vài tình huống kèm người và di chuyển của Thái Sơn Nam tại giải các CLB" title="Một vài tình huống kèm người và di chuyển của Thái Sơn Nam tại giải các CLB" class=""></a></div>
-																			</div>
-																			<div class="group group cls_post_data clearfix ">
-																				<div class="cls-field-title">
-																					<div class="cls-item-value"><a href="http://www.futsalunitedsaigon.com/2012/05/mot-vai-tinh-huong-kem-nguoi-va-di-chuyen-cua-thai-son-nam-tai-giai-cac-clb/" title="Một vài tình huống kèm người và di chuyển của Thái Sơn Nam tại giải các CLB">Một vài tình huống kèm người và di chuyển của Thái...</a></div>
-																				</div>
-																			</div>
-																		</li>
-																		<li class="cls-item-no5 cls-row5 cls-item cls-first-in-line clearfix cls-last-in-line cls-only-in-line">
-																			<div class="cls-field-video_thumb">
-																				<div class="cls-item-value"><a href="http://www.futsalunitedsaigon.com/2012/05/cau-chuyen-thai-son-nam/" title="Câu Chuyện Thái Sơn Nam"><img src="http://img.youtube.com/vi/EsnbzQpPCwo/mqdefault.jpg" alt="Câu Chuyện Thái Sơn Nam" title="Câu Chuyện Thái Sơn Nam" class=""></a></div>
-																			</div>
-																			<div class="group group cls_post_data clearfix ">
-																				<div class="cls-field-title">
-																					<div class="cls-item-value"><a href="http://www.futsalunitedsaigon.com/2012/05/cau-chuyen-thai-son-nam/" title="Câu Chuyện Thái Sơn Nam">Câu Chuyện Thái Sơn Nam</a></div>
-																				</div>
-																			</div>
-																		</li>
+																		<?php $i++;} ?>
 																	</ul>
 																</div>
 															</div>
@@ -975,6 +996,7 @@
 												</div>
 												<!--/cls_box_inner -->
 											</div>
+											<?php } ?>
 											<!--/cls_box_wrapper -->
 											<script type="text/javascript">
 												jQuery(function(){
@@ -1002,6 +1024,7 @@
 																</div>
 																<div class="cls_box_header_right_wrapper">
 																	<div class="cls_box_header_right_inner">
+																
 																	</div>
 																</div>
 															</div>
@@ -1028,7 +1051,47 @@
 													<div class="cls_box_content_wrapper">
 														<div class="cls_box_content_inner">
 															<div class="cls_live_match_image_wrapper">
-																<img src="http://www.futsalunitedsaigon.com/wp-content/themes/futsalunitedsaigon.com/_images/img_live_match.png" alt="live match" />
+																<div class="main-width" id="next-match" data-event-id="1506174">
+                                 
+                                 <div class="date" title="Monday 12 May">
+                                    <?php
+                                    $date =  strtotime($next_match[0]['time']);
+                                    echo date('D d/m/Y',$date);
+                                    ?>
+                                 </div>
+                                 <div id="button-left">
+                                    
+                                 </div>
+                                 <div class="logo_team">
+                                    <div class="team_home" style="margin-right:3px;">
+                                       <img width="46" height="60" src="http://saigonfutsal.com/beta/file/uploads/teams/fust_logo.png" alt="Elche">
+                                    </div>
+                                    <div class="vs ">
+                                       <a href="#" target="_blank">
+                                       <?php 
+                                       echo date('H:i',$date);
+                                       ?></a>
+                                       <span title="Not started">
+                                       VS                    </span>
+                                    </div>
+                                    <div class="team_away" style="margin-left: 3px;">
+                                    <?php 
+                                    if(file_exists(PATH_FOLDER.ROT_DIR.'file/uploads/team/'.$next_match[0]['team_challenge_logo']) && is_file(PATH_FOLDER.ROT_DIR.'file/uploads/team/'.$next_match[0]['team_challenge_logo']) && $next_match[0]['team_challenge_logo']!='')
+                                    {
+                                    ?>
+                                       <img width="46" height="60" src="<?php echo base_url();?>file/uploads/team/<?php echo $next_match[0]['team_challenge_logo']?>" alt="<?php echo $next_match[0]['team_challenge']?>">
+                                       <?php } else {?>
+                                        <img width="46" height="60" src="<?php echo base_url();?>file/uploads/no_image.gif" alt="<?php echo $next_match[0]['team_challenge']?>" alt="<?php echo $next_match[0]['team_challenge']?>">
+                                       <?php } ?>
+                                    </div>
+                                    <p class="teams-names">
+                                       <span title="FUST">FUST</span> vs <span title="<?php echo $next_match[0]['team_challenge']?>"><?php echo $next_match[0]['team_challenge']?></span>
+                                    </p>
+                                 </div>
+                                 <div id="button-right">
+                                   
+                                 </div>
+                              </div>
 															</div>
 														</div>
 													</div>
@@ -1051,7 +1114,7 @@
 																	<ul class="non-ajax clearfix">
 																		<li class="cls-item-no0 cls-row0 cls-item cls-first-in-line clearfix cls-last-in-line cls-only-in-line">
 																			<div class="cls-field-image">
-																				<div class="cls-item-value"><img width="300" height="300" src="http://www.futsalunitedsaigon.com/wp-content/uploads/2013/11/BCCTCT-300x300.jpg" class="attachment-ths_thumb wp-post-image" alt="Hãy bình chọn cho cầu thủ futsal hay nhất tháng" title="Hãy bình chọn cho cầu thủ futsal hay nhất tháng" /></div>
+																				<div class="cls-item-value"><img width="300" height="300" src="<?php echo base_url();?>file/uploads/BCCTCT.jpg" class="attachment-ths_thumb wp-post-image" alt="Hãy bình chọn cho cầu thủ futsal hay nhất tháng" title="Hãy bình chọn cho cầu thủ futsal hay nhất tháng" /></div>
 																			</div>
 																			<div class="group group cls_post_data clearfix ">
 																				<div class="cls-field-title">

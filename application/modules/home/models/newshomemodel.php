@@ -9,7 +9,7 @@ class Newshomemodel extends CI_Model
 	}
 	public function list_new_slide()
 	{
-		$sql="SELECT * FROM {$this->_name} ORDER BY id_new DESC LIMIT 5";
+		$sql="SELECT * FROM {$this->_name} WHERE noi_bat = 1 ORDER BY id_new DESC LIMIT 5";
 		$query = $this->db->query($sql);
 		return $query->result_array();
 	}
@@ -31,6 +31,12 @@ class Newshomemodel extends CI_Model
 			$sql="SELECT * FROM {$this->_name} WHERE id_new NOT IN($id) ORDER BY id_new DESC LIMIT 8";
 		}
 		
+		$query = $this->db->query($sql);
+		return $query->result_array();
+	}
+	public function list_new_clb_content()
+	{
+		$sql="SELECT * FROM {$this->_name} WHERE id_cate = 2 ORDER BY id_new DESC LIMIT 6";
 		$query = $this->db->query($sql);
 		return $query->result_array();
 	}

@@ -5,6 +5,9 @@ class Home extends MY_Controller {
     public function __construct() {
         parent::__construct();
 		$this->load->model('newshomemodel');
+		$this->load->model('imagehomemodel');
+		$this->load->model('youtubehomemodel');
+		$this->load->model('challengehomemodel');
     }
 
     public function index() {
@@ -15,10 +18,29 @@ class Home extends MY_Controller {
 		{
 			$list_new[$va['id_new']] = $va['id_new'];
 		}
+		$this->data['list_new_clb'] = $this->newshomemodel->list_new_clb_content();
 		$this->data['list_new_li'] = $this->newshomemodel->list_new_li($list_new);
+		$this->data['list_image'] = $this->imagehomemodel->list_image();
+		$this->data['list_yoututbe'] = $this->youtubehomemodel->list_youtube();
+		$this->data['next_match'] = $this->challengehomemodel->next_match();
 		$this->load->view('home_layout/home_index_layout',$this->data);
     }
-
+	public function getyoutube()
+	{
+		$file = file_get_contents('http://gdata.youtube.com/feeds/api/users/SaigonFutsal/uploads?v=2&alt=jsonc');
+		$file = json_decode($file);
+		$data_save = array();
+		foreach($file->data->items as $data_youtube)
+		{
+			$detail_youtube = $this->youtubehomemodel->detail_youtube($data_youtube->id);
+			if(empty($detail_youtube))
+			{
+				$data_save = array('code_youtube'=>$data_youtube->id,'title_youtube'=>$data_youtube->title);
+				$this->youtubehomemodel->insert_youtube($data_save);
+			}
+			
+		}
+	}
     public function check_email() {
         $this->load->model('users');
         $email = $this->input->post('email');
