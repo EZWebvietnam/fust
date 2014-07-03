@@ -213,17 +213,15 @@ if (defined('ENVIRONMENT'))
  }
  else
  {
-    define('HOST','localhost'); 
-    define('DB_NAME','vietmong_vmc');
-    define('DB_USER','vietmong_vmc');
-    define('DB_PASS','a123456');
+    define('HOST','mysql-server02'); 
+    define('DB_NAME','0936222844fust');
+    define('DB_USER','0936222844fust');
+    define('DB_PASS','aA123456');
     define('ROT_DIR','/');
-    define('BASE_URL','http://futsalunitedsaigon.vn/');
+    define('BASE_URL','http://futsalunitedsaigon.com/');
     define('MAIL_ADMIN','giangbeoit@gmail.com');
     define('PATH_FOLDER',$_SERVER['DOCUMENT_ROOT']);
  }
- define('LAT','10.8408666');
- define('LONG','106.7169267');
 require_once BASEPATH.'core/CodeIgniter.php';
 
 /* End of file index.php */
