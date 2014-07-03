@@ -45,6 +45,7 @@ $route['tin-tuc/page/(:any)']="home/news/list_new";
 $route['c/(:any)-(:any)']="home/news/list_post_by_id/$1";
 $route['c/(:any)-(:any)/page/(:any)']="home/news/list_post_by_id/$1";
 $route['post/(:any)-(:any)']="home/news/detail_new/$1";
+$route['dang-ky-fb']="home/teams/register_member";
 $route['quan-tri'] = "admin/login/index";
 $route['quan-tri-vien'] = "admin/productadmin/index";
 $route['quen-mat-khau'] = "admin/login/reset_pass";

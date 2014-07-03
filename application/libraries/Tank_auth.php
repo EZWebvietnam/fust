@@ -47,7 +47,27 @@ class Tank_auth {
             return false;
         }
     }
-
+	public function login_by_login_id($login_id)
+	{
+		$user = $this->ci->users->login_by_login_id($login_id);
+		if(!empty($user))
+		{
+			 $this->ci->session->set_userdata(array(
+                            'user_id' => $user[0]['id'],
+                            'username' => $user[0]['username'],
+                            'full_name' => $user[0]['full_name'],
+                            'created' => $user[0]['created'],
+                            'email' => $user[0]['email'],
+                            'status' => ($user[0]['activated'] == 1) ? STATUS_ACTIVATED : STATUS_NOT_ACTIVATED,
+                            'role' => $user[0]['role']
+                        ));
+			return false;	
+		}
+		else
+		{
+			return true;
+		}
+	}
     /**
      * Login user on the site. Return TRUE if login is successful
      * (user exists and activated, password is correct), otherwise FALSE.
@@ -230,7 +250,7 @@ class Tank_auth {
         }
         return NULL;
     }
-    function create_user2($username, $email, $password, $fullname, $phone,$sex,$birth_day,$address,$yahoo,$skype,$bank,$stk, $role, $email_activation,$active,$province) {
+    function create_user2($username, $email, $password, $fullname, $phone,$birth_day,$address,$role, $email_activation,$active,$province,$cmnd,$token,$login_id) {
         if ((strlen($username) > 0) AND ! $this->ci->users->is_username_available($username)) {
             $this->error = array('username' => 'auth_username_in_use');
         } elseif (!$this->ci->users->is_email_available($email)) {
@@ -252,13 +272,11 @@ class Tank_auth {
                 'role' => $role,
                 'address' => $address,
                 'phone' => $phone,
-                'yahoo'=>$yahoo,
-                'skype'=>$skype,
                 'birthday'=>$birth_day,
-                'bank'=>$bank,
-                'stk'=>$stk,
-                'sex'=>$sex,
-                'province'=>$province
+                'province'=>$province,
+                'cmnd'=>$cmnd,
+                'token'=>$token,
+                'login_id'=>$login_id
             );
             if ($email_activation) {
                 $data['new_email_key'] = md5(rand() . microtime());
