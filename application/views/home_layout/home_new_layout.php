@@ -153,7 +153,16 @@
 											</ul>
 										</div>
 										<div class="cls_headr_members cls_right">
-											<span><a href="http://www.futsalunitedsaigon.com/thanh-vien-dang-nhap/">Thành viên CLB đăng nhập</a></span>
+										<?php 
+										if(!$this->tank_auth->is_logged_in())
+										{
+										
+										?>
+											<span><a href="<?php echo base_url();?>dang-ky-fb">Thành viên CLB đăng nhập</a></span>
+											<?php } else { ?>
+											<span><?php echo $this->session->userdata('full_name');?></span>
+											<span><a href="<?php echo base_url();?>logout">Đăng xuất</a></span>
+											<?php } ?>
 										</div>
 										<div class="cls_headr_top_web_link cls_right">
 											<ul>

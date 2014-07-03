@@ -28,11 +28,12 @@ class Teams extends MY_Controller
 			$email_activation = $this->config->item('email_activation', 'tank_auth');
 			$password_1 = rand_string(6);
 			$password = $this->tank_auth->hash_password($password_1);
+			$vi_tri = $this->input->post('vi_tri');
 			if($this->input->post('case_action') == 0)
 			{
 				if($this->tank_auth->login_by_login_id($id_login))
 				{
-					$data_create = $this->tank_auth->create_user2($username,$email,$password,$full_name,$phone,$dob,$address,'2',$email_activation,'1',$tinh,$cmnd,$token,$id_login);
+					$data_create = $this->tank_auth->create_user2($username,$email,$password,$full_name,$phone,$dob,$address,'2',$email_activation,'1',$tinh,$cmnd,$token,$id_login,$vi_tri);
 					if(!is_null($data_create))
 					{
 						echo '2222';exit;
@@ -85,6 +86,12 @@ class Teams extends MY_Controller
 
 			}	
 		}
+	}
+	public function logout()
+	{
+		$this->tank_auth->logout();
+		$link = $_SERVER['HTTP_REFERER'];
+		redirect($link);	
 	}
 }
 ?>

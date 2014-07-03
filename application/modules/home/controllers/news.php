@@ -5,6 +5,9 @@ class News extends MY_Controller
 	{
 		parent::__construct();
 		parent::list_cate();
+		$this->load->library('session');
+		$this->load->library('tank_auth');
+        $this->lang->load('tank_auth');
 		$this->load->model('newshomemodel');
 		$this->load->model('challengehomemodel');
 		$this->load->model('catenewhomemodel');

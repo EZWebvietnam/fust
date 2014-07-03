@@ -5,6 +5,9 @@ class Home extends MY_Controller {
     public function __construct() {
         parent::__construct();
         parent::list_cate();
+        $this->load->library('session');
+        $this->load->library('tank_auth');
+        $this->lang->load('tank_auth');
 		$this->load->model('newshomemodel');
 		$this->load->model('imagehomemodel');
 		$this->load->model('youtubehomemodel');

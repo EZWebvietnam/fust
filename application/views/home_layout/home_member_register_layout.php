@@ -180,8 +180,17 @@
 										</ul>
 									</div>
 									<div class="cls_headr_members cls_right">
-										<span><a href="<?php echo base_url();?>template/ezwebvietnam/fust_home/thanh-vien-dang-nhap/">Thành viên CLB đăng nhập</a></span>
-									</div>
+										<?php 
+										if(!$this->tank_auth->is_logged_in())
+										{
+										
+										?>
+											<span><a href="<?php echo base_url();?>dang-ky-fb">Thành viên CLB đăng nhập</a></span>
+											<?php } else { ?>
+											<span><?php echo $this->session->userdata('full_name');?></span>
+											<span><a href="<?php echo base_url();?>logout">Đăng xuất</a></span>
+											<?php } ?>
+										</div>
 									<div class="cls_headr_top_web_link cls_right">
 										<ul>
 											<li class="cls_bg_none">
@@ -199,10 +208,10 @@
 											<div class="cls_headr_bg_inner_right">
 												<div class="cls_headr_content clearfix">
 													<div class="logo">
-														<a href="http://www.futsalunitedsaigon.com" class="cls_logo">
-														<img src="<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-content/themes/futsalunitedsaigon.com/_images/logo.png" alt="logo" />
-														</a>
-													</div>
+															<a href="http://www.futsalunitedsaigon.com" class="cls_logo">
+															<img src="<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-content/themes/futsalunitedsaigon.com/_images/fust_logo.png" width="144" height="143" alt="logo" />
+															</a>
+														</div>
 													<div class="cls_headr_right_wrapper">
 														<div class="cls_headr_top_right_wrapper clearfix">
 															<div class="cls_search_form_wrapper cls_right clearfix">
@@ -223,14 +232,16 @@
 																<div class="menu-bottom-menu-container">
 																	<ul id="menu-bottom-menu" class="cls_top_menu">
 																		<li id="menu-item-309" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-309">
-																			<a href="<?php echo base_url();?>template/ezwebvietnam/fust_home/category/tin-tuc/">Tin Tức</a>
+																			<a href="<?php echo base_url();?>tin-tuc">Tin Tức</a>
 																			<ul class="sub-menu">
-																				<li id="menu-item-310" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-310"><a href="<?php echo base_url();?>template/ezwebvietnam/fust_home/category/tin-tuc/">Tin tức mới</a></li>
-																				<li id="menu-item-246" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-246"><a href="<?php echo base_url();?>template/ezwebvietnam/fust_home/category/tin-tuc/tin-cau-lac-bo/">Tin tức CLB</a></li>
-																				<li id="menu-item-804" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-804"><a href="<?php echo base_url();?>template/ezwebvietnam/fust_home/category/tin-tuc/tin-futsal/futsal-quoc-te/">Futsal quốc tế</a></li>
-																				<li id="menu-item-803" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-803"><a href="<?php echo base_url();?>template/ezwebvietnam/fust_home/category/tin-tuc/tin-futsal/futsal-trong-nuoc/">Futsal trong nước</a></li>
-																				<li id="menu-item-247" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-247"><a href="<?php echo base_url();?>template/ezwebvietnam/fust_home/category/tin-tuc/truyen-thong/">Truyền thông</a></li>
-																			</ul>
+																					<?php 
+																					foreach($list_cate as $l_cate)
+																					{
+																					
+																					?>
+																					<li id="menu-item-<?php echo $l_cate['id_cate']?>" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-<?php echo $l_cate['id_cate']?>"><a href="<?php echo base_url();?>c/<?php echo $l_cate['id_cate']?>-<?php echo  mb_strtolower(url_title(removesign($l_cate['title_cate'])))?>"><?php echo $l_cate['title_cate']?></a></li>
+																					<?php } ?>
+																				</ul>
 																		</li>
 																		<li id="menu-item-633" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-633">
 																			<a href="<?php echo base_url();?>template/ezwebvietnam/fust_home/doi-bong/danh-sach/">Đội bóng</a>
@@ -334,6 +345,14 @@
 															<div class="bbp-username">
 																<label for="user_login">SĐT: </label>
 																<input type="text" name="phone" value="" size="20" id="phone" tabindex="101" />
+															</div>
+															<div class="bbp-username">
+																<label for="user_login">Vị trí thi đấu: </label>
+																<select name="vi_tri">
+																
+																<option value="2"> Cầu thủ</option>
+																<option value="3"> Thủ môn</option>
+																</select>
 															</div>
 															<div class="bbp-username">
 																<label for="user_login">Địa chỉ: </label>

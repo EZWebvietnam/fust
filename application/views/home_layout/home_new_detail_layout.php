@@ -113,6 +113,14 @@
 		<![endif]-->
 	</head>
 	<body>
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=771797639499496&version=v2.0";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
 		<!-- platform wrapper -->
 		<div id="pf-platform" class="">
 			<!-- browser wrapper -->
@@ -151,7 +159,15 @@
 											</ul>
 										</div>
 										<div class="cls_headr_members cls_right">
-											<span><a href="http://www.futsalunitedsaigon.com/thanh-vien-dang-nhap/">Thành viên CLB đăng nhập</a></span>
+										<?php 
+										if(!$this->tank_auth->is_logged_in())
+										{
+										?>
+											<span><a href="<?php echo base_url();?>dang-ky-fb">Thành viên CLB đăng nhập</a></span>
+											<?php } else { ?>
+											<span><?php echo $this->session->userdata('full_name');?></span>
+											<span><a href="<?php echo base_url();?>logout">Đăng xuất</a></span>
+											<?php } ?>
 										</div>
 										<div class="cls_headr_top_web_link cls_right">
 											<ul>
@@ -171,7 +187,7 @@
 													<div class="cls_headr_content clearfix">
 														<div class="logo">
 															<a href="http://www.futsalunitedsaigon.com" class="cls_logo">
-															<img src="wp-content/themes/futsalunitedsaigon.com/_images/logo.png" alt="logo" />
+															<img src="<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-content/themes/futsalunitedsaigon.com/_images/fust_logo.png" width="144" height="143" alt="logo" />
 															</a>
 														</div>
 														<div class="cls_headr_right_wrapper">
@@ -194,13 +210,15 @@
 																	<div class="menu-bottom-menu-container">
 																		<ul id="menu-bottom-menu" class="cls_top_menu">
 																			<li id="menu-item-309" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor menu-item-has-children menu-item-309">
-																				<a href="http://www.futsalunitedsaigon.com/category/tin-tuc/">Tin Tức</a>
+																				<a href="<?php echo base_url();?>tin-tuc">Tin Tức</a>
 																				<ul class="sub-menu">
-																					<li id="menu-item-310" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor menu-item-310"><a href="http://www.futsalunitedsaigon.com/category/tin-tuc/">Tin tức mới</a></li>
-																					<li id="menu-item-246" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-246"><a href="http://www.futsalunitedsaigon.com/category/tin-tuc/tin-cau-lac-bo/">Tin tức CLB</a></li>
-																					<li id="menu-item-804" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-804"><a href="http://www.futsalunitedsaigon.com/category/tin-tuc/tin-futsal/futsal-quoc-te/">Futsal quốc tế</a></li>
-																					<li id="menu-item-803" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-803"><a href="http://www.futsalunitedsaigon.com/category/tin-tuc/tin-futsal/futsal-trong-nuoc/">Futsal trong nước</a></li>
-																					<li id="menu-item-247" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-247"><a href="http://www.futsalunitedsaigon.com/category/tin-tuc/truyen-thong/">Truyền thông</a></li>
+																					<?php 
+																					foreach($list_cate as $l_cate)
+																					{
+																					
+																					?>
+																					<li id="menu-item-<?php echo $l_cate['id_cate']?>" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-<?php echo $l_cate['id_cate']?>"><a href="<?php echo base_url();?>c/<?php echo $l_cate['id_cate']?>-<?php echo  mb_strtolower(url_title(removesign($l_cate['title_cate'])))?>"><?php echo $l_cate['title_cate']?></a></li>
+																					<?php } ?>
 																				</ul>
 																			</li>
 																			<li id="menu-item-633" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-633">
@@ -321,8 +339,14 @@
 																			</div>
 																			<div class="cls-field-content">
 																			<?php echo $new_detail[0]['content_new']?>
+																			
 																			</div>
+																			
 																		</li>
+																		<div class="fb-like" data-href="<?php echo full_url_($_SERVER);?>" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
+																		<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+<g:plusone></g:plusone>
+<div class="fb-comments" data-href="<?php echo full_url_($_SERVER);?>" data-width="455" data-numposts="5" data-colorscheme="light"></div>
 																	</ul>
 																</div>
 															</article>
