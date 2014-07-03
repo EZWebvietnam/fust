@@ -218,9 +218,9 @@ if (defined('ENVIRONMENT'))
     define('DB_USER','0936222844fust');
     define('DB_PASS','aA123456');
     define('ROT_DIR','/');
-    define('BASE_URL','http://futsalunitedsaigon.com/');
+    define('BASE_URL','http://futsalunitedsaigon.com/beta');
     define('MAIL_ADMIN','giangbeoit@gmail.com');
-    define('PATH_FOLDER',$_SERVER['DOCUMENT_ROOT']);
+    define('PATH_FOLDER','/export/linux/www/com/l/a/saigonfutsal/3/9/0936222844.H1039/futsalunitedsaigon.com/beta');
  }
 require_once BASEPATH.'core/CodeIgniter.php';
 
