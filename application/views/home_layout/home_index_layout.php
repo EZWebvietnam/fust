@@ -194,13 +194,15 @@
 																	<div class="menu-bottom-menu-container">
 																		<ul id="menu-bottom-menu" class="cls_top_menu">
 																			<li id="menu-item-309" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-309">
-																				<a href="http://www.futsalunitedsaigon.com/category/tin-tuc/">Tin Tức</a>
+																				<a href="<?php echo base_url();?>tin-tuc">Tin Tức</a>
 																				<ul class="sub-menu">
-																					<li id="menu-item-310" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-310"><a href="http://www.futsalunitedsaigon.com/category/tin-tuc/">Tin tức mới</a></li>
-																					<li id="menu-item-246" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-246"><a href="http://www.futsalunitedsaigon.com/category/tin-tuc/tin-cau-lac-bo/">Tin tức CLB</a></li>
-																					<li id="menu-item-804" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-804"><a href="http://www.futsalunitedsaigon.com/category/tin-tuc/tin-futsal/futsal-quoc-te/">Futsal quốc tế</a></li>
-																					<li id="menu-item-803" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-803"><a href="http://www.futsalunitedsaigon.com/category/tin-tuc/tin-futsal/futsal-trong-nuoc/">Futsal trong nước</a></li>
-																					<li id="menu-item-247" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-247"><a href="http://www.futsalunitedsaigon.com/category/tin-tuc/truyen-thong/">Truyền thông</a></li>
+																					<?php 
+																					foreach($list_cate as $l_cate)
+																					{
+																					
+																					?>
+																					<li id="menu-item-<?php echo $l_cate['id_cate']?>" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-<?php echo $l_cate['id_cate']?>"><a href="<?php echo base_url();?>c/<?php echo $l_cate['id_cate']?>-<?php echo  mb_strtolower(url_title(removesign($l_cate['title_cate'])))?>"><?php echo $l_cate['title_cate']?></a></li>
+																					<?php } ?>
 																				</ul>
 																			</li>
 																			<li id="menu-item-633" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-633">
@@ -267,7 +269,7 @@
 												<li class="cls-item-no<?php echo $i;?> cls-row0 cls-item cls-first-in-line cls-bx-slides clearfix">
 													<div class="cls-field-image">
 														<div class="cls-item-value">
-														<a href="http://www.futsalunitedsaigon.com/2014/06/giai-vo-dich-futsal-tphcm-2014-cac-doi-dau-bang-toan-thang/" title="Giải vô địch futsal TPHCM 2014: Các đội đầu bảng toàn thắng">
+														<a href="<?php echo base_url();?>post/<?php echo $new_sl['id_new']?>-<?php echo  mb_strtolower(url_title(removesign($new_sl['title_new'])))?>" title="<?php echo $new_sl['title_new']?>">
 														<?php 
 														if(file_exists(PATH_FOLDER.ROT_DIR.'file/uploads/new/'.$new_sl['image_new']) && is_file(PATH_FOLDER.ROT_DIR.'file/uploads/new/'.$new_sl['image_new']) && $new_sl['image_new']!='')
 														{
@@ -281,7 +283,7 @@
 													</div>
 													<div class="group group cls-slider-description clearfix ">
 														<div class="cls-field-title">
-															<div class="cls-item-value"><a href="http://www.futsalunitedsaigon.com/2014/06/giai-vo-dich-futsal-tphcm-2014-cac-doi-dau-bang-toan-thang/" title="Giải vô địch futsal TPHCM 2014: Các đội đầu bảng toàn thắng"><?php echo $new_sl['title_new']?></a></div>
+															<div class="cls-item-value"><a href="<?php echo base_url();?>post/<?php echo $new_sl['id_new']?>-<?php echo  mb_strtolower(url_title(removesign($new_sl['title_new'])))?>" title="<?php echo $new_sl['title_new']?>"><?php echo $new_sl['title_new']?></a></div>
 														</div>
 														<div class="cls-field-intro">
 															<div class="cls-item-value"><?php echo sub_string(loaibohtmltrongvanban($new_sl['content_new']),227);?></div>
@@ -305,7 +307,7 @@
 												<li class="cls-item-no<?php echo $i;?> cls-row0 cls-item cls-first-in-line cls-bx-pager clearfix">
 													<div class="group group cls-pager-description clearfix ">
 														<div class="cls-field-title">
-															<div class="cls-item-value"><a href="http://www.futsalunitedsaigon.com/2014/06/giai-vo-dich-futsal-tphcm-2014-cac-doi-dau-bang-toan-thang/" title="Giải vô địch futsal TPHCM 2014: Các đội đầu bảng toàn thắng"><?php echo $new_sl['title_new']?></a></div>
+															<div class="cls-item-value"><a href="<?php echo base_url();?>post/<?php echo $new_sl['id_new']?>-<?php echo  mb_strtolower(url_title(removesign($new_sl['title_new'])))?>" title="<?php echo $new_sl['title_new']?>"><?php echo $new_sl['title_new']?></a></div>
 														</div>
 													</div>
 												</li>
@@ -433,7 +435,7 @@
 															<div class="cls_box_header_inner_right">
 																<div class="cls_box_header_left_wrapper">
 																	<div class="cls_box_header_left_inner">
-																		<a href="http://www.futsalunitedsaigon.com/category/tin-tuc/">Tin mới nhất</a>						
+																		<a href="<?php echo base_url();?>tin-tuc">Tin mới nhất</a>						
 																	</div>
 																</div>
 																<div class="cls_box_header_right_wrapper">
@@ -470,7 +472,7 @@
 																		<li class="cls-item-no<?php echo $i;?> cls-row0 <?php echo $class;?>">
 																			<div class="cls-field-image">
 																				<div class="cls-item-value">
-																				<a href="http://www.futsalunitedsaigon.com/2014/06/giai-vo-dich-futsal-tphcm-2014-cac-doi-dau-bang-toan-thang/" title="<?php echo $content_0['title_new']?>">
+																				<a href="<?php echo base_url();?>post/<?php echo $content_0['id_new']?>-<?php echo  mb_strtolower(url_title(removesign($content_0['title_new'])))?>" title="<?php echo $content_0['title_new']?>">
 																				<?php 
 																				if(file_exists(PATH_FOLDER.ROT_DIR.'file/uploads/new/'.$content_0['image_new']) && is_file(PATH_FOLDER.ROT_DIR.'file/uploads/new/'.$content_0['image_new']) && $content_0['image_new']!='')
 																				{
@@ -485,7 +487,7 @@
 																			</div>
 																			<div class="group group cls_post_data clearfix ">
 																				<div class="cls-field-title">
-																					<div class="cls-item-value"><a href="http://www.futsalunitedsaigon.com/2014/06/giai-vo-dich-futsal-tphcm-2014-cac-doi-dau-bang-toan-thang/" title="Giải vô địch futsal TPHCM 2014: Các đội đầu bảng toàn thắng"><?php echo $content_0['title_new']?></a></div>
+																					<div class="cls-item-value"><a href="<?php echo base_url();?>post/<?php echo $content_0['id_new']?>-<?php echo  mb_strtolower(url_title(removesign($content_0['title_new'])))?>" title="<?php echo $content_0['title_new']?>"><?php echo $content_0['title_new']?></a></div>
 																				</div>
 																			</div>
 																		</li>
@@ -511,7 +513,7 @@
 																		<li class="cls-item-no<?php echo $i;?> cls-row1 <?php echo $class;?>">
 																			<div class="cls-field-image">
 																				<div class="cls-item-value">
-																				<a href="http://www.futsalunitedsaigon.com/2014/06/giai-vo-dich-futsal-tphcm-2014-cac-doi-dau-bang-toan-thang/" title="<?php echo $content_1['title_new']?>">
+																				<a href="<?php echo base_url();?>post/<?php echo $content_1['id_new']?>-<?php echo  mb_strtolower(url_title(removesign($content_1['title_new'])))?>" title="<?php echo $content_1['title_new']?>">
 																				<?php 
 																				if(file_exists(PATH_FOLDER.ROT_DIR.'file/uploads/new/'.$content_1['image_new']) && is_file(PATH_FOLDER.ROT_DIR.'file/uploads/new/'.$content_1['image_new']) && $content_1['image_new']!='')
 																				{
@@ -526,7 +528,7 @@
 																			</div>
 																			<div class="group group cls_post_data clearfix ">
 																				<div class="cls-field-title">
-																					<div class="cls-item-value"><a href="http://www.futsalunitedsaigon.com/2014/06/giai-vo-dich-futsal-tphcm-2014-cac-doi-dau-bang-toan-thang/" title="Giải vô địch futsal TPHCM 2014: Các đội đầu bảng toàn thắng"><?php echo $content_1['title_new']?></a></div>
+																					<div class="cls-item-value"><a href="<?php echo base_url();?>post/<?php echo $content_1['id_new']?>-<?php echo  mb_strtolower(url_title(removesign($content_1['title_new'])))?>" title="<?php echo $content_1['title_new']?>"><?php echo $content_1['title_new']?></a></div>
 																				</div>
 																			</div>
 																		</li>
@@ -552,7 +554,7 @@
 																		<li class="cls-item-no<?php echo $i;?> cls-row1 <?php echo $class;?>">
 																			<div class="cls-field-image">
 																				<div class="cls-item-value">
-																				<a href="http://www.futsalunitedsaigon.com/2014/06/giai-vo-dich-futsal-tphcm-2014-cac-doi-dau-bang-toan-thang/" title="<?php echo $content_2['title_new']?>">
+																				<a href="<?php echo base_url();?>post/<?php echo $content_2['id_new']?>-<?php echo  mb_strtolower(url_title(removesign($content_2['title_new'])))?>" title="<?php echo $content_2['title_new']?>">
 																				<?php 
 																				if(file_exists(PATH_FOLDER.ROT_DIR.'file/uploads/new/'.$content_2['image_new']) && is_file(PATH_FOLDER.ROT_DIR.'file/uploads/new/'.$content_2['image_new']) && $content_2['image_new']!='')
 																				{
@@ -567,7 +569,7 @@
 																			</div>
 																			<div class="group group cls_post_data clearfix ">
 																				<div class="cls-field-title">
-																					<div class="cls-item-value"><a href="http://www.futsalunitedsaigon.com/2014/06/giai-vo-dich-futsal-tphcm-2014-cac-doi-dau-bang-toan-thang/" title="Giải vô địch futsal TPHCM 2014: Các đội đầu bảng toàn thắng"><?php echo $content_2['title_new']?></a></div>
+																					<div class="cls-item-value"><a href="<?php echo base_url();?>post/<?php echo $content_2['id_new']?>-<?php echo  mb_strtolower(url_title(removesign($content_2['title_new'])))?>" title="<?php echo $content_2['title_new']?>"><?php echo $content_2['title_new']?></a></div>
 																				</div>
 																			</div>
 																		</li>
@@ -600,7 +602,7 @@
 																		<li class="cls-item-no<?php echo $j;?> cls-row0 <?php echo $class_li;?>">
 																			<div class="group group cls_post_data clearfix ">
 																				<div class="cls-field-title">
-																					<div class="cls-item-value"><a href="http://www.futsalunitedsaigon.com/2014/06/16-doi-nam-va-8-doi-nu-tham-du-giai-vo-dich-futsal-sinh-vien-the-gioi-2014/" title="<?php echo $list_new_li_0['title_new']?>"><?php echo $list_new_li_0['title_new']?></a></div>
+																					<div class="cls-item-value"><a href="<?php echo base_url();?>post/<?php echo $list_new_li_0['id_new']?>-<?php echo  mb_strtolower(url_title(removesign($list_new_li_0['title_new'])))?>" title="<?php echo $list_new_li_0['title_new']?>"><?php echo $list_new_li_0['title_new']?></a></div>
 																				</div>
 																			</div>
 																		</li>
@@ -622,7 +624,7 @@
 																		<li class="cls-item-no<?php echo $j;?> cls-row1 <?php echo $class_li;?>">
 																			<div class="group group cls_post_data clearfix ">
 																				<div class="cls-field-title">
-																					<div class="cls-item-value"><a href="http://www.futsalunitedsaigon.com/2014/06/16-doi-nam-va-8-doi-nu-tham-du-giai-vo-dich-futsal-sinh-vien-the-gioi-2014/" title="<?php echo $list_new_li_1['title_new']?>"><?php echo $list_new_li_1['title_new']?></a></div>
+																					<div class="cls-item-value"><a href="<?php echo base_url();?>post/<?php echo $list_new_li_1['id_new']?>-<?php echo  mb_strtolower(url_title(removesign($list_new_li_1['title_new'])))?>" title="<?php echo $list_new_li_1['title_new']?>"><?php echo $list_new_li_1['title_new']?></a></div>
 																				</div>
 																			</div>
 																		</li>
@@ -644,7 +646,7 @@
 																		<li class="cls-item-no<?php echo $j;?> cls-row2 <?php echo $class_li;?>">
 																			<div class="group group cls_post_data clearfix ">
 																				<div class="cls-field-title">
-																					<div class="cls-item-value"><a href="http://www.futsalunitedsaigon.com/2014/06/16-doi-nam-va-8-doi-nu-tham-du-giai-vo-dich-futsal-sinh-vien-the-gioi-2014/" title="<?php echo $list_new_li_2['title_new']?>"><?php echo $list_new_li_2['title_new']?></a></div>
+																					<div class="cls-item-value"><a href="<?php echo base_url();?>post/<?php echo $list_new_li_2['id_new']?>-<?php echo  mb_strtolower(url_title(removesign($list_new_li_2['title_new'])))?>" title="<?php echo $list_new_li_2['title_new']?>"><?php echo $list_new_li_2['title_new']?></a></div>
 																				</div>
 																			</div>
 																		</li>
@@ -666,7 +668,7 @@
 																		<li class="cls-item-no<?php echo $j;?> cls-row2 <?php echo $class_li;?>">
 																			<div class="group group cls_post_data clearfix ">
 																				<div class="cls-field-title">
-																					<div class="cls-item-value"><a href="http://www.futsalunitedsaigon.com/2014/06/16-doi-nam-va-8-doi-nu-tham-du-giai-vo-dich-futsal-sinh-vien-the-gioi-2014/" title="<?php echo $list_new_li_3['title_new']?>"><?php echo $list_new_li_3['title_new']?></a></div>
+																					<div class="cls-item-value"><a href="<?php echo base_url();?>post/<?php echo $list_new_li_3['id_new']?>-<?php echo  mb_strtolower(url_title(removesign($list_new_li_3['title_new'])))?>" title="<?php echo $list_new_li_3['title_new']?>"><?php echo $list_new_li_3['title_new']?></a></div>
 																				</div>
 																			</div>
 																		</li>
@@ -696,7 +698,7 @@
 															<div class="cls_box_header_inner_right">
 																<div class="cls_box_header_left_wrapper">
 																	<div class="cls_box_header_left_inner">
-																		<a href="http://www.futsalunitedsaigon.com/category/tin-tuc/">Tin FUST</a>						
+																		<a href="<?php echo base_url();?>c/2-tin-tuc-clb">Tin FUST</a>						
 																	</div>
 																</div>
 																<div class="cls_box_header_right_wrapper">
@@ -733,7 +735,7 @@
 																		<li class="cls-item-no<?php echo $i;?> cls-row0 <?php echo $class;?>">
 																			<div class="cls-field-image">
 																				<div class="cls-item-value">
-																				<a href="http://www.futsalunitedsaigon.com/2014/06/giai-vo-dich-futsal-tphcm-2014-cac-doi-dau-bang-toan-thang/" title="<?php echo $content_clb_0['title_new']?>">
+																				<a href="<?php echo base_url();?>post/<?php echo $content_clb_0['id_new']?>-<?php echo  mb_strtolower(url_title(removesign($content_clb_0['title_new'])))?>" title="<?php echo $content_clb_0['title_new']?>">
 																				<?php 
 																				if(file_exists(PATH_FOLDER.ROT_DIR.'file/uploads/new/'.$content_clb_0['image_new']) && is_file(PATH_FOLDER.ROT_DIR.'file/uploads/new/'.$content_clb_0['image_new']) && $content_clb_0['image_new']!='')
 																				{
@@ -748,7 +750,7 @@
 																			</div>
 																			<div class="group group cls_post_data clearfix ">
 																				<div class="cls-field-title">
-																					<div class="cls-item-value"><a href="http://www.futsalunitedsaigon.com/2014/06/giai-vo-dich-futsal-tphcm-2014-cac-doi-dau-bang-toan-thang/" title="Giải vô địch futsal TPHCM 2014: Các đội đầu bảng toàn thắng"><?php echo $content_clb_0['title_new']?></a></div>
+																					<div class="cls-item-value"><a href="<?php echo base_url();?>post/<?php echo $content_clb_0['id_new']?>-<?php echo  mb_strtolower(url_title(removesign($content_clb_0['title_new'])))?>" title="<?php echo $content_clb_0['title_new']?>"><?php echo $content_clb_0['title_new']?></a></div>
 																				</div>
 																			</div>
 																		</li>
@@ -774,7 +776,7 @@
 																		<li class="cls-item-no<?php echo $i;?> cls-row1 <?php echo $class;?>">
 																			<div class="cls-field-image">
 																				<div class="cls-item-value">
-																				<a href="http://www.futsalunitedsaigon.com/2014/06/giai-vo-dich-futsal-tphcm-2014-cac-doi-dau-bang-toan-thang/" title="<?php echo $content_clb_1['title_new']?>">
+																				<a href="<?php echo base_url();?>post/<?php echo $content_clb_1['id_new']?>-<?php echo  mb_strtolower(url_title(removesign($content_clb_1['title_new'])))?>" title="<?php echo $content_clb_1['title_new']?>">
 																				<?php 
 																				if(file_exists(PATH_FOLDER.ROT_DIR.'file/uploads/new/'.$content_clb_1['image_new']) && is_file(PATH_FOLDER.ROT_DIR.'file/uploads/new/'.$content_clb_1['image_new']) && $content_clb_1['image_new']!='')
 																				{
@@ -789,7 +791,7 @@
 																			</div>
 																			<div class="group group cls_post_data clearfix ">
 																				<div class="cls-field-title">
-																					<div class="cls-item-value"><a href="http://www.futsalunitedsaigon.com/2014/06/giai-vo-dich-futsal-tphcm-2014-cac-doi-dau-bang-toan-thang/" title="Giải vô địch futsal TPHCM 2014: Các đội đầu bảng toàn thắng"><?php echo $content_clb_1['title_new']?></a></div>
+																					<div class="cls-item-value"><a href="<?php echo base_url();?>post/<?php echo $content_clb_1['id_new']?>-<?php echo  mb_strtolower(url_title(removesign($content_clb_1['title_new'])))?>" title="<?php echo $content_clb_1['title_new']?>"><?php echo $content_clb_1['title_new']?></a></div>
 																				</div>
 																			</div>
 																		</li>
@@ -815,7 +817,7 @@
 																		<li class="cls-item-no<?php echo $i;?> cls-row1 <?php echo $class;?>">
 																			<div class="cls-field-image">
 																				<div class="cls-item-value">
-																				<a href="http://www.futsalunitedsaigon.com/2014/06/giai-vo-dich-futsal-tphcm-2014-cac-doi-dau-bang-toan-thang/" title="<?php echo $content_clb_2['title_new']?>">
+																				<a href="<?php echo base_url();?>post/<?php echo $content_clb_2['id_new']?>-<?php echo  mb_strtolower(url_title(removesign($content_clb_2['title_new'])))?>" title="<?php echo $content_clb_2['title_new']?>">
 																				<?php 
 																				if(file_exists(PATH_FOLDER.ROT_DIR.'file/uploads/new/'.$content_clb_2['image_new']) && is_file(PATH_FOLDER.ROT_DIR.'file/uploads/new/'.$content_clb_2['image_new']) && $content_clb_2['image_new']!='')
 																				{
@@ -830,7 +832,7 @@
 																			</div>
 																			<div class="group group cls_post_data clearfix ">
 																				<div class="cls-field-title">
-																					<div class="cls-item-value"><a href="http://www.futsalunitedsaigon.com/2014/06/giai-vo-dich-futsal-tphcm-2014-cac-doi-dau-bang-toan-thang/" title="Giải vô địch futsal TPHCM 2014: Các đội đầu bảng toàn thắng"><?php echo $content_clb_2['title_new']?></a></div>
+																					<div class="cls-item-value"><a href="<?php echo base_url();?>post/<?php echo $content_clb_2['id_new']?>-<?php echo  mb_strtolower(url_title(removesign($content_clb_2['title_new'])))?>" title="<?php echo $content_clb_2['title_new']?>"><?php echo $content_clb_2['title_new']?></a></div>
 																				</div>
 																			</div>
 																		</li>

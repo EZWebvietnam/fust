@@ -41,6 +41,10 @@
 $route['default_controller'] = "home/index";
 $route['trang-chu'] = "home/home/index";
 $route['tin-tuc']="home/news/list_new";
+$route['tin-tuc/page/(:any)']="home/news/list_new";
+$route['c/(:any)-(:any)']="home/news/list_post_by_id/$1";
+$route['c/(:any)-(:any)/page/(:any)']="home/news/list_post_by_id/$1";
+$route['post/(:any)-(:any)']="home/news/detail_new/$1";
 $route['quan-tri'] = "admin/login/index";
 $route['quan-tri-vien'] = "admin/productadmin/index";
 $route['quen-mat-khau'] = "admin/login/reset_pass";

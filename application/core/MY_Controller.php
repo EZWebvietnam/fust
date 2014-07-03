@@ -11,22 +11,9 @@ class MY_Controller extends CI_Controller
     }
     public function list_cate()
     {
-        $this->load->model('catehomemodel');
-        $this->data['list_cate']=$this->catehomemodel->list_cate_nav();
+        $this->load->model('catenewhomemodel');
+        $this->data['list_cate']=$this->catenewhomemodel->list_cate();
     }
-    public function count_cart()
-    {
-    	$this->load->model('cartmodel');
-    	if(!empty($_SERVER['HTTP_CLIENT_IP'])){
-			$ip = $_SERVER['HTTP_CLIENT_IP'];
-			}elseif(!empty($_SERVER['HTTP_X_FORWARDED_FOR'])){
-				$ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
-			}else{
-				$ip = $_SERVER['REMOTE_ADDR'];
-			}
-		$count_cart = count($this->cartmodel->list_cart_ip($ip));
-		$this->data['count_cart']=$count_cart;
-	}
     public function load_header()
     {
         $link = PATH_FOLDER . ROT_DIR . 'setting.xml';
@@ -63,25 +50,5 @@ class MY_Controller extends CI_Controller
         }
         $this->data['header']=$data_setting;
     }
-	public function load_faq()
-	{
-		$this->load->model('faqhomemodel');
-		$this->data['list_faq_rand']=$this->faqhomemodel->random_faq();
-	}
-	public function load_yahoo()
-	{
-		$this->load->model('faqhomemodel');
-		$this->data['list_yahoo']=$this->faqhomemodel->list_support();
-	}
-	public function about()
-	{
-		$this->load->model('faqhomemodel');
-		$this->data['about'] = $this->faqhomemodel->about();	
-	}
-	public function rand_image()
-	{
-		$this->load->model('faqhomemodel');
-		$this->data['rand_image'] = $this->faqhomemodel->rand_image();	
-	}
 }
 ?>

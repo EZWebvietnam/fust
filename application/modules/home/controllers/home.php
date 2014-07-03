@@ -4,6 +4,7 @@ class Home extends MY_Controller {
 
     public function __construct() {
         parent::__construct();
+        parent::list_cate();
 		$this->load->model('newshomemodel');
 		$this->load->model('imagehomemodel');
 		$this->load->model('youtubehomemodel');

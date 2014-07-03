@@ -3,13 +3,10 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>Tin Tức | Thai Son Nam FC | Page 4</title>
+		<title>Giải vô địch futsal TPHCM 2014: Các đội đầu bảng toàn thắng | Thai Son Nam FC</title>
 		<link rel="stylesheet" href="<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-content/plugins/sitepress-multilingual-cms/res/css/language-selector.css?v=2.6.0" type="text/css" media="all" />
-		<link rel="profile" href="http://gmpg.org/xfn/11" />
-		<link rel="shortcut icon" href="wp-content/uploads/2013/12/favicon.ico" type="image/x-icon" />
-		<link rel="pingback" href="http://www.futsalunitedsaigon.com/xmlrpc.php" />
+		<link rel="shortcut icon" href="<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-content/uploads/2013/12/favicon.ico" type="image/x-icon" />
 		<meta name='robots' content='noindex,nofollow' />
-		
 		<link rel='stylesheet' id='bbp-child-bbpress-css'  href='<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-content/themes/futsalunitedsaigon.com/css/bbpress.css?ver=2.4.1' type='text/css' media='screen' />
 		<link rel='stylesheet' id='bp-parent-css-css'  href='<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-content/themes/futsalunitedsaigon.com/buddypress/css/buddypress.css?ver=1.8.1' type='text/css' media='screen' />
 		
@@ -21,7 +18,7 @@
 		<link rel='stylesheet' id='tsnfc2013-main-css'  href='<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-content/themes/futsalunitedsaigon.com/_stylesheets/main.css?ver=3.7.3' type='text/css' media='all' />
 		<link rel='stylesheet' id='tablepress-default-css'  href='<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-content/plugins/tablepress/css/default.min.css?ver=1.2' type='text/css' media='all' />
 		<link rel='stylesheet'   href='<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-content/themes/futsalunitedsaigon.com/_stylesheets/match.css' type='text/css' media='screen' />
-		<script type='text/javascript' src=<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-includes/js/jquery/jquery.js?ver=1.10.2'></script>
+		<script type='text/javascript' src='<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-includes/js/jquery/jquery.js?ver=1.10.2'></script>
 		<script type='text/javascript' src='<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
 		<script type='text/javascript'>
 			/* <![CDATA[ */
@@ -29,6 +26,7 @@
 			/* ]]> */
 		</script>
 		<script type='text/javascript' src='<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-content/themes/futsalunitedsaigon.com/buddypress/js/buddypress.js?ver=1.8.1'></script>
+		<script type='text/javascript' src='<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-includes/js/comment-reply.min.js?ver=3.7.3'></script>
 		<script type='text/javascript' src='<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-content/themes/futsalunitedsaigon.com/_javascripts/modernizr.custom.js?ver=3.7.3'></script>
 		<script type='text/javascript' src='<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-content/themes/futsalunitedsaigon.com/_javascripts/browserdetect.js?ver=3.7.3'></script>
 		<script type='text/javascript' src='<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-content/themes/futsalunitedsaigon.com/_assets/jquery.bxslider/jquery.bxslider.js?ver=3.7.3'></script>
@@ -38,14 +36,12 @@
 		<script type='text/javascript' src='<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-content/themes/futsalunitedsaigon.com/_assets/bootstrap/js/bootstrap.min.js?ver=3.7.3'></script>
 		<script type='text/javascript' src='<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-content/themes/futsalunitedsaigon.com/_javascripts/scripts.js?ver=3.7.3'></script>
 		<script type='text/javascript' src='<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-content/plugins/sitepress-multilingual-cms/res/js/jquery.cookie.js?ver=2.6.0'></script>
-		<script type='text/javascript' src='<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-content/themes/futsalunitedsaigon.com/_javascripts/paging.js'></script>
 		<script type='text/javascript'>
 			/* <![CDATA[ */
-			var wpml_browser_redirect_params = {"pageLanguage":"vi","languageUrls":{"vi":"http:\/\/www.futsalunitedsaigon.com\/category\/tin-tuc\/","en":"http:\/\/www.futsalunitedsaigon.com\/en\/category\/news\/"},"cookie":{"name":"_icl_visitor_lang_js","domain":"www.futsalunitedsaigon.com","path":"\/","expiration":24}};
+			var wpml_browser_redirect_params = {"pageLanguage":"vi","languageUrls":{"vi":"http:\/\/www.futsalunitedsaigon.com\/2014\/06\/giai-vo-dich-futsal-tphcm-2014-cac-doi-dau-bang-toan-thang\/","en":"http:\/\/www.futsalunitedsaigon.com\/en\/"},"cookie":{"name":"_icl_visitor_lang_js","domain":"www.futsalunitedsaigon.com","path":"\/","expiration":24}};
 			/* ]]> */
 		</script>
 		<script type='text/javascript' src='<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-content/plugins/sitepress-multilingual-cms/res/js/browser-redirect.js?ver=2.6.0'></script>
-		
 		<meta name="generator" content="WordPress 3.7.3" />
 		<script type="text/javascript">
 			/* <![CDATA[ */
@@ -97,8 +93,10 @@
 		
 		<script type="text/javascript">var icl_lang = 'vi';var icl_home = 'http://www.futsalunitedsaigon.com/';</script>
 		<script type="text/javascript" src="<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-content/plugins/sitepress-multilingual-cms/res/js/sitepress.js"></script>
+		<meta name="generator" content="WPML ver:2.6.0 stt:59,1;0" />
 		<!-- WP-Mobilizer 1.0.6 by Kilukru Media (www.wp-mobilizer.com)-->
 		<!-- /WP-Mobilizer -->
+		
 		<script type="text/javascript">
 			jQuery( document ).ready( function() {
 				jQuery( 'a.confirm').click( function() {
@@ -120,7 +118,7 @@
 			<!-- browser wrapper -->
 			<div id="pf-browser" class="">
 				<!-- site-wrapper -->
-				<div id="pf-site-wrapper" class="archive category category-tin-tuc category-14 paged-4 category-paged-4 full-width custom-background-empty custom-font-enabled cls-panel-close no-js">
+				<div id="pf-site-wrapper" class="single single-post postid-4360 single-format-standard full-width custom-background-empty custom-font-enabled cls-panel-close no-js">
 					<!-- site-inner -->
 					<div id="pf-site-inner" class="vi">
 						<script type="text/javascript">
@@ -148,8 +146,8 @@
 									<div class="cls_headr_top">
 										<div class="cls_language cls_right">
 											<ul>
-												<li class="cls_bg_none"><a href="http://www.futsalunitedsaigon.com/category/tin-tuc/" class="cls_active">Vietnamese</a></li>
-												<li class=""><a href="http://www.futsalunitedsaigon.com/en/category/news/" >English</a></li>
+												<li class="cls_bg_none"><a href="http://www.futsalunitedsaigon.com/2014/06/giai-vo-dich-futsal-tphcm-2014-cac-doi-dau-bang-toan-thang/" class="cls_active">Vietnamese</a></li>
+												<li class=""><a href="http://www.futsalunitedsaigon.com/en/" >English</a></li>
 											</ul>
 										</div>
 										<div class="cls_headr_members cls_right">
@@ -173,7 +171,7 @@
 													<div class="cls_headr_content clearfix">
 														<div class="logo">
 															<a href="http://www.futsalunitedsaigon.com" class="cls_logo">
-															<img src="<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-content/themes/futsalunitedsaigon.com/_images/fust_logo.png" width="144" height="143" alt="logo" />
+															<img src="wp-content/themes/futsalunitedsaigon.com/_images/logo.png" alt="logo" />
 															</a>
 														</div>
 														<div class="cls_headr_right_wrapper">
@@ -195,16 +193,14 @@
 																<div class="cls_top_menu_inner">
 																	<div class="menu-bottom-menu-container">
 																		<ul id="menu-bottom-menu" class="cls_top_menu">
-																			<li id="menu-item-309" class="menu-item menu-item-type-taxonomy menu-item-object-category current-menu-item current-menu-ancestor current-menu-parent menu-item-has-children menu-item-309">
-																				<a href="<?php echo base_url();?>tin-tuc">Tin Tức</a>
+																			<li id="menu-item-309" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor menu-item-has-children menu-item-309">
+																				<a href="http://www.futsalunitedsaigon.com/category/tin-tuc/">Tin Tức</a>
 																				<ul class="sub-menu">
-																					<?php 
-																					foreach($list_cate as $l_cate)
-																					{
-																					
-																					?>
-																					<li id="menu-item-<?php echo $l_cate['id_cate']?>" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-<?php echo $l_cate['id_cate']?>"><a href="<?php echo base_url();?>c/<?php echo $l_cate['id_cate']?>-<?php echo  mb_strtolower(url_title(removesign($l_cate['title_cate'])))?>"><?php echo $l_cate['title_cate']?></a></li>
-																					<?php } ?>
+																					<li id="menu-item-310" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor menu-item-310"><a href="http://www.futsalunitedsaigon.com/category/tin-tuc/">Tin tức mới</a></li>
+																					<li id="menu-item-246" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-246"><a href="http://www.futsalunitedsaigon.com/category/tin-tuc/tin-cau-lac-bo/">Tin tức CLB</a></li>
+																					<li id="menu-item-804" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-804"><a href="http://www.futsalunitedsaigon.com/category/tin-tuc/tin-futsal/futsal-quoc-te/">Futsal quốc tế</a></li>
+																					<li id="menu-item-803" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-803"><a href="http://www.futsalunitedsaigon.com/category/tin-tuc/tin-futsal/futsal-trong-nuoc/">Futsal trong nước</a></li>
+																					<li id="menu-item-247" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-247"><a href="http://www.futsalunitedsaigon.com/category/tin-tuc/truyen-thong/">Truyền thông</a></li>
 																				</ul>
 																			</li>
 																			<li id="menu-item-633" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-633">
@@ -262,7 +258,7 @@
 								<div class="cls_main_content clearfix">
 									<div class="cls_breadcrumb_wrapper">
 										<!-- Breadcrumb NavXT 4.4.0 -->
-										<a title="Go to Thai Son Nam FC." href="http://www.futsalunitedsaigon.com" class="home">Trang Chủ</a> &#047; <span class="cls_category">Tin Tức</span>
+										<a title="Go to Futsal United Saigon FC." href="http://www.futsalunitedsaigon.com" class="home">Trang Chủ</a> &#047; <a title="Go to the Tin Tức category archives." href=<?php echo base_url();?>tin-tuc" class="category">Tin Tức</a> &#047;<a title="Go to the Futsal trong Nước category archives." href="<?php echo base_url();?>c/<?php echo $cate_detail[0]['id_cate']?>-<?php echo  mb_strtolower(url_title(removesign($cate_detail[0]['title_cate'])))?>" class="category"><?php echo $cate_detail[0]['title_cate']?></a> &#047; <?php echo $new_detail[0]['title_new']?>
 									</div>
 									<div class="cls_layout_wrapper three_col_layout clearfix">
 										<div class="cls_layout_inner col1">
@@ -287,18 +283,19 @@
 														<?php } ?>
 													</ul>
 												</div>
+												
 											</div>
 										</div>
 										<div class="cls_layout_inner col2">
-											<!-- box lastest news -->
-											<div class="cls_box_wrapper clearfix cls_list_news_in_cat_wrapper clearfix">
+											<!-- box single news display -->
+											<div class="cls_box_wrapper clearfix cls_single_news_wrapper clearfix">
 												<div class="cls_box_inner">
 													<div class="cls_box_header_wrapper clearfix">
 														<div  class="cls_box_header_inner_left">
 															<div class="cls_box_header_inner_right">
 																<div class="cls_box_header_left_wrapper">
 																	<div class="cls_box_header_left_inner">
-																		
+																		<a href="<?php echo base_url();?>c/<?php echo $cate_detail[0]['id_cate']?>-<?php echo  mb_strtolower(url_title(removesign($cate_detail[0]['title_cate'])))?>/"><?php echo $cate_detail[0]['title_cate'];?></a>
 																	</div>
 																</div>
 																<div class="cls_box_header_right_wrapper">
@@ -309,30 +306,80 @@
 														</div>
 														<!-- /cls_box_header_inner -->
 													</div>
-													<?php echo $this->load->view($main_content);?>
+													<!-- /cls_box_header_wrapper -->
+													<div class="cls_box_content_wrapper">
+														<div class="cls_box_content_inner">
+															<article id="post-4360" class="post-4360 post type-post status-publish format-standard hentry category-futsal-trong-nuoc">
+																<div class="cls-post-listing clearfix">
+																	<ul class="non-ajax clearfix">
+																		<li class="cls-item-no0 cls-row0 cls-item cls-first-in-line clearfix cls-last-in-line cls-only-in-line">
+																			<div class="cls-field-title">
+																				<div class="cls-item-value"><?php echo $new_detail[0]['title_new']?></div>
+																			</div>
+																			<div class="cls-field-date">
+																				<div class="cls-item-value"><?php echo date('H:i',$new_detail[0]['create_date']);?> | <?php echo date('d/m/Y',$new_detail[0]['create_date']);?></div>
+																			</div>
+																			<div class="cls-field-content">
+																			<?php echo $new_detail[0]['content_new']?>
+																			</div>
+																		</li>
+																	</ul>
+																</div>
+															</article>
+															<!-- #post -->
+														</div>
+													</div>
+													<!-- /cls_box_content_wrapper -->
+													<div class="cls_box_footer_wrapper">
+													</div>
+													<!--/cls_box_footer_wrapper -->
 												</div>
 												<!--/cls_box_inner -->
 											</div>
 											<!--/cls_box_wrapper -->
-											<script type="text/javascript">
-												//var strText = jQuery('.cls_left_panel_menu_wrapper ul li:first-child a').html()
-												<?php 
-												if(isset($cate_detail))
-												{
-													?> 
-													var strText = "<?php echo $cate_detail[0]['title_cate']?>";
-													<?php } else { ?> 
-													var strText = 'Tin tức';
-													<?php
-														
-													}
-												
-												?>
-												
-												jQuery('.cls_list_news_in_cat_wrapper .cls_box_header_left_inner').html(strText);
-												jQuery('.cls_breadcrumb_wrapper span.cls_category').html(strText);
-											</script>
-											<!-- /End box lastest news -->
+											<!-- /End single news display -->
+											<!-- box related news display -->
+											<div class="cls_box_wrapper clearfix cls_relative_news_wrapper clearfix">
+												<div class="cls_box_inner">
+													<div class="cls_header_title_wrapper clearfix">
+														<h2>Bài Liên Quan:</h2>
+													</div>
+													<!-- /cls_header_title_wrapper -->
+													<div class="cls_box_content_wrapper">
+														<div class="cls_box_content_inner">
+															<div class="cls_box_content_row cls_second_content">
+																<div class="cls-post-listing clearfix">
+																	<ul class="non-ajax clearfix">
+																	<?php 
+																	$i = 0;
+																	foreach($list_new_by_cate as $new_b_cate)
+																	{
+																	
+																	?>
+																		<li class="cls-item-no<?php echo $i;?> cls-row<?php echo $i;?> cls-item cls-first-in-line clearfix cls-last-in-line cls-only-in-line">
+																			<div class="group group cls_post_data clearfix ">
+																				<div class="cls-field-title">
+																					<div class="cls-item-value"><a href="<?php echo base_url();?>post/<?php echo $new_b_cate['id_new']?>-<?php echo  mb_strtolower(url_title(removesign($new_b_cate['title_new'])))?>" title="<?php echo $new_b_cate['title_new']?>"><?php echo $new_b_cate['title_new']?></a></div>
+																				</div>
+																			</div>
+																		</li>
+																		<?php $i++;} ?>
+																		
+																		
+																	</ul>
+																</div>
+															</div>
+														</div>
+													</div>
+													<!-- /cls_box_content_wrapper -->
+													<div class="cls_box_footer_wrapper">
+													</div>
+													<!--/cls_box_footer_wrapper -->
+												</div>
+												<!--/cls_box_inner -->
+											</div>
+											<!--/cls_box_wrapper -->
+											<!-- /End related news display -->
 										</div>
 										<div class="cls_layout_inner col3">
 											<!--box most read posts-->
@@ -499,7 +546,7 @@
 											</div>
 											<!--/cls_box_wrapper -->
 											<!--box forum-->
-											
+									
 											<!--/cls_box_wrapper -->
 											<!--end forum-->
 										</div>
@@ -548,13 +595,13 @@
 													<div class="cls_footer_info clearfix">
 														<div class="menu-bottom-menu-container">
 															<ul id="menu-bottom-menu-1" class="cls_bottom_menu">
-																<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-menu-item current-menu-ancestor current-menu-parent menu-item-has-children menu-item-309">
+																<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor menu-item-has-children menu-item-309">
 																	<a href="http://www.futsalunitedsaigon.com/category/tin-tuc/">Tin Tức</a>
 																	<ul class="sub-menu">
-																		<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-menu-item menu-item-310"><a href="http://www.futsalunitedsaigon.com/category/tin-tuc/">Tin tức mới</a></li>
+																		<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor menu-item-310"><a href="http://www.futsalunitedsaigon.com/category/tin-tuc/">Tin tức mới</a></li>
 																		<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-246"><a href="http://www.futsalunitedsaigon.com/category/tin-tuc/tin-cau-lac-bo/">Tin tức CLB</a></li>
 																		<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-804"><a href="http://www.futsalunitedsaigon.com/category/tin-tuc/tin-futsal/futsal-quoc-te/">Futsal quốc tế</a></li>
-																		<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-803"><a href="http://www.futsalunitedsaigon.com/category/tin-tuc/tin-futsal/futsal-trong-nuoc/">Futsal trong nước</a></li>
+																		<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-803"><a href="http://www.futsalunitedsaigon.com/category/tin-tuc/tin-futsal/futsal-trong-nuoc/">Futsal trong nước</a></li>
 																		<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-247"><a href="http://www.futsalunitedsaigon.com/category/tin-tuc/truyen-thong/">Truyền thông</a></li>
 																	</ul>
 																</li>
@@ -624,7 +671,7 @@
 			<!-- /browser wrapper -->
 		</div>
 		<!-- /platform wrapper -->
-		<!-- Generated in 0.208 seconds. (311 q) -->
+		<!-- Generated in 0.187 seconds. (283 q) -->
 		<script type='text/javascript' src='<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-content/themes/futsalunitedsaigon.com/_javascripts/navigation.js?ver=1.0'></script>
 	</body>
 </html>
