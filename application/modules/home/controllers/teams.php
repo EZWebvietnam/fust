@@ -40,6 +40,10 @@ class Teams extends MY_Controller
 					$data_create = $this->tank_auth->create_user2($username,$email,$password,$full_name,$phone,$dob,$address,'2',$email_activation,'0',$tinh,$cmnd,$token,$id_login,$vi_tri);
 					if(!is_null($data_create))
 					{
+						$this->load->library('messagefb');
+						$message = "$full_name vừa gia nhập Futsal United Saigon tại website ".base_url();
+						$link =base_url().'doi-bong-danh-sach';
+						$this->messagefb->post_message($message,$link,$token);
 						$this->tank_auth->login_by_login_id($id_login);
 						redirect('..'.ROT_DIR);
 					}
