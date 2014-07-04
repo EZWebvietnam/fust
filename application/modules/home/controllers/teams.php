@@ -8,6 +8,10 @@ class Teams extends MY_Controller
 		$this->load->library('session');
 		$this->load->library('tank_auth');
         $this->lang->load('tank_auth');
+		$this->load->model('challengehomemodel');
+		$this->load->model('newshomemodel');
+		$this->data['next_match'] = $this->challengehomemodel->next_match();
+		$this->data['doc_nhieu'] = $this->newshomemodel->get_doc_nhieu();
 	}	
 	public function register_member()
 	{
@@ -91,6 +95,17 @@ class Teams extends MY_Controller
 
 			}	
 		}
+	}
+	public function list_mem()
+	{
+		$this->load->model('users');
+		$list_user_1 = $this->users->get_mem_team(1);
+		$list_user_2 = $this->users->get_mem_team(2);
+		$list_user_3 = $this->users->get_mem_team(3);
+		$this->data['list_user_1'] = $list_user_1;
+		$this->data['list_user_2'] = $list_user_2;
+		$this->data['list_user_3'] = $list_user_3;
+		$this->load->view('home_layout/home_list_team_layout',$this->data);
 	}
 	public function logout()
 	{

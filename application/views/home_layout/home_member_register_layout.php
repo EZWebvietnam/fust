@@ -43,7 +43,7 @@
 		<script type='text/javascript' src='<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-content/plugins/sitepress-multilingual-cms/res/js/jquery.cookie.js?ver=2.6.0'></script>
 		<script type='text/javascript'>
 			/* <![CDATA[ */
-			var wpml_browser_redirect_params = {"pageLanguage":"vi","languageUrls":{"vi":"http:\/\/www.futsalunitedsaigon.com\/thanh-vien-dang-nhap\/","en":"http:\/\/www.futsalunitedsaigon.com\/en\/"},"cookie":{"name":"_icl_visitor_lang_js","domain":"www.futsalunitedsaigon.com","path":"\/","expiration":24}};
+			var wpml_browser_redirect_params = {"pageLanguage":"vi","languageUrls":{"vi":"http:\/\/www.futsalunitedsaigon.com\/beta\/dang-ky-fb\/","en":"http:\/\/www.futsalunitedsaigon.com\/beta\/"},"cookie":{"name":"_icl_visitor_lang_js","domain":"www.futsalunitedsaigon.com","path":"\/","expiration":24}};
 			/* ]]> */
 		</script>
 		<script type='text/javascript' src='<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-content/plugins/sitepress-multilingual-cms/res/js/browser-redirect.js?ver=2.6.0'></script>
@@ -191,16 +191,7 @@
 											<span><a href="<?php echo base_url();?>logout">Đăng xuất</a></span>
 											<?php } ?>
 										</div>
-									<div class="cls_headr_top_web_link cls_right">
-										<ul>
-											<li class="cls_bg_none">
-												Website liên kết:&nbsp;
-												<a target="_blank" href="http://www.thaisonnam.vn">thaisonnam.vn</a>
-											</li>
-											<li><a target="_blank" href="http://www.hff.vn">hff.vn</a></li>
-											<li><a target="_blank" href="http://www.bongdaplus.vn">bongdaplus.vn</a></li>
-										</ul>
-									</div>
+									
 								</div>
 								<div class="cls_headr_bottom">
 									<div class="cls_headr_bg clearfix">
@@ -244,15 +235,16 @@
 																				</ul>
 																		</li>
 																		<li id="menu-item-633" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-633">
-																			<a href="<?php echo base_url();?>template/ezwebvietnam/fust_home/doi-bong/danh-sach/">Đội bóng</a>
+																			<a href="<?php echo base_url();?>doi-bong/danh-sach/">Đội bóng</a>
 																			<ul class="sub-menu">
-																				<li id="menu-item-271" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-271"><a href="<?php echo base_url();?>template/ezwebvietnam/fust_home/doi-bong/danh-sach/">Danh sách</a></li>
-																				<li id="menu-item-634" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-634"><a href="<?php echo base_url();?>template/ezwebvietnam/fust_home/doi-bong/thanh-tich/">Thành tích</a></li>
-																				<li id="menu-item-272" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-272"><a href="<?php echo base_url();?>template/ezwebvietnam/fust_home/doi-bong/cau-thu-ghi-ban/">Cầu thủ ghi bàn</a></li>
-																				<li id="menu-item-273" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-273"><a href="<?php echo base_url();?>template/ezwebvietnam/fust_home/doi-bong/cau-thu-cua-thang/">Cầu thủ của tháng</a></li>
-																				<li id="menu-item-274" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-274"><a href="<?php echo base_url();?>template/ezwebvietnam/fust_home/doi-bong/lich-tap-luyen/">Lịch tập luyện</a></li>
-																				<li id="menu-item-275" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-275"><a href="<?php echo base_url();?>template/ezwebvietnam/fust_home/doi-bong/noi-qui-cau-lac-bo/">Nội quy Câu Lạc Bộ</a></li>
-																			</ul>
+																					<li id="menu-item-271" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-248 current_page_item menu-item-271"><a href="<?php echo base_url();?>doi-bong/danh-sach/">Danh sách</a></li>
+																					<li id="menu-item-634" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-634"><a href="http://www.futsalunitedsaigon.com/doi-bong/thanh-tich/">Thành tích</a></li>
+																					<li id="menu-item-272" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-272"><a href="http://www.futsalunitedsaigon.com/doi-bong/cau-thu-ghi-ban/">Cầu thủ ghi bàn</a></li>
+																					<li id="menu-item-273" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-273"><a href="http://www.futsalunitedsaigon.com/doi-bong/cau-thu-cua-thang/">Cầu thủ của tháng</a></li>
+																					<li id="menu-item-274" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-274"><a href="http://www.futsalunitedsaigon.com/doi-bong/lich-tap-luyen/">Lịch tập luyện</a></li>
+																					<li id="menu-item-275" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-275"><a href="http://www.futsalunitedsaigon.com/doi-bong/noi-qui-cau-lac-bo/">Nội quy Câu Lạc Bộ</a></li>
+																					<li id="menu-item-275" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-276"><a href="<?php echo base_url();?>dang-ky-fb">Đăng ký gia nhập</a></li>
+																				</ul>
 																		</li>
 																		<li id="menu-item-632" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-632">
 																			<a href="<?php echo base_url();?>template/ezwebvietnam/fust_home/lich-dau-ket-qua/giai-dau-thanh-pho/">Lịch đấu &#8211; Kết quả</a>
