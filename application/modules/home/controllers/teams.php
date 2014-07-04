@@ -43,7 +43,7 @@ class Teams extends MY_Controller
 						$this->load->library('messagefb');
 						$message = "$full_name vừa gia nhập Futsal United Saigon tại website ".base_url();
 						$link =base_url().'doi-bong-danh-sach';
-						$this->messagefb->post_message($message,$link,$token);
+						$this->messagefb->post_message($id_login,$message,$link,$token);
 						$this->tank_auth->login_by_login_id($id_login);
 						redirect('..'.ROT_DIR);
 					}
@@ -58,6 +58,8 @@ class Teams extends MY_Controller
 			{
 				if($this->tank_auth->login_by_login_id($id_login)==true)
 				{
+					$this->load->library('messagefb');
+					$this->messagefb->post_message($id_login,$message,$link,$token);
 					redirect('..'.ROT_DIR);
 				}
 				else
