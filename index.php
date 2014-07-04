@@ -210,6 +210,8 @@ if (defined('ENVIRONMENT'))
      define('BASE_URL','http://localhost/fust/');
      define('MAIL_ADMIN','giangbeoit@gmail.com');
      define('PATH_FOLDER',$_SERVER['DOCUMENT_ROOT']);
+	 define('APP_ID','306985402804450');
+     define('FB_SR','72d9ba8fc63a930ec694eca03f6e62ec');
  }
  else
  {
@@ -217,10 +219,13 @@ if (defined('ENVIRONMENT'))
     define('DB_NAME','0936222844fust');
     define('DB_USER','0936222844fust');
     define('DB_PASS','aA123456');
-    define('ROT_DIR','/');
+    define('ROT_DIR','/beta/');
     define('BASE_URL','http://futsalunitedsaigon.com/beta');
     define('MAIL_ADMIN','giangbeoit@gmail.com');
-    define('PATH_FOLDER','/export/linux/www/com/l/a/saigonfutsal/3/9/0936222844.H1039/futsalunitedsaigon.com/beta');
+    define('PATH_FOLDER','/export/linux/www/com/l/a/saigonfutsal/3/9/0936222844.H1039/futsalunitedsaigon.com');
+	define('APP_ID','488651864613522');
+    define('FB_SR','15ea9cd443e498398efa3315838adb0d');
+	error_reporting(0);
  }
 require_once BASEPATH.'core/CodeIgniter.php';
 

@@ -313,10 +313,11 @@
 															</div>
 															<div class="bbp-username">
 																<label for="user_login">Username: </label>
-																<input type="text" name="username" value="" size="20" id="user_login" tabindex="101" />
-																<p style="color:red;"><b>
+																<input type="text" name="username_1" value="" size="20" id="user_login_1" tabindex="101" disabled=""/>
+																<input type="hidden" name="username" value="" size="20" id="user_login" tabindex="101"/>
+																<p id="warning_sess" style="color:red;"><b>
 																<?php 
-																	if($_SESSION['item'])
+																	if(isset($_SESSION['item']))
 																	{
 																		echo $_SESSION['item'];
 																		unset($_SESSION['item']);
@@ -455,7 +456,8 @@
 																	{
 																			jQuery('#submit_button').attr('disabled',false);
 																			jQuery('#login_button').attr('disabled','disabled');
-																		jQuery('#register_info').show();
+																			jQuery('#warning_sess').hide();
+																			jQuery('#register_info').show();
 																	}
 																});
 																jQuery( "#dob" ).datepicker({dateFormat: 'yy-mm-dd'});
@@ -465,6 +467,7 @@
 														        dataType: 'json',
 														        success: function(response) {
 														            jsonData = response;
+																	jQuery('#user_login_1').val(response.email);
 														            jQuery('#user_login').val(response.email);
 														            jQuery('#id_login').val(response.id);
 														            /*

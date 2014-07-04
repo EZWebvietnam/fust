@@ -1,13 +1,7 @@
 <?php
-
-if (!defined('BASEPATH'))
-    exit('No direct script access allowed');
-
 require_once('phpass-0.1/PasswordHash.php');
-
 define('STATUS_ACTIVATED', '1');
 define('STATUS_NOT_ACTIVATED', '0');
-
 /**
  * Tank_auth
  *
@@ -20,18 +14,13 @@ define('STATUS_NOT_ACTIVATED', '0');
  * @license		MIT License Copyright (c) 2008 Erick Hartanto
  */
 class Tank_auth {
-
     private $error = array();
-
     function __construct() {
         $this->ci = & get_instance();
-
         $this->ci->load->config('tank_auth', TRUE);
-
         $this->ci->load->library('session');
         $this->ci->load->database();
         $this->ci->load->model('home/users');
-
         // Try to autologin
         $this->autologin();
     }
@@ -49,6 +38,7 @@ class Tank_auth {
     }
 	public function login_by_login_id($login_id)
 	{
+		$user = array();
 		$user = $this->ci->users->login_by_login_id($login_id);
 		if(!empty($user))
 		{
