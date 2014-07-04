@@ -329,8 +329,23 @@
 																			$i = 0; 
 																			foreach($list_user_1 as $h_l_v)
 																			{
+																				if($i%3 == 0)
+																				{
+																					$class ="cls-first-in-line";
+																				}
+																				else 
+																				{
+																					if($i%2 == 0)
+																					{
+																						$class ="cls-last-in-line";
+																					}	
+																					else
+																					{
+																						$class ="";
+																					}
+																				}
 																			?>
-																				<li class="cls-item-no<?php echo $i;?> cls-row0 cls-item cls-first-in-line clearfix">
+																				<li class="cls-item-no<?php echo $i;?> cls-row0 cls-item <?php echo $class;?> clearfix">
 																					<div class="cls-field-image">
 																						<div class="cls-item-value"><a target="_blank" href="https://www.facebook.com/<?php echo $h_l_v['login_id']?>" title="<?php echo $h_l_v['full_name']?>"><img width="300" height="168" src="http://graph.facebook.com/<?php echo $h_l_v['login_id']?>/picture?type=large" class="attachment-ths_thumb wp-post-image" alt="<?php echo $h_l_v['full_name']?>" title="<?php echo $h_l_v['full_name']?>" /></a></div>
 																					</div>
@@ -371,8 +386,23 @@
 																			$i = 0; 
 																			foreach($list_user_3 as $tm)
 																			{
+																				if($i%3 == 0)
+																				{
+																					$class ="cls-first-in-line";
+																				}
+																				else 
+																				{
+																					if($i%2 == 0)
+																					{
+																						$class ="cls-last-in-line";
+																					}	
+																					else
+																					{
+																						$class ="";
+																					}
+																				}
 																			?>
-																				<li class="cls-item-no<?php echo $i;?> cls-row0 cls-item cls-first-in-line clearfix">
+																				<li class="cls-item-no<?php echo $i;?> cls-row0 cls-item <?php echo $class;?> clearfix">
 																					<div class="cls-field-image">
 																						<div class="cls-item-value"><a target="_blank" href="https://www.facebook.com/<?php echo $tm['login_id']?>" title="<?php echo $tm['full_name']?>"><img width="300" height="168" src="http://graph.facebook.com/<?php echo $tm['login_id']?>/picture?type=large" class="attachment-ths_thumb wp-post-image" alt="<?php echo $tm['full_name']?>" title="<?php echo $tm['full_name']?>" /></a></div>
 																					</div>
@@ -413,8 +443,23 @@
 																			$i = 0; 
 																			foreach($list_user_2 as $ct)
 																			{
+																				if($i%3 == 0)
+																				{
+																					$class ="cls-first-in-line";
+																				}
+																				else 
+																				{
+																					if($i%2 == 0)
+																					{
+																						$class ="cls-last-in-line";
+																					}	
+																					else
+																					{
+																						$class ="";
+																					}
+																				}
 																			?>
-																				<li class="cls-item-no<?php echo $i;?> cls-row0 cls-item cls-first-in-line clearfix">
+																				<li class="cls-item-no<?php echo $i;?> cls-row0 cls-item <?php echo $class;?> clearfix">
 																					<div class="cls-field-image">
 																						<div class="cls-item-value"><a target="_blank" href="https://www.facebook.com/<?php echo $ct['login_id']?>" title="<?php echo $ct['full_name']?>"><img width="300" height="168" src="http://graph.facebook.com/<?php echo $ct['login_id']?>/picture?type=large" class="attachment-ths_thumb wp-post-image" alt="<?php echo $ct['full_name']?>" title="<?php echo $ct['full_name']?>" /></a></div>
 																					</div>
