@@ -12,9 +12,11 @@ class Home extends MY_Controller {
 		$this->load->model('imagehomemodel');
 		$this->load->model('youtubehomemodel');
 		$this->load->model('challengehomemodel');
+		$this->load->model('abouthomemodel');
     }
 
     public function index() {
+		
 		$this->data['news_slide'] = $this->newshomemodel->list_new_slide();
 		$this->data['list_new_content'] = $this->newshomemodel->list_new_content();
 		$list_new = array();
@@ -22,6 +24,7 @@ class Home extends MY_Controller {
 		{
 			$list_new[$va['id_new']] = $va['id_new'];
 		}
+		$this->data['about_fust'] = $this->abouthomemodel->get_about(1);
 		$this->data['list_new_clb'] = $this->newshomemodel->list_new_clb_content();
 		$this->data['list_new_li'] = $this->newshomemodel->list_new_li($list_new);
 		$this->data['list_image'] = $this->imagehomemodel->list_image();

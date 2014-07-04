@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>Thai Son Nam FC | Thai Son Nam FC</title>
+		<title>Futsal United Saigon FC | Futsal United Saigon FC</title>
 		<link rel="stylesheet" href="<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-content/plugins/sitepress-multilingual-cms/res/css/language-selector.css?v=2.6.0" type="text/css" media="all" />
 		<link rel="profile" href="http://gmpg.org/xfn/11" />
 		<link rel="shortcut icon" href="http://www.futsalunitedsaigon.com/wp-content/uploads/2013/12/favicon.ico" type="image/x-icon" />
@@ -1316,12 +1316,11 @@
 																<ul class="non-ajax clearfix">
 																	<li class="cls-item-no0 cls-row0 cls-item cls-first-in-line clearfix cls-last-in-line cls-only-in-line">
 																		<div class="cls-field-image">
-																			<div class="cls-item-value"><img width="300" height="168" src="http://www.futsalunitedsaigon.com/wp-content/uploads/2013/10/lich-su-hinh-thanh1-300x168.jpg" class="attachment-ths_thumb wp-post-image" alt="Lịch sử hình thành" title="Lịch sử hình thành" /></div>
+																			<div class="cls-item-value"><img width="300" height="168" src="https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-xap1/t1.0-9/10325561_1445071755745876_3058295760812569024_n.jpg" class="attachment-ths_thumb wp-post-image" alt="Lịch sử hình thành" title="Lịch sử hình thành" /></div>
 																		</div>
 																		<div class="group group cls_post_data ">
 																			<div class="cls-field-intro">
-																				<div class="cls-item-value">Thái Sơn Nam FC – Một đội bóng, một thương hiệu
-																					Nói đến Thái Sơn Nam là người ta nghĩ ngay đến futsal. Ngược lại, nói đến futsal, người hâm mộ cả nước cũng thường nghĩ ngay đến Thái Sơn Nam. Không ngoa khi cho rằng, Thái Sơn Nam đã và đang định hình được chỗ đứng trong lòng người hâm mộ. Và để hình thành một thương hiệu như bây giờ, Thái Sơn Nam cũng như ông bầu Trần Anh Tú đã trải qua khá nhiều thăng trầm trên bước đường hình thành và phát triển…
+																				<div class="cls-item-value"><?php echo sub_string(loaibohtmltrongvanban($about_fust[0]['content_about']),592);?>
 																				</div>
 																			</div>
 																		</div>

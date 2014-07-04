@@ -332,11 +332,11 @@
 																			?>
 																				<li class="cls-item-no<?php echo $i;?> cls-row0 cls-item cls-first-in-line clearfix">
 																					<div class="cls-field-image">
-																						<div class="cls-item-value"><a href="https://www.facebook.com/<?php echo $h_l_v['login_id']?>" title="<?php echo $h_l_v['full_name']?>"><img width="300" height="168" src="http://graph.facebook.com/<?php echo $h_l_v['login_id']?>/picture?type=large" class="attachment-ths_thumb wp-post-image" alt="<?php echo $h_l_v['full_name']?>" title="<?php echo $h_l_v['full_name']?>" /></a></div>
+																						<div class="cls-item-value"><a target="_blank" href="https://www.facebook.com/<?php echo $h_l_v['login_id']?>" title="<?php echo $h_l_v['full_name']?>"><img width="300" height="168" src="http://graph.facebook.com/<?php echo $h_l_v['login_id']?>/picture?type=large" class="attachment-ths_thumb wp-post-image" alt="<?php echo $h_l_v['full_name']?>" title="<?php echo $h_l_v['full_name']?>" /></a></div>
 																					</div>
 																					<div class="group group cls_post_data clearfix ">
 																						<div class="cls-field-title">
-																							<div class="cls-item-value"><a href="https://www.facebook.com/<?php echo $h_l_v['login_id']?>" title="<?php echo $h_l_v['full_name']?>"><?php echo $h_l_v['full_name']?></a></div>
+																							<div class="cls-item-value"><a target="_blank" href="https://www.facebook.com/<?php echo $h_l_v['login_id']?>" title="<?php echo $h_l_v['full_name']?>"><?php echo $h_l_v['full_name']?></a></div>
 																						</div>
 																					</div>
 																				</li>
@@ -374,11 +374,11 @@
 																			?>
 																				<li class="cls-item-no<?php echo $i;?> cls-row0 cls-item cls-first-in-line clearfix">
 																					<div class="cls-field-image">
-																						<div class="cls-item-value"><a href="https://www.facebook.com/<?php echo $tm['login_id']?>" title="<?php echo $tm['full_name']?>"><img width="300" height="168" src="http://graph.facebook.com/<?php echo $tm['login_id']?>/picture?type=large" class="attachment-ths_thumb wp-post-image" alt="<?php echo $tm['full_name']?>" title="<?php echo $tm['full_name']?>" /></a></div>
+																						<div class="cls-item-value"><a target="_blank" href="https://www.facebook.com/<?php echo $tm['login_id']?>" title="<?php echo $tm['full_name']?>"><img width="300" height="168" src="http://graph.facebook.com/<?php echo $tm['login_id']?>/picture?type=large" class="attachment-ths_thumb wp-post-image" alt="<?php echo $tm['full_name']?>" title="<?php echo $tm['full_name']?>" /></a></div>
 																					</div>
 																					<div class="group group cls_post_data clearfix ">
 																						<div class="cls-field-title">
-																							<div class="cls-item-value"><a href="https://www.facebook.com/<?php echo $tm['login_id']?>" title="<?php echo $tm['full_name']?>"><?php echo $tm['full_name']?></a></div>
+																							<div class="cls-item-value"><a target="_blank" href="https://www.facebook.com/<?php echo $tm['login_id']?>" title="<?php echo $tm['full_name']?>"><?php echo $tm['full_name']?></a></div>
 																						</div>
 																					</div>
 																				</li>
@@ -416,11 +416,11 @@
 																			?>
 																				<li class="cls-item-no<?php echo $i;?> cls-row0 cls-item cls-first-in-line clearfix">
 																					<div class="cls-field-image">
-																						<div class="cls-item-value"><a href="https://www.facebook.com/<?php echo $ct['login_id']?>" title="<?php echo $ct['full_name']?>"><img width="300" height="168" src="http://graph.facebook.com/<?php echo $ct['login_id']?>/picture?type=large" class="attachment-ths_thumb wp-post-image" alt="<?php echo $ct['full_name']?>" title="<?php echo $ct['full_name']?>" /></a></div>
+																						<div class="cls-item-value"><a target="_blank" href="https://www.facebook.com/<?php echo $ct['login_id']?>" title="<?php echo $ct['full_name']?>"><img width="300" height="168" src="http://graph.facebook.com/<?php echo $ct['login_id']?>/picture?type=large" class="attachment-ths_thumb wp-post-image" alt="<?php echo $ct['full_name']?>" title="<?php echo $ct['full_name']?>" /></a></div>
 																					</div>
 																					<div class="group group cls_post_data clearfix ">
 																						<div class="cls-field-title">
-																							<div class="cls-item-value"><a href="https://www.facebook.com/<?php echo $ct['login_id']?>" title="<?php echo $ct['full_name']?>"><?php echo $ct['full_name']?></a></div>
+																							<div class="cls-item-value"><a target="_blank" href="https://www.facebook.com/<?php echo $ct['login_id']?>" title="<?php echo $ct['full_name']?>"><?php echo $ct['full_name']?></a></div>
 																						</div>
 																					</div>
 																				</li>
