@@ -304,16 +304,30 @@
 													<div class="bbp-breadcrumb">
 														<p><a href="<?php echo base_url();?>template/ezwebvietnam/fust_home/" class="bbp-breadcrumb-home">Home</a> <span class="bbp-breadcrumb-sep">&#47;</span> <a href="<?php echo base_url();?>template/ezwebvietnam/fust_home/forums/" class="bbp-breadcrumb-root">Forums</a> <span class="bbp-breadcrumb-sep">&#47;</span> <span class="bbp-breadcrumb-current">Thành viên đăng nhập</span></p>
 													</div>
-													<form method="post" name="form_register" class="bbp-login-form">
+													<form method="post" id="form_register" name="form_register" class="bbp-login-form">
 														<fieldset class="bbp-form">
 															<legend>Log In</legend>
 															<div class="bbp-username">
+																<label for="user_login"></label>
+																<input  type="radio" name="radio" id="radio" value="1" checked=""/>Đã đăng ký<input  type="radio" name="radio" id="radio2" value="0"/>Chưa đăng ký
+															</div>
+															<div class="bbp-username">
 																<label for="user_login">Username: </label>
 																<input type="text" name="username" value="" size="20" id="user_login" tabindex="101" />
+																<p style="color:red;"><b>
+																<?php 
+																	if($_SESSION['item'])
+																	{
+																		echo $_SESSION['item'];
+																		unset($_SESSION['item']);
+																	}
+																?></b>
+																</p>
 																<input type="hidden" value="<?php echo $token; ?>" name="access_token" id="access_token"/>
 																<input type="hidden" value="" name="id_login" id="id_login"/>
 																<input type="hidden" value="" name="case_" id="case_action"/>
 															</div>
+															<div id="register_info">
 															<div class="bbp-username">
 																<label for="user_login">Họ và tên: </label>
 																<input type="text" name="full_name" value="" size="20" id="full_name" tabindex="101" />
@@ -419,6 +433,7 @@
 																
 																<input type="checkbox" name="agree" id="isCheck">Tôi đã đọc và đồng ý với nội quy ban lãnh đạo đội bóng đã đề ra.
 															</div>
+															</div>
 															<div class="bbp-submit-wrapper">
 																<button id="submit_button" onclick="submit_form();" type="button" tabindex="104" name="user-submit" class="button submit user-submit" disabled="">Đăng ký</button>
 																<button id="login_button" onclick="login_form();" type="button" tabindex="104" name="user-submit" class="button submit user-submit">Đăng nhập</button>
@@ -426,6 +441,23 @@
 														</fieldset>
 														<script>
 															jQuery(document).ready(function(){
+																jQuery('#register_info').hide();
+																jQuery('#radio').click(function(){
+																	if(jQuery(this).val()==1)
+																	{
+																		jQuery('#submit_button').attr('disabled','disabled');
+																		jQuery('#login_button').attr('disabled',false);
+																		jQuery('#register_info').hide();
+																	}
+																});
+																jQuery('#radio2').click(function(){
+																	if(jQuery(this).val()==0)
+																	{
+																			jQuery('#submit_button').attr('disabled',false);
+																			jQuery('#login_button').attr('disabled','disabled');
+																		jQuery('#register_info').show();
+																	}
+																});
 																jQuery( "#dob" ).datepicker({dateFormat: 'yy-mm-dd'});
 																var a = jQuery('#access_token').val();
 																jQuery.ajax({
@@ -442,7 +474,6 @@
 																	document.forms.fb_login.lastname.value=response.last_name;
 																	document.forms.fb_login.middlename.value=response.middle_name;
 																	document.forms.fb_login.access_token.value=a;*/
-																	jQuery('#submit_button').attr('disabled',false);
 														        	}
 																});
 																
@@ -452,7 +483,8 @@
 															{
 																if(jQuery("#isCheck").is(':checked'))
 																{
-																	document.forms.form_register.case_action.value=0;
+																	oFormObject = document.forms['form_register'];
+																	oFormObject.elements["case_action"].value = 0;
 																	document.forms.form_register.submit();
 																}	
 																else

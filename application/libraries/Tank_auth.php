@@ -61,11 +61,11 @@ class Tank_auth {
                             'status' => ($user[0]['activated'] == 1) ? STATUS_ACTIVATED : STATUS_NOT_ACTIVATED,
                             'role' => $user[0]['role']
                         ));
-			return false;	
+			return true;	
 		}
 		else
 		{
-			return true;
+			return false;
 		}
 	}
     /**
