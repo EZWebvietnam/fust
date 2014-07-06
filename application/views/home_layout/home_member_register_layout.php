@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>Thành viên đăng nhập | Thai Son Nam FC</title>
+		<title>Thành viên đăng nhập | Futsal United Saigon FC</title>
 		<link rel="stylesheet" href="<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-content/plugins/sitepress-multilingual-cms/res/css/language-selector.css?v=2.6.0" type="text/css" media="all" />
 		
 		<link rel="shortcut icon" href="<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-content/uploads/2013/12/favicon.ico" type="image/x-icon" />
@@ -263,12 +263,12 @@
 																			</ul>
 																		</li>
 																		<li id="menu-item-284" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-284">
-																			<a href="<?php echo base_url();?>template/ezwebvietnam/fust_home/category/hinh-anh/">Thư Viện</a>
-																			<ul class="sub-menu">
-																				<li id="menu-item-285" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-285"><a href="<?php echo base_url();?>template/ezwebvietnam/fust_home/category/video/">Video Clip</a></li>
-																				<li id="menu-item-286" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-286"><a href="<?php echo base_url();?>template/ezwebvietnam/fust_home/category/hinh-anh/">Ảnh đẹp</a></li>
-																			</ul>
-																		</li>
+																				<a href="<?php echo base_url();?>media/hinh-anh">Thư Viện</a>
+																				<ul class="sub-menu">
+																					<li id="menu-item-285" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-285"><a href="<?php echo base_url();?>media/clip">Video Clip</a></li>
+																					<li id="menu-item-286" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-286"><a href="<?php echo base_url();?>media/hinh-anh">Ảnh đẹp</a></li>
+																				</ul>
+																			</li>
 																		<li id="menu-item-287" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-287"><a href="<?php echo base_url();?>template/ezwebvietnam/fust_home/forums/">Forum</a></li>
 																	</ul>
 																</div>

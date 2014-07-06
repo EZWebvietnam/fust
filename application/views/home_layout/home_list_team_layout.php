@@ -153,7 +153,16 @@
 											</ul>
 										</div>
 										<div class="cls_headr_members cls_right">
-											<span><a href="http://www.futsalunitedsaigon.com/thanh-vien-dang-nhap/">Thành viên CLB đăng nhập</a></span>
+										<?php 
+										if(!$this->tank_auth->is_logged_in())
+										{
+										
+										?>
+											<span><a href="<?php echo base_url();?>dang-ky-fb">Thành viên CLB đăng nhập</a></span>
+											<?php } else { ?>
+											<span><?php echo $this->session->userdata('full_name');?></span>
+											<span><a href="<?php echo base_url();?>logout">Đăng xuất</a></span>
+											<?php } ?>
 										</div>
 										
 									</div>
@@ -228,10 +237,10 @@
 																				</ul>
 																			</li>
 																			<li id="menu-item-284" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-284">
-																				<a href="http://www.futsalunitedsaigon.com/category/hinh-anh/">Thư Viện</a>
+																				<a href="<?php echo base_url();?>media/hinh-anh">Thư Viện</a>
 																				<ul class="sub-menu">
-																					<li id="menu-item-285" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-285"><a href="http://www.futsalunitedsaigon.com/category/video/">Video Clip</a></li>
-																					<li id="menu-item-286" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-286"><a href="http://www.futsalunitedsaigon.com/category/hinh-anh/">Ảnh đẹp</a></li>
+																					<li id="menu-item-285" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-285"><a href="<?php echo base_url();?>media/clip">Video Clip</a></li>
+																					<li id="menu-item-286" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-286"><a href="<?php echo base_url();?>media/hinh-anh">Ảnh đẹp</a></li>
 																				</ul>
 																			</li>
 																			<li id="menu-item-287" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-287"><a href="http://www.futsalunitedsaigon.com/forums/">Forum</a></li>
@@ -261,12 +270,17 @@
 											<div class="cls_left_panel_menu_wrapper">
 												<div class="menu-left-team-menu-container">
 													<ul id="menu-left-team-menu" class="cls_left_panel_menu">
-														<li id="menu-item-519" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-248 current_page_item menu-item-519"><a href="http://www.futsalunitedsaigon.com/doi-bong/danh-sach/">Danh sách</a></li>
+														<li id="danh-sach" class="menu-item menu-item-type-post_type menu-item-object-page  page_item page-item-248  menu-item-519"><a href="http://www.futsalunitedsaigon.com/doi-bong/danh-sach/">Danh sách</a></li>
 														<li id="menu-item-526" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-526"><a href="http://www.futsalunitedsaigon.com/doi-bong/thanh-tich/">Thành tích</a></li>
 														<li id="menu-item-520" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-520"><a href="http://www.futsalunitedsaigon.com/doi-bong/cau-thu-ghi-ban/">Cầu thủ ghi bàn</a></li>
-														<li id="menu-item-521" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-521"><a href="<?php echo base_url();?>doi-bong/cau-thu-xuat-sac-nhat-thang">Cầu thủ của tháng</a></li>
-														<li id="menu-item-522" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-522"><a href="http://www.futsalunitedsaigon.com/doi-bong/lich-tap-luyen/">Lịch tập luyện</a></li>
-														<li id="menu-item-523" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-523"><a href="<?php echo base_url();?>doi-bong/noi-quy">Nội quy Câu Lạc Bộ</a></li>
+														<li id="cau-thu-xuat-sac-nhat-thang" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-521"><a href="<?php echo base_url();?>doi-bong/cau-thu-xuat-sac-nhat-thang">Cầu thủ của tháng</a></li>
+														<li id="lich-thi-dau" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-522"><a href="<?php echo base_url();?>doi-bong/lich-thi-dau">Lịch thi đấu</a></li>
+														<li id=noi-quy" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-523"><a  href="<?php echo base_url();?>doi-bong/noi-quy">Nội quy Câu Lạc Bộ</a></li>
+													<script>
+															jQuery(document).ready(function(){
+																jQuery("#<?php echo $this->uri->segment(2)?>").addClass('current-menu-item');
+															})
+														</script>			
 													</ul>
 												</div>
 												

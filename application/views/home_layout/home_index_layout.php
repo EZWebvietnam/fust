@@ -235,10 +235,10 @@
 																				</ul>
 																			</li>
 																			<li id="menu-item-284" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-284">
-																				<a href="http://www.futsalunitedsaigon.com/category/hinh-anh/">Thư Viện</a>
+																				<a href="<?php echo base_url();?>media/hinh-anh">Thư Viện</a>
 																				<ul class="sub-menu">
-																					<li id="menu-item-285" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-285"><a href="http://www.futsalunitedsaigon.com/category/video/">Video Clip</a></li>
-																					<li id="menu-item-286" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-286"><a href="http://www.futsalunitedsaigon.com/category/hinh-anh/">Ảnh đẹp</a></li>
+																					<li id="menu-item-285" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-285"><a href="<?php echo base_url();?>media/clip">Video Clip</a></li>
+																					<li id="menu-item-286" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-286"><a href="<?php echo base_url();?>media/hinh-anh">Ảnh đẹp</a></li>
 																				</ul>
 																			</li>
 																			<li id="menu-item-287" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-287"><a href="http://www.futsalunitedsaigon.com/forums/">Forum</a></li>

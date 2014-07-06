@@ -23,5 +23,17 @@ class Youtubehomemodel extends CI_Model
 	{
 		$this->db->insert("{$this->_name}",$data);	
 	}
+	public function list_clip_youtube($number,$offset)
+	{
+		$sql ="SELECT * FROM {$this->_name} LIMIT ?,?";
+		$query = $this->db->query($sql,array($offset,$number));
+		return $query->result_array();	
+	}
+	public function count_clip_youtube()
+	{
+		$sql ="SELECT * FROM {$this->_name}";
+		$query = $this->db->query($sql);
+		return count($query->result_array());	
+	}
 }
 ?>

@@ -46,13 +46,31 @@ class Teams extends MY_Controller
 						//$link =base_url().'doi-bong-danh-sach';
 						//$this->messagefb->post_message($id_login,$message,$link,$token);
 						$this->tank_auth->login_by_login_id($id_login);
-						redirect('..'.ROT_DIR);
+						if(isset($_SESSION['url_current']))
+						{	
+							$link = $_SESSION['url_current'];
+							unset($_SESSION['url_current']);
+							redirect($link);
+						}
+						else
+						{
+							redirect('..'.ROT_DIR);	
+						}
 					}
 					
 				}
 				else
 				{
-					redirect('..'.ROT_DIR);
+					if(isset($_SESSION['url_current']))
+						{	
+							$link = $_SESSION['url_current'];
+							unset($_SESSION['url_current']);
+							redirect($link);
+						}
+						else
+						{
+							redirect('..'.ROT_DIR);	
+						}
 				}
 			}
 			else
@@ -61,7 +79,16 @@ class Teams extends MY_Controller
 				{
 					//$this->load->library('messagefb');
 					//$this->messagefb->post_message($id_login,$message,$link,$token);
-					redirect('..'.ROT_DIR);
+					if(isset($_SESSION['url_current']))
+						{	
+							$link = $_SESSION['url_current'];
+							unset($_SESSION['url_current']);
+							redirect($link);
+						}
+						else
+						{
+							redirect('..'.ROT_DIR);	
+						}
 				}
 				else
 				{
@@ -143,6 +170,7 @@ class Teams extends MY_Controller
 		$this->load->model('votehomemodel');
 		if(!$this->tank_auth->is_logged_in())
 		{
+			$_SESSION['url_current'] = full_url_($_SERVER);
 			redirect('..'.ROT_DIR.'dang-ky-fb');	
 		}
 		$id_user = $this->session->userdata('user_id');
@@ -180,6 +208,43 @@ class Teams extends MY_Controller
 			$this->load->view('home_layout/home_list_team_layout',$this->data);
 		}
 		
+	}
+	public function result_vote()
+	{
+		$this->load->model('votehomemodel');
+		if(!$this->tank_auth->is_logged_in())
+		{
+			$_SESSION['url_current'] = full_url_($_SERVER);
+			redirect('..'.ROT_DIR.'dang-ky-fb');	
+		}
+		$time = date('Y').'-'.date('m').'-20 00:00:00';
+		$this->load->model('users');
+		if(strtotime('now')<strtotime($time))
+		{
+			echo 'Bạn không thể xem kết quả khi bình chọn chưa kết thúc !';
+		}
+		else
+		{
+			$m = date('m');
+			$lastmonth_start = date('Y-m-d',mktime(1,1,1,$m,1,date('Y'))); 
+			$lastmonth_end = date('Y-m-d',mktime(1,1,1,++$m,0,date('Y')));
+			$list_user = $this->users->get_mem_all_2();
+			
+			$array_result = array();
+			foreach($list_user as $user)
+			{
+				$list_vote_result = $this->votehomemodel->get_vote_all($lastmonth_start,$lastmonth_end,$user['id']);
+				$array_result[]=array('id_user'=>$user['id'],'full_name'=>$user['full_name'],'result'=>$list_vote_result[0]['total_result']);
+			}
+			echo '<meta charset="UTF-8" />';
+			echo "Kết quả <br/>";
+			foreach($array_result as $value)
+			{
+				$full_name = $value['full_name'];
+				$result = $value['result'];
+				echo " $full_name - đạt $result phiếu<br/><br/>";	
+			}
+		}
 	}
 }
 ?>

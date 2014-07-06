@@ -1,3 +1,21 @@
+<link rel="stylesheet" href="<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-content/themes/futsalunitedsaigon.com/_stylesheets/colorbox.css" />
+<script src="<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-content/themes/futsalunitedsaigon.com/_javascripts/jquery.colorbox.js"></script>
+<style>
+	#cboxLoadedContent
+	{
+		background:#fff !important;	
+	}
+	
+</style>
+<script>
+	jQuery(document).ready(function(){
+				//Examples of how to assign the Colorbox event to elements
+
+				jQuery(".ajax").colorbox();
+			});
+
+	
+</script>
 	<div class="cls_layout_inner col2">
 											<!-- box teams -->
 											<div class="cls_box_header_wrapper clearfix">
@@ -35,6 +53,17 @@
 		</div>
 	</fieldset>
 </form>
+<?php 
+$time = date('Y').'-'.date('m').'-20 00:00:00';
+		$this->load->model('users');
+		if(strtotime('now')>strtotime($time))
+		{
+		?> 
+		<p><a class='ajax' href="<?php echo base_url();?>doi-bong/ket-qua-bau-chon" title="Homer Defined">Kết quả</a></p>
+		<?php
+		}
+?>
+
 											<!-- /End teams -->
 											
 										</div>
