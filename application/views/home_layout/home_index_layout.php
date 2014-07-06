@@ -979,7 +979,7 @@
 																			</div>
 																			<div class="group group cls_post_data clearfix ">
 																				<div class="cls-field-title">
-																					<div class="cls-item-value"><a class="video_layer<?php echo $i;?>" href="http://www.youtube.com/embed/<?php echo $youtube['code_youtube']?>?rel=0&amp;wmode=transparent" title="<?php echo $youtube['title_youtube']?>"><?php echo $youtube['title_youtube']?></a></div>
+																					<div class="cls-item-value"><a class="video_layer<?php echo $i;?>" href="http://www.youtube.com/embed/<?php echo $youtube['code_youtube']?>?rel=0&amp;wmode=transparent" title="<?php echo $youtube['title_youtube']?>"></a></div>
 																				</div>
 																				<script>
 																				$('.video_layer'+<?php echo $i;?>).colorbox({iframe:true, innerWidth:640, innerHeight:390});
