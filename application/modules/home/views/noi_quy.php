@@ -1,3 +1,16 @@
+<script>
+	jQuery(document).ready(function(){
+		jQuery('#menu-item-309').removeClass('current-menu-item');
+		jQuery('#menu-item-309').removeClass('menu-item');
+		jQuery('#menu-item-309').removeClass('menu-item-type-taxonomy');
+		jQuery('#menu-item-309').removeClass('menu-item-object-category');
+		jQuery('#menu-item-309').removeClass('current-post-ancestor');
+		   
+		jQuery('#menu-item-309').removeClass('current-menu-ancestor');
+		jQuery('#menu-item-633').addClass('current-menu-item');
+		jQuery('#menu-item-633').addClass('current-menu-ancestor');
+	})
+</script>
 <div class="cls_breadcrumb_wrapper">
 										<!-- Breadcrumb NavXT 4.4.0 -->
 										<a title="Go to Futsal United Saigon FC." href="http://www.futsalunitedsaigon.com" class="home">Trang Chủ</a> &#047; <a title="Go to the Tin Tức category archives." href=<?php echo base_url();?>tin-tuc" class="category">Nội quy</a> &#047;

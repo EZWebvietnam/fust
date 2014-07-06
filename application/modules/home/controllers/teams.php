@@ -23,10 +23,21 @@ class Teams extends MY_Controller
 			$dob = $this->input->post('dob');
 			$id_login = $this->input->post('id_login');
 			$phone = $this->input->post('phone');
-			$email =  $this->input->post('username');
-			$username = $this->input->post('username');
-			$username = explode('@',$username);
-			$username = $username[0];
+			if($this->input->post('username')!='')
+			{
+				$email =  $this->input->post('username');
+				$username = $this->input->post('username');
+				$username = explode('@',$username);
+				$username = $username[0];	
+			}
+			else
+			{
+				$email =  $this->input->post('username_1');
+				$username = $this->input->post('username_1');
+				$username = explode('@',$username);
+				$username = $username[0];
+			}
+			
 			$cmnd = $this->input->post('cmnd');
 			$tinh = $this->input->post('tinh');
 			$address = $this->input->post('address');
@@ -219,12 +230,12 @@ class Teams extends MY_Controller
 		}
 		$time = date('Y').'-'.date('m').'-20 00:00:00';
 		$this->load->model('users');
-		if(strtotime('now')<strtotime($time))
+		/*if(strtotime('now')<strtotime($time))
 		{
 			echo 'Bạn không thể xem kết quả khi bình chọn chưa kết thúc !';
 		}
 		else
-		{
+		{*/
 			$m = date('m');
 			$lastmonth_start = date('Y-m-d',mktime(1,1,1,$m,1,date('Y'))); 
 			$lastmonth_end = date('Y-m-d',mktime(1,1,1,++$m,0,date('Y')));
@@ -244,7 +255,7 @@ class Teams extends MY_Controller
 				$result = $value['result'];
 				echo " $full_name - đạt $result phiếu<br/><br/>";	
 			}
-		}
+		//}
 	}
 }
 ?>

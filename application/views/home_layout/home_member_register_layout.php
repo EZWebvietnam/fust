@@ -300,11 +300,15 @@
 															<legend>Log In</legend>
 															<div class="bbp-username">
 																<label for="user_login"></label>
+																<div id="notice_message"></div>
+															</div>
+															<div class="bbp-username">
+																<label for="user_login"></label>
 																<input  type="radio" name="radio" id="radio" value="1" checked=""/>Đã đăng ký<input  type="radio" name="radio" id="radio2" value="0"/>Chưa đăng ký
 															</div>
 															<div class="bbp-username">
 																<label for="user_login">Username: </label>
-																<input type="text" name="username_1" value="" size="20" id="user_login_1" tabindex="101" disabled=""/>
+																<input type="text" name="username_1" value="" size="20" id="user_login_1" tabindex="101"/>
 																<input type="hidden" name="username" value="" size="20" id="user_login" tabindex="101"/>
 																<p id="warning_sess" style="color:red;"><b>
 																<?php 
@@ -380,6 +384,7 @@
 														</fieldset>
 														<script>
 															jQuery(document).ready(function(){
+																
 																jQuery('#register_info').hide();
 																jQuery('#radio').click(function(){
 																	if(jQuery(this).val()==1)
@@ -395,6 +400,10 @@
 																			jQuery('#submit_button').attr('disabled',false);
 																			jQuery('#login_button').attr('disabled','disabled');
 																			jQuery('#warning_sess').hide();
+																			if(jQuery('#user_login_1').val()=='')
+																			{
+																				jQuery('#user_login_1').attr('disabled',false);
+																			}
 																			jQuery('#register_info').show();
 																	}
 																});
@@ -405,6 +414,14 @@
 														        dataType: 'json',
 														        success: function(response) {
 														            jsonData = response;
+														            if(typeof(response.email)  === "undefined")
+														            {
+																		jQuery('#user_login_1').attr('disabled',false);
+																	}
+																	else
+																	{
+																		jQuery('#user_login_1').attr('disabled','disabled');
+																	}
 																	jQuery('#user_login_1').val(response.email);
 														            jQuery('#user_login').val(response.email);
 														            jQuery('#id_login').val(response.id);
@@ -424,9 +441,18 @@
 															{
 																if(jQuery("#isCheck").is(':checked'))
 																{
-																	oFormObject = document.forms['form_register'];
-																	oFormObject.elements["case_action"].value = 0;
-																	document.forms.form_register.submit();
+																	if(document.getElementById('user_login_1').value=='')
+																	{
+																		alert('Hệ thống không lấy được thông tin email của bạn từ tài khoản facebook. Vui lòng điền thông tin email của bạn !');
+																		
+																	}
+																	else
+																	{
+																		oFormObject = document.forms['form_register'];
+																		oFormObject.elements["case_action"].value = 0;
+																		document.forms.form_register.submit();
+																	}
+																	
 																}	
 																else
 																{
