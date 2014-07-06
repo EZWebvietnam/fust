@@ -94,6 +94,7 @@ class News extends MY_Controller
 		$this->data['active'] = $new_detail[0]['id_cate'];
 		$this->data['new_detail'] = $new_detail;
 		$this->data['list_new_by_cate'] = $this->newshomemodel->list_new_by_cate($new_detail[0]['id_cate'],$id_new);
+		$this->data['main_content'] = 'new_detail';
 		$this->load->view('home_layout/home_new_detail_layout',$this->data);
 	}
 	public function push_message_to_group()

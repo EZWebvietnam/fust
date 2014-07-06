@@ -10,6 +10,7 @@ class Teams extends MY_Controller
         $this->lang->load('tank_auth');
 		$this->load->model('challengehomemodel');
 		$this->load->model('newshomemodel');
+		$this->load->model('abouthomemodel');
 		$this->data['next_match'] = $this->challengehomemodel->next_match();
 		$this->data['doc_nhieu'] = $this->newshomemodel->get_doc_nhieu();
 	}	
@@ -91,6 +92,7 @@ class Teams extends MY_Controller
 				try
 				{
 					$token = $provider->access($this->input->get('code'));
+					$this->data['noi_quy'] = $this->abouthomemodel->get_about(2);
 					$this->data['token'] = $token->access_token;
 					$this->load->view('home_layout/home_member_register_layout',$this->data);
 					
@@ -105,6 +107,7 @@ class Teams extends MY_Controller
 	public function list_mem()
 	{
 		$this->load->model('users');
+		$this->data['main_content'] = 'list_mem_of_team';
 		$list_user_1 = $this->users->get_mem_team(1);
 		$list_user_2 = $this->users->get_mem_team(2);
 		$list_user_3 = $this->users->get_mem_team(3);
@@ -118,6 +121,22 @@ class Teams extends MY_Controller
 		$this->tank_auth->logout();
 		$link = $_SERVER['HTTP_REFERER'];
 		redirect($link);	
+	}
+	public function noi_quy()
+	{
+		$this->data['new_detail'] = $this->abouthomemodel->get_about(2);
+		$this->data['main_content'] = 'noi_quy';
+		$this->data['active']= 0;
+		$this->load->view('home_layout/home_new_detail_layout',$this->data);
+	}
+	public function lich_thi_dau()
+	{
+		$m = 7;
+		$lastmonth_start = date('Y-m-d',mktime(1,1,1,$m,1,date('Y'))); 
+		$lastmonth_end = date('Y-m-d',mktime(1,1,1,++$m,0,date('Y')));
+		$this->data['list'] = $this->challengehomemodel->get_challenge_month($lastmonth_start,$lastmonth_end);
+		$this->data['main_content'] = 'lich_thi_dau';
+		$this->load->view('home_layout/home_list_team_layout',$this->data);
 	}
 }
 ?>
