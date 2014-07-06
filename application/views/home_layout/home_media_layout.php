@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>Thư viện Clip - Hình ảnh| Futsal United Saigon FC</title>
+		<title>Thư viện Clip - Hình ảnh| FUST | Futsal United Saigon</title>
 		<link rel="stylesheet" href="<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-content/plugins/sitepress-multilingual-cms/res/css/language-selector.css?v=2.6.0" type="text/css" media="all" />
 		
 		<link rel="shortcut icon" href="<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-content/uploads/2013/12/favicon.ico" type="image/x-icon" />
@@ -263,7 +263,7 @@
 								<div class="cls_main_content clearfix">
 									<div class="cls_breadcrumb_wrapper">
 										<!-- Breadcrumb NavXT 4.4.0 -->
-										<a title="Go to Futsal United Saigon FC." href="http://www.futsalunitedsaigon.com" class="home">Trang Chủ</a> &#047; <span class="cls_category">Video Clip</span>
+										<a title="Go to FUST | Futsal United Saigon." href="http://www.futsalunitedsaigon.com" class="home">Trang Chủ</a> &#047; <span class="cls_category">Video Clip</span>
 									</div>
 									<div class="cls_layout_wrapper cls_layout_media_wrapper cls_layout_video_wrapper two_col_layout clearfix">
 										<div class="cls_layout_inner col1">

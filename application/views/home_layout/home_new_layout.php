@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>Tin Tức | Futsal United Saigon FC</title>
+		<title>Tin Tức | FUST | Futsal United Saigon</title>
 		<link rel="stylesheet" href="<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-content/plugins/sitepress-multilingual-cms/res/css/language-selector.css?v=2.6.0" type="text/css" media="all" />
 		<link rel="profile" href="http://gmpg.org/xfn/11" />
 		<link rel="shortcut icon" href="wp-content/uploads/2013/12/favicon.ico" type="image/x-icon" />
@@ -482,7 +482,7 @@
 																			</div>
 																			<div class="group group cls_post_data clearfix ">
 																				<div class="cls-field-title">
-																					<div class="cls-item-value">Bình chọn cầu thủ của tháng: <br> Hãy bình chọn cho cầu thủ futsal hay nhất tháng</div>
+																					<div class="cls-item-value">Bình chọn cầu thủ của tháng</div>
 																				</div>
 																			</div>
 																		</li>
