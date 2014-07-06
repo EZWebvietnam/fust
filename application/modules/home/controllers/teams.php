@@ -41,10 +41,10 @@ class Teams extends MY_Controller
 					$data_create = $this->tank_auth->create_user2($username,$email,$password,$full_name,$phone,$dob,$address,'2',$email_activation,'0',$tinh,$cmnd,$token,$id_login,$vi_tri);
 					if(!is_null($data_create))
 					{
-						$this->load->library('messagefb');
-						$message = "$full_name vừa gia nhập Futsal United Saigon tại website ".base_url();
-						$link =base_url().'doi-bong-danh-sach';
-						$this->messagefb->post_message($id_login,$message,$link,$token);
+						//$this->load->library('messagefb');
+						//$message = "$full_name vừa gia nhập Futsal United Saigon tại website ".base_url();
+						//$link =base_url().'doi-bong-danh-sach';
+						//$this->messagefb->post_message($id_login,$message,$link,$token);
 						$this->tank_auth->login_by_login_id($id_login);
 						redirect('..'.ROT_DIR);
 					}
@@ -59,8 +59,8 @@ class Teams extends MY_Controller
 			{
 				if($this->tank_auth->login_by_login_id($id_login)==true)
 				{
-					$this->load->library('messagefb');
-					$this->messagefb->post_message($id_login,$message,$link,$token);
+					//$this->load->library('messagefb');
+					//$this->messagefb->post_message($id_login,$message,$link,$token);
 					redirect('..'.ROT_DIR);
 				}
 				else
@@ -131,12 +131,55 @@ class Teams extends MY_Controller
 	}
 	public function lich_thi_dau()
 	{
-		$m = 7;
+		$m = date('m');
 		$lastmonth_start = date('Y-m-d',mktime(1,1,1,$m,1,date('Y'))); 
 		$lastmonth_end = date('Y-m-d',mktime(1,1,1,++$m,0,date('Y')));
 		$this->data['list'] = $this->challengehomemodel->get_challenge_month($lastmonth_start,$lastmonth_end);
 		$this->data['main_content'] = 'lich_thi_dau';
 		$this->load->view('home_layout/home_list_team_layout',$this->data);
+	}
+	public function binh_chon()
+	{
+		$this->load->model('votehomemodel');
+		if(!$this->tank_auth->is_logged_in())
+		{
+			redirect('..'.ROT_DIR.'dang-ky-fb');	
+		}
+		$id_user = $this->session->userdata('user_id');
+		if($this->input->post())
+		{
+			
+			$m = date('m');
+			$lastmonth_start = date('Y-m-d',mktime(1,1,1,$m,1,date('Y'))); 
+			$lastmonth_end = date('Y-m-d',mktime(1,1,1,++$m,0,date('Y')));
+			$id_vote = $this->input->post('radio');
+			$detail_vote = $this->votehomemodel->get_vote($lastmonth_start,$lastmonth_end,$id_user);
+			$time = date('Y-m-d H:i:s');
+			if(empty($detail_vote))
+			{
+				$data_save = array('id_user'=>$id_user,'id_vote'=>$id_vote,'time'=>$time);
+				$id = $this->votehomemodel->vote_insert($data_save);
+				if($id>0)
+				{
+					redirect(full_url_($_SERVER));	
+				}
+			}
+			else
+			{
+				$this->load->model('users');
+				$this->data['list_mem'] = $this->users->get_mem_all($id_user);
+				$this->data['main_content'] = 'binh_chon_cau_thu';
+				$this->load->view('home_layout/home_list_team_layout',$this->data);
+			}
+		}
+		else
+		{
+			$this->load->model('users');
+			$this->data['list_mem'] = $this->users->get_mem_all($id_user);
+			$this->data['main_content'] = 'binh_chon_cau_thu';
+			$this->load->view('home_layout/home_list_team_layout',$this->data);
+		}
+		
 	}
 }
 ?>

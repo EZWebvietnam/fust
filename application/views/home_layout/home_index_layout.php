@@ -211,7 +211,7 @@
 																					<li id="menu-item-271" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-248 current_page_item menu-item-271"><a href="<?php echo base_url();?>doi-bong/danh-sach/">Danh sách</a></li>
 																					<li id="menu-item-634" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-634"><a href="http://www.futsalunitedsaigon.com/doi-bong/thanh-tich/">Thành tích</a></li>
 																					<li id="menu-item-272" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-272"><a href="http://www.futsalunitedsaigon.com/doi-bong/cau-thu-ghi-ban/">Cầu thủ ghi bàn</a></li>
-																					<li id="menu-item-273" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-273"><a href="http://www.futsalunitedsaigon.com/doi-bong/cau-thu-cua-thang/">Cầu thủ của tháng</a></li>
+																					<li id="menu-item-273" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-273"><a href="<?php echo base_url();?>doi-bong/cau-thu-xuat-sac-nhat-thang">Cầu thủ của tháng</a></li>
 																					<li id="menu-item-274" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-274"><a href="<?php echo base_url();?>doi-bong/lich-thi-dau">Lịch thi đấu</a></li>
 																					<li id="menu-item-275" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-275"><a href="<?php echo base_url();?>doi-bong/noi-quy">Nội quy Câu Lạc Bộ</a></li>
 																					<li id="menu-item-275" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-276"><a href="<?php echo base_url();?>dang-ky-fb">Đăng ký gia nhập</a></li>
@@ -1112,7 +1112,7 @@
 												<div class="cls_box_inner">
 													<div class="cls_box_content_wrapper">
 														<div class="cls_box_content_inner">
-															<a href="http://www.futsalunitedsaigon.com/doi-bong/cau-thu-cua-thang/">
+															<a href="<?php echo base_url();?>doi-bong/cau-thu-xuat-sac-nhat-thang">
 																<div class="cls-post-listing clearfix">
 																	<ul class="non-ajax clearfix">
 																		<li class="cls-item-no0 cls-row0 cls-item cls-first-in-line clearfix cls-last-in-line cls-only-in-line">

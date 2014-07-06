@@ -49,6 +49,7 @@ $route['dang-ky-fb']="home/teams/register_member";
 $route['doi-bong/danh-sach']="home/teams/list_mem";
 $route['doi-bong/noi-quy']="home/teams/noi_quy";
 $route['doi-bong/lich-thi-dau'] = 'home/teams/lich_thi_dau';
+$route['doi-bong/cau-thu-xuat-sac-nhat-thang'] = "home/teams/binh_chon";
 $route['logout']="home/teams/logout";
 $route['quan-tri'] = "admin/login/index";
 $route['quan-tri-vien'] = "admin/productadmin/index";
