@@ -37,6 +37,7 @@
 		<script type='text/javascript' src='<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-content/themes/futsalunitedsaigon.com/_assets/bootstrap/js/bootstrap.min.js?ver=3.7.3'></script>
 		<script type='text/javascript' src='<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-content/themes/futsalunitedsaigon.com/_javascripts/scripts.js?ver=3.7.3'></script>
 		<script type='text/javascript' src='<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-content/plugins/sitepress-multilingual-cms/res/js/jquery.cookie.js?ver=2.6.0'></script>
+		<script type='text/javascript' src='<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-content/themes/futsalunitedsaigon.com/_javascripts/paging.js'></script>
 		<script type='text/javascript'>
 			/* <![CDATA[ */
 			var wpml_browser_redirect_params = {"pageLanguage":"vi","languageUrls":{"vi":"http:\/\/www.futsalunitedsaigon.com\/doi-bong\/danh-sach\/","en":"http:\/\/www.futsalunitedsaigon.com\/en\/players\/"},"cookie":{"name":"_icl_visitor_lang_js","domain":"www.futsalunitedsaigon.com","path":"\/","expiration":24}};
@@ -196,7 +197,7 @@
 																	<div class="menu-bottom-menu-container">
 																		<ul id="menu-bottom-menu" class="cls_top_menu">
 																			<li id="menu-item-309" class="menu-item menu-item-type-taxonomy menu-item-object-category current-page-parent menu-item-has-children menu-item-309">
-																				<a href="http://www.futsalunitedsaigon.com/category/tin-tuc/">Tin Tức</a>
+																				<a href="<?php echo base_url();?>tin-tuc">Tin Tức</a>
 																				<ul class="sub-menu">
 																					<?php 
 																					foreach($list_cate as $l_cate)
@@ -211,7 +212,7 @@
 																				<a href="<?php echo base_url();?>doi-bong/danh-sach/">Đội bóng</a>
 																				<ul class="sub-menu">
 																					<li id="menu-item-271" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-248 current_page_item menu-item-271"><a href="<?php echo base_url();?>doi-bong/danh-sach/">Danh sách</a></li>
-																					<li id="menu-item-634" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-634"><a href="http://www.futsalunitedsaigon.com/doi-bong/thanh-tich/">Thành tích</a></li>
+																					<li id="menu-item-634" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-634"><a href="<?php echo base_url();?>doi-bong/ket-qua-thi-dau">Kết quả thi đấu</a></li>
 																					<li id="menu-item-272" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-272"><a href="http://www.futsalunitedsaigon.com/doi-bong/cau-thu-ghi-ban/">Cầu thủ ghi bàn</a></li>
 																					<li id="menu-item-273" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-273"><a href="<?php echo base_url();?>doi-bong/cau-thu-xuat-sac-nhat-thang">Cầu thủ của tháng</a></li>
 																					<li id="menu-item-274" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-274"><a href="<?php echo base_url();?>doi-bong/lich-thi-dau">Lịch thi đấu</a></li>
@@ -271,7 +272,7 @@
 												<div class="menu-left-team-menu-container">
 													<ul id="menu-left-team-menu" class="cls_left_panel_menu">
 														<li id="danh-sach" class="menu-item menu-item-type-post_type menu-item-object-page  page_item page-item-248  menu-item-519"><a href="http://www.futsalunitedsaigon.com/doi-bong/danh-sach/">Danh sách</a></li>
-														<li id="menu-item-526" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-526"><a href="http://www.futsalunitedsaigon.com/doi-bong/thanh-tich/">Thành tích</a></li>
+														<li id="ket-qua-thi-dau" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-526"><a href="<?php echo base_url();?>doi-bong/ket-qua-thi-dau">Kết quả thi đấu</a></li>
 														<li id="menu-item-520" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-520"><a href="http://www.futsalunitedsaigon.com/doi-bong/cau-thu-ghi-ban/">Cầu thủ ghi bàn</a></li>
 														<li id="cau-thu-xuat-sac-nhat-thang" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-521"><a href="<?php echo base_url();?>doi-bong/cau-thu-xuat-sac-nhat-thang">Cầu thủ của tháng</a></li>
 														<li id="lich-thi-dau" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-522"><a href="<?php echo base_url();?>doi-bong/lich-thi-dau">Lịch thi đấu</a></li>

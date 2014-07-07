@@ -143,5 +143,11 @@ class Newshomemodel extends CI_Model
 		$this->db->where('id_new',$id);
 		$this->db->update("{$this->_name}",$data);	
 	}
+	public function match_review($id_match)
+	{
+		$sql="SELECT * FROM {$this->_name} WHERE match_review = ?";
+		$query = $this->db->query($sql,array($id_match));
+		return $query->result_array();
+	}
 }
 ?>

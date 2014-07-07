@@ -257,5 +257,31 @@ class Teams extends MY_Controller
 			}
 		//}
 	}
+	public function result_team()
+	{
+		$this->load->model('resulthomemodel');
+		$this->load->helper('url');
+		$config['uri_segment'] = 5;
+		$page = $this->uri->segment(4);
+		$config['per_page'] = 12;
+		$config['total_rows'] = $this->resulthomemodel->count_result();
+		if($page == ''){
+			$page = 1;
+		}
+		$page1 = ($page - 1) * $config['per_page'];
+		if(!is_numeric($page)){
+			show_404();
+			exit;
+		}
+		$num_pages = ceil($config['total_rows'] / $config['per_page']);
+		$array_sv  = $this->resulthomemodel->get_result($config['per_page'], $page1);
+		$this->data['total_page'] = $num_pages;
+		$this->data['offset'] = $page1;
+		$this->data['page'] = $page;
+		$this->data['total'] = $config['total_rows'];
+		$this->data['list'] = $array_sv;
+		$this->data['main_content'] = 'result_view';
+		$this->load->view('home_layout/home_list_team_layout',$this->data);
+	}
 }
 ?>
