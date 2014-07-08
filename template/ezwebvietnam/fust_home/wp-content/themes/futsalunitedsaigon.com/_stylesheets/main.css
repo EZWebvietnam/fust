@@ -1829,7 +1829,7 @@ article.type-post table{
 }
 
 /* cls_footer_bottom */
-.cls_footer_bottom address
+.cls_footer_bottom .address
 {
 	color: #fff;
 	font-size: 12px;

@@ -26,6 +26,15 @@ class Home extends MY_Controller {
 		}
 		$this->data['about_fust'] = $this->abouthomemodel->get_about(1);
 		$this->data['list_new_clb'] = $this->newshomemodel->list_new_clb_content();
+		$truyen_thong = $this->data['list_new_clb'];
+		$count = count($this->data['list_new_clb']);
+		if($count>0)
+		{
+			$array_rand = array("$count","$count-1","$count-2");
+			$rand_keys = array_rand($truyen_thong, 3);
+			$this->data['truyen_thong']=$truyen_thong;
+		}	
+		
 		$this->data['list_new_li'] = $this->newshomemodel->list_new_li($list_new);
 		$this->data['list_image'] = $this->imagehomemodel->list_image();
 		$this->data['list_yoututbe'] = $this->youtubehomemodel->list_youtube();
@@ -123,84 +132,20 @@ class Home extends MY_Controller {
         $this->session->set_flashdata('message', $message);
         redirect('/');
     }
-
-    
-    private function _create_captcha() {
-        $this->load->helper('captcha');
-        $options = array('img_path' => PATH_FOLDER . ROT_DIR . '/captcha/', 'img_url' => base_url() . "captcha/", 'img_width' => '150', 'img_height' => '40', 'expiration' => 7200);
-        $cap = create_captcha($options);
-        $image = $cap['image'];
-        $this->session->set_userdata('captchaword', $cap['word']);
-        return $image;
-    }
-
-    public function check_captcha($string) {
-
-        if ($string == $this->session->userdata('captchaword')) {
-            return TRUE;
-        } else {
-            $this->form_validation->set_message('check_captcha', 'Wrong captcha code');
-            return FALSE;
-        }
-    }
-    public function check_captcha_ajax()
-    {
-        $captcha = $this->input->post('captcha');
-        if($this->check_captcha($captcha))
-        {
-            $data = array('error'=>'0');
-        }
-        else
-        {
-            $data = array('error'=>'1');
-        }
-        echo json_encode($data);
-    }
-    public function create_captcha_ajax() {
-        $this->load->helper('captcha');
-        $options = array('img_path' => PATH_FOLDER . ROT_DIR . '/captcha/', 'img_url' => base_url() . "captcha/", 'img_width' => '150', 'img_height' => '40', 'expiration' => 7200);
-        $cap = create_captcha($options);
-        $image = $cap['image'];
-        $this->session->set_userdata('captchaword', $cap['word']);
-        $array = array('error'=>0,'img'=>$image);
-        echo json_encode($array);
-    }
     public function about()
     {
-        $this->load->model('faq');
-        $this->load->model('productmodel');
-        $this->data['image']=$this->_create_captcha();
-        $this->data['list_product_sale'] = $this->productmodel->get_list_product_sale_off();
-        $this->data['about'] = $this->faq->about();
-        $this->data['main_content'] = 'home_view/detail_about';
-        $this->load->view('home/layout_detail', $this->data);
+		$this->data['main_content'] = 'about_view';
+		$this->data['title'] = 'Giới thiệu về CLB';
+		$this->data['about'] = $this->abouthomemodel->get_about(1);
+       $this->load->view('home_layout/home_about_layout',$this->data);		
     }
-    public function payment()
+    public function tai_tro()
     {
-    	$this->load->model('orderhomemodel');
-    	$this->data['faq_detail'][0]['title'] = 'Hướng dẫn thanh toán';
-    	$this->data['list_payment'] = $this->orderhomemodel->load_payment();
-		$this->data['main_content']='thanh_toan_view';
-		$this->load->view('home/layout_faq_detail',$this->data);
-	}
-	public function contact()
-	{
-		if($this->input->post())
-		{
-			
-			$data_mail = array('email'=>$this->input->post('email'),'full_name'=>$this->input->post('fullname'),'phone'=>$this->input->post('phone'),'noi_dung'=>loaibohtmltrongvanban($this->input->post('noi_dung')));
-			$this->_send_email('contact','tibimarthcm@gmail.com','tibimarthcm@gmail.com',$data_mail,'Liên hệ');
-		}
-		
-		
-			$this->data['title'] = 'Liên hệ';
-			$this->data['gui_cau_hoi'] = 1;
-			$this->data['contact_'] = 1;
-			$this->data['main_content']='contact_view';
-			$this->load->view('home/layout_contact',$this->data);
-		
-		
-	}
+		$this->data['title'] = 'Nhà tài trợ';
+		$this->data['main_content'] = 'about_view';
+		$this->data['about'][0]['content_about'] = '';
+       $this->load->view('home_layout/home_about_layout',$this->data);		
+    }
 	public function list_clip()
 	{
 		
@@ -254,6 +199,7 @@ class Home extends MY_Controller {
 		$this->data['main_content'] = 'list_picture_view';
 		$this->load->view('home_layout/home_media_layout',$this->data);		
 	}
+	
 	function _send_email($type, $to, $email, &$data, $title) {
         /*$this->load->library('email');*/
        // $this->load->library('maillinux');

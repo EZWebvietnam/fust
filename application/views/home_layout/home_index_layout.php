@@ -162,7 +162,16 @@
 											<span><a href="<?php echo base_url();?>logout">Đăng xuất</a></span>
 											<?php } ?>
 										</div>
-										
+										<div class="cls_headr_top_web_link cls_right">
+											<ul>
+												<li class="cls_bg_none">
+													Website liên kết:&nbsp;
+													<a target="_blank" href="http://saigonfutsal.com">Saigon Futsal</a>
+												</li>
+												<li><a target="_blank" href="http://www.saigonfootball.org/">Saigon Football</a></li>
+												
+											</ul>
+										</div>
 									</div>
 									<div class="cls_headr_bottom">
 										<div class="cls_headr_bg clearfix">
@@ -218,20 +227,20 @@
 																				</ul>
 																			</li>
 																			<li id="menu-item-632" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-632">
-																				<a href="http://www.futsalunitedsaigon.com/lich-dau-ket-qua/giai-dau-thanh-pho/">Lịch đấu &#8211; Kết quả</a>
+																				<a href="<?php echo base_url();?>doi-bong/lich-thi-dau">Lịch đấu &#8211; Kết quả</a>
 																				<ul class="sub-menu">
-																					<li id="menu-item-277" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-277"><a href="http://www.futsalunitedsaigon.com/lich-dau-ket-qua/giai-dau-thanh-pho/">Giải đấu thành phố</a></li>
-																					<li id="menu-item-278" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-278"><a href="http://www.futsalunitedsaigon.com/lich-dau-ket-qua/giai-dau-trong-nuoc/">Giải đấu trong nước</a></li>
-																					<li id="menu-item-279" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-279"><a href="http://www.futsalunitedsaigon.com/lich-dau-ket-qua/giai-dau-quoc-te/">Giải đấu quốc tế</a></li>
+																					<li id="menu-item-277" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-277"><a href="<?php echo base_url();?>doi-bong/lich-thi-dau">Lịch thi đấu</a></li>
+																					<li id="menu-item-278" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-278"><a href="<?php echo base_url();?>doi-bong/ket-qua-thi-dau">Kết quả</a></li>
+																					
 																				</ul>
 																			</li>
-																			<li id="menu-item-280" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-280">
-																				<a href="http://www.futsalunitedsaigon.com/ve-cau-lac-bo/">Về Câu Lạc Bộ</a>
+																			<li id="menu-item-280" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-has-children menu-item-280">
+																				<a href="<?php echo base_url();?>doi-bong/gioi-thieu">Về Câu Lạc Bộ</a>
 																				<ul class="sub-menu">
-																					<li id="menu-item-281" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-281"><a href="http://www.futsalunitedsaigon.com/ve-cau-lac-bo/gioi-thieu-cau-lac-bo/">Giới thiệu Câu Lạc Bộ</a></li>
-																					<li id="menu-item-282" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-282"><a href="http://www.futsalunitedsaigon.com/ve-cau-lac-bo/lich-su-hinh-thanh/">Lịch sử hình thành</a></li>
-																					<li id="menu-item-390" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-390"><a href="http://www.futsalunitedsaigon.com/ve-cau-lac-bo/lien-he/">Liên hệ</a></li>
-																					<li id="menu-item-283" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-283"><a href="http://www.futsalunitedsaigon.com/ve-cau-lac-bo/nha-tai-tro/">Nhà tài trợ</a></li>
+																					<li id="menu-item-281" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-264 current_page_item menu-item-281"><a href="<?php echo base_url();?>doi-bong/gioi-thieu">Giới thiệu Câu Lạc Bộ</a></li>
+																					
+																					
+																					<li id="menu-item-283" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-283"><a href="<?php echo base_url();?>doi-bong/nha-tai-tro">Nhà tài trợ</a></li>
 																				</ul>
 																			</li>
 																			<li id="menu-item-284" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-284">
@@ -1164,45 +1173,35 @@
 															<div class="cls_box_content_row cls_first_content">
 																<div class="cls-post-listing clearfix">
 																	<ul class="non-ajax clearfix">
+																	<?php 
+																	$i = 0;
+																	foreach($truyen_thong as $_tr)
+																	{
+																	
+																	?>
 																		<li class="cls-item-no0 cls-row0 cls-item cls-first-in-line clearfix cls-last-in-line cls-only-in-line">
 																			<div class="cls-field-image">
-																				<div class="cls-item-value"><a href="http://www.futsalunitedsaigon.com/2014/06/huyen-thoai-pham-huynh-tam-lang-vinh-vien-ra-di/" title="Huyền thoại Phạm Huỳnh Tam Lang vĩnh viễn ra đi"><img width="300" height="198" src="http://www.futsalunitedsaigon.com/wp-content/uploads/2014/06/TamLang_2-6-14-300x198.jpg" class="attachment-ths_thumb wp-post-image" alt="Huyền thoại Phạm Huỳnh Tam Lang vĩnh viễn ra đi" title="Huyền thoại Phạm Huỳnh Tam Lang vĩnh viễn ra đi" /></a></div>
+																				<div class="cls-item-value"><a href="<?php echo base_url();?>post/<?php echo $_tr['id_new']?>-<?php echo  mb_strtolower(url_title(removesign($_tr['title_new'])))?>" title="<?php echo $_tr['title_new'];?>">
+																				<?php 
+                                    if(file_exists(PATH_FOLDER.ROT_DIR.'file/uploads/new/'.$_tr['image_new']) && is_file(PATH_FOLDER.ROT_DIR.'file/uploads/new/'.$_tr['image_new']) && $_tr['image_new']!='')
+                                    {
+                                    ?>
+																				<img width="300" height="198" src="<?php echo base_url();?>file/uploads/new/<?php echo $_tr['image_new'];?>" class="attachment-ths_thumb wp-post-image" alt="<?php echo $_tr['title_new'];?>" title="<?php echo $_tr['title_new'];?>" />
+																				<?php } else { ?>
+																				<img width="300" height="198" src="<?php echo base_url();?>file/uploads/no_image.gif" class="attachment-ths_thumb wp-post-image" alt="<?php echo $_tr['title_new'];?>" title="<?php echo $_tr['title_new'];?>" />
+																				<?php } ?>
+																				</a></div>
 																			</div>
 																			<div class="group group cls_post_data clearfix ">
 																				<div class="cls-field-title">
-																					<div class="cls-item-value"><a href="http://www.futsalunitedsaigon.com/2014/06/huyen-thoai-pham-huynh-tam-lang-vinh-vien-ra-di/" title="Huyền thoại Phạm Huỳnh Tam Lang vĩnh viễn ra đi">Huyền thoại Phạm Huỳnh Tam Lang vĩnh viễn ra đi</a></div>
+																					<div class="cls-item-value"><a href="<?php echo base_url();?>post/<?php echo $_tr['id_new']?>-<?php echo  mb_strtolower(url_title(removesign($_tr['title_new'])))?>" title="<?php echo $_tr['title_new'];?>"><?php echo $_tr['title_new'];?></a></div>
 																				</div>
 																				<div class="cls-field-date">
-																					<div class="cls-item-value">23:00 | 02/06/2014</div>
+																					<div class="cls-item-value">2<?php echo date('h:i',$_tr['create_date']);?> | <?php echo date('d/m/Y',$_tr['create_date']);?></div>
 																				</div>
 																			</div>
 																		</li>
-																		<li class="cls-item-no1 cls-row1 cls-item cls-first-in-line clearfix cls-last-in-line cls-only-in-line">
-																			<div class="cls-field-image">
-																				<div class="cls-item-value"><a href="http://www.futsalunitedsaigon.com/2013/08/futsal-viet-nam-tien-bo-nhanh/" title="“Futsal Việt Nam tiến bộ nhanh”"><img width="300" height="168" src="http://www.futsalunitedsaigon.com/wp-content/uploads/2013/08/Futsal-Viet-Nam-Italia-vo-dich-Kuwait-Uzbekistan-101-300x168.jpg" class="attachment-ths_thumb wp-post-image" alt="“Futsal Việt Nam tiến bộ nhanh”" title="“Futsal Việt Nam tiến bộ nhanh”" /></a></div>
-																			</div>
-																			<div class="group group cls_post_data clearfix ">
-																				<div class="cls-field-title">
-																					<div class="cls-item-value"><a href="http://www.futsalunitedsaigon.com/2013/08/futsal-viet-nam-tien-bo-nhanh/" title="“Futsal Việt Nam tiến bộ nhanh”">“Futsal Việt Nam tiến bộ nhanh”</a></div>
-																				</div>
-																				<div class="cls-field-date">
-																					<div class="cls-item-value">18:40 | 30/08/2013</div>
-																				</div>
-																			</div>
-																		</li>
-																		<li class="cls-item-no2 cls-row2 cls-item cls-first-in-line clearfix cls-last-in-line cls-only-in-line">
-																			<div class="cls-field-image">
-																				<div class="cls-item-value"><a href="http://www.futsalunitedsaigon.com/2013/08/vck-futsal-chau-a-2013-thai-son-nam-san-sang-xung-tran/" title="VCK Futsal châu Á 2013: Thái Sơn Nam sẵn sàng xung trận"><img width="300" height="168" src="http://www.futsalunitedsaigon.com/wp-content/uploads/2013/11/tsn1-300x168.jpg" class="attachment-ths_thumb wp-post-image" alt="VCK Futsal châu Á 2013: Thái Sơn Nam sẵn sàng xung trận" title="VCK Futsal châu Á 2013: Thái Sơn Nam sẵn sàng xung trận" /></a></div>
-																			</div>
-																			<div class="group group cls_post_data clearfix ">
-																				<div class="cls-field-title">
-																					<div class="cls-item-value"><a href="http://www.futsalunitedsaigon.com/2013/08/vck-futsal-chau-a-2013-thai-son-nam-san-sang-xung-tran/" title="VCK Futsal châu Á 2013: Thái Sơn Nam sẵn sàng xung trận">VCK Futsal châu Á 2013: Thái Sơn Nam sẵn sàng xung trận</a></div>
-																				</div>
-																				<div class="cls-field-date">
-																					<div class="cls-item-value">18:30 | 26/08/2013</div>
-																				</div>
-																			</div>
-																		</li>
+																		<?php $i++;} ?>
 																	</ul>
 																</div>
 															</div>
@@ -1233,49 +1232,7 @@
 												});
 											</script>    	<!--end media-->
 											<!--media-->
-											<div class="cls_box_wrapper clearfix cls_rewards_wrapper clearfix">
-												<div class="cls_box_inner">
-													<div class="cls_header_title_wrapper clearfix">
-														<h2>Cúp vô địch</h2>
-													</div>
-													<!-- /cls_header_title_wrapper -->
-													<div class="cls_box_content_wrapper">
-														<div class="cls_box_content_inner">
-															<div class="cls_box_content_row cls_first_content">
-																<div class="cls-post-listing clearfix">
-																	<ul class="non-ajax clearfix">
-																		<li class="cls-item-no0 cls-row0 cls-item cls-first-in-line clearfix cls-last-in-line cls-only-in-line">
-																			<div class="cls-field-image">
-																				<div class="cls-item-value"><img width="101" height="101" src="http://www.futsalunitedsaigon.com/wp-content/uploads/2013/10/cup.png" class="attachment-ths_thumb wp-post-image" alt="Vô địch Việt Nam" title="Vô địch Việt Nam" /></div>
-																			</div>
-																		</li>
-																		<li class="cls-item-no1 cls-row1 cls-item cls-first-in-line clearfix cls-last-in-line cls-only-in-line">
-																			<div class="cls-field-image">
-																				<div class="cls-item-value"><img width="101" height="101" src="http://www.futsalunitedsaigon.com/wp-content/uploads/2013/10/cup.png" class="attachment-ths_thumb wp-post-image" alt="Vô địch TPHCM: " title="Vô địch TPHCM: " /></div>
-																			</div>
-																		</li>
-																		<li class="cls-item-no2 cls-row2 cls-item cls-first-in-line clearfix cls-last-in-line cls-only-in-line">
-																			<div class="cls-field-image">
-																				<div class="cls-item-value"><img width="101" height="101" src="http://www.futsalunitedsaigon.com/wp-content/uploads/2013/10/cup.png" class="attachment-ths_thumb wp-post-image" alt="Vô địch giải futsal các đội mạnh TPHCM mở rộng - cúp LS" title="Vô địch giải futsal các đội mạnh TPHCM mở rộng - cúp LS" /></div>
-																			</div>
-																		</li>
-																		<li class="cls-item-no3 cls-row3 cls-item cls-first-in-line clearfix cls-last-in-line cls-only-in-line">
-																			<div class="cls-field-image">
-																				<div class="cls-item-value"><img width="101" height="101" src="http://www.futsalunitedsaigon.com/wp-content/uploads/2013/10/cup.png" class="attachment-ths_thumb wp-post-image" alt="Giải futsal các CLB châu Á" title="Giải futsal các CLB châu Á" /></div>
-																			</div>
-																		</li>
-																	</ul>
-																</div>
-															</div>
-														</div>
-													</div>
-													<!-- /cls_box_content_wrapper -->
-													<div class="cls_box_footer_wrapper">
-													</div>
-													<!--/cls_box_footer_wrapper -->
-												</div>
-												<!--/cls_box_inner -->
-											</div>
+											
 											<!--/cls_box_wrapper -->
 											<script type="text/javascript">
 												jQuery(function(){
@@ -1344,111 +1301,7 @@
 								<!-- / cls_main_content -->
 							</div>
 							<!-- pf-footer -->
-							<div id="pf-footer">
-								<footer>
-									<div class="cls_bg_footer">
-										<div class="cls_bg_footer_left">
-											<div class="cls_bg_footer_right">
-												<div class="cls-inner cls_footer_content_wrapper clearfix">
-													<div class="cls_footer_top clearfix">
-														<!--box footer sponsors-->
-														<div class="clearfix cls_footer_sponsors_wrapper">
-															<div class="cls_box_inner">
-																<div class="cls_box_content_wrapper">
-																	<div class="cls_box_content_inner">
-																		<div class="cls_box_content_row cls_first_content">
-																			<div class="cls-post-listing clearfix">
-																				<ul class="non-ajax clearfix">
-																					<li class="cls-item-no0 cls-row0 cls-item cls-first-in-line clearfix">
-																						<div class="cls-field-meta-small_image">
-																							<div class="cls-item-value"><a href="http://www.futsalunitedsaigon.com/sponsor/cong-ty-thai-son-nam/" title="Thái Sơn Nam"><img src="http://www.futsalunitedsaigon.com/wp-content/uploads/2013/10/logo-tsn.png" alt="Thái Sơn Nam" title="Thái Sơn Nam" /></a></div>
-																						</div>
-																					</li>
-																					<li class="cls-item-no1 cls-row0 cls-item clearfix cls-last-in-line">
-																						<div class="cls-field-meta-small_image">
-																							<div class="cls-item-value"><a href="http://www.futsalunitedsaigon.com/sponsor/tap-doan-ls/" title="Tập đoàn LS"><img src="http://www.futsalunitedsaigon.com/wp-content/uploads/2013/10/logo-ls.png" alt="Tập đoàn LS" title="Tập đoàn LS" /></a></div>
-																						</div>
-																					</li>
-																				</ul>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-																<!-- /cls_box_content_wrapper -->
-															</div>
-															<!--/cls_box_inner -->
-														</div>
-														<!--/cls_box_wrapper -->												    	<!--box footer sponsors-->
-													</div>
-													<!-- / cls_footer_top -->
-													<div class="cls_footer_info clearfix">
-														<div class="menu-bottom-menu-container">
-															<ul id="menu-bottom-menu-1" class="cls_bottom_menu">
-																<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-309">
-																	<a href="http://www.futsalunitedsaigon.com/category/tin-tuc/">Tin Tức</a>
-																	<ul class="sub-menu">
-																		<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-310"><a href="http://www.futsalunitedsaigon.com/category/tin-tuc/">Tin tức mới</a></li>
-																		<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-246"><a href="http://www.futsalunitedsaigon.com/category/tin-tuc/tin-cau-lac-bo/">Tin tức CLB</a></li>
-																		<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-804"><a href="http://www.futsalunitedsaigon.com/category/tin-tuc/tin-futsal/futsal-quoc-te/">Futsal quốc tế</a></li>
-																		<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-803"><a href="http://www.futsalunitedsaigon.com/category/tin-tuc/tin-futsal/futsal-trong-nuoc/">Futsal trong nước</a></li>
-																		<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-247"><a href="http://www.futsalunitedsaigon.com/category/tin-tuc/truyen-thong/">Truyền thông</a></li>
-																	</ul>
-																</li>
-																<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-633">
-																	<a href="http://www.futsalunitedsaigon.com/doi-bong/danh-sach/">Đội bóng</a>
-																	<ul class="sub-menu">
-																		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-271"><a href="http://www.futsalunitedsaigon.com/doi-bong/danh-sach/">Danh sách</a></li>
-																		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-634"><a href="http://www.futsalunitedsaigon.com/doi-bong/thanh-tich/">Thành tích</a></li>
-																		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-272"><a href="http://www.futsalunitedsaigon.com/doi-bong/cau-thu-ghi-ban/">Cầu thủ ghi bàn</a></li>
-																		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-273"><a href="http://www.futsalunitedsaigon.com/doi-bong/cau-thu-cua-thang/">Cầu thủ của tháng</a></li>
-																		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-274"><a href="http://www.futsalunitedsaigon.com/doi-bong/lich-tap-luyen/">Lịch tập luyện</a></li>
-																		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-275"><a href="http://www.futsalunitedsaigon.com/doi-bong/noi-qui-cau-lac-bo/">Nội quy Câu Lạc Bộ</a></li>
-																	</ul>
-																</li>
-																<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-632">
-																	<a href="http://www.futsalunitedsaigon.com/lich-dau-ket-qua/giai-dau-thanh-pho/">Lịch đấu &#8211; Kết quả</a>
-																	<ul class="sub-menu">
-																		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-277"><a href="http://www.futsalunitedsaigon.com/lich-dau-ket-qua/giai-dau-thanh-pho/">Giải đấu thành phố</a></li>
-																		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-278"><a href="http://www.futsalunitedsaigon.com/lich-dau-ket-qua/giai-dau-trong-nuoc/">Giải đấu trong nước</a></li>
-																		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-279"><a href="http://www.futsalunitedsaigon.com/lich-dau-ket-qua/giai-dau-quoc-te/">Giải đấu quốc tế</a></li>
-																	</ul>
-																</li>
-																<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-280">
-																	<a href="http://www.futsalunitedsaigon.com/ve-cau-lac-bo/">Về Câu Lạc Bộ</a>
-																	<ul class="sub-menu">
-																		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-281"><a href="http://www.futsalunitedsaigon.com/ve-cau-lac-bo/gioi-thieu-cau-lac-bo/">Giới thiệu Câu Lạc Bộ</a></li>
-																		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-282"><a href="http://www.futsalunitedsaigon.com/ve-cau-lac-bo/lich-su-hinh-thanh/">Lịch sử hình thành</a></li>
-																		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-390"><a href="http://www.futsalunitedsaigon.com/ve-cau-lac-bo/lien-he/">Liên hệ</a></li>
-																		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-283"><a href="http://www.futsalunitedsaigon.com/ve-cau-lac-bo/nha-tai-tro/">Nhà tài trợ</a></li>
-																	</ul>
-																</li>
-																<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-284">
-																	<a href="http://www.futsalunitedsaigon.com/category/hinh-anh/">Thư Viện</a>
-																	<ul class="sub-menu">
-																		<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-285"><a href="http://www.futsalunitedsaigon.com/category/video/">Video Clip</a></li>
-																		<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-286"><a href="http://www.futsalunitedsaigon.com/category/hinh-anh/">Ảnh đẹp</a></li>
-																	</ul>
-																</li>
-																<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-287"><a href="http://www.futsalunitedsaigon.com/forums/">Forum</a></li>
-															</ul>
-														</div>
-													</div>
-													<!--/cls_footer_info -->
-													<div class="cls_footer_bottom clearfix">
-														<address>
-															Copyright © 2013 futsalunitedsaigon.com - Design by Pi Communications
-														</address>
-													</div>
-												</div>
-												<!-- / cls_footer_content_wrapper -->
-											</div>
-											<!-- / cls_bg_footer_right -->
-										</div>
-										<!-- / cls_bg_footer_left -->
-									</div>
-									<!-- / cls_bg_footer -->
-								</footer>
-							</div>
+							<?php include('footer.php');?>
 							<!-- / pf-footer -->
 						</div>
 						<!-- / pf-container -->

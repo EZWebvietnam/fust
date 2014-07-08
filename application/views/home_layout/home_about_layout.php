@@ -3,16 +3,15 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>Tin Tức | FUST | Futsal United Saigon</title>
+		<title>Giới thiệu Câu Lạc Bộ | Futsal United Saigon</title>
 		<link rel="stylesheet" href="<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-content/plugins/sitepress-multilingual-cms/res/css/language-selector.css?v=2.6.0" type="text/css" media="all" />
 		<link rel="profile" href="http://gmpg.org/xfn/11" />
-		<link rel="shortcut icon" href="wp-content/uploads/2013/12/favicon.ico" type="image/x-icon" />
-		<link rel="pingback" href="http://www.futsalunitedsaigon.com/xmlrpc.php" />
+		<link rel="shortcut icon" href="<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-content/uploads/2013/12/favicon.ico" type="image/x-icon" />
+		<link rel="pingback" href="<?php echo base_url();?>template/ezwebvietnam/fust_home/xmlrpc.php" />
 		<meta name='robots' content='noindex,nofollow' />
-		
 		<link rel='stylesheet' id='bbp-child-bbpress-css'  href='<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-content/themes/futsalunitedsaigon.com/css/bbpress.css?ver=2.4.1' type='text/css' media='screen' />
 		<link rel='stylesheet' id='bp-parent-css-css'  href='<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-content/themes/futsalunitedsaigon.com/buddypress/css/buddypress.css?ver=1.8.1' type='text/css' media='screen' />
-		
+		<link rel='stylesheet' id='mblzr_common-css'  href='<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-content/plugins/wp-mobilizer/css/styles.css?ver=1.0.6' type='text/css' media='screen' />
 		<link rel='stylesheet' id='tsnfc2013-style-css'  href='<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-content/themes/futsalunitedsaigon.com/style.css?ver=3.7.3' type='text/css' media='all' />
 		<link rel='stylesheet' id='tsnfc2013-myreset-css'  href='<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-content/themes/futsalunitedsaigon.com/_stylesheets/myreset.css?ver=3.7.3' type='text/css' media='all' />
 		<link rel='stylesheet' id='tsnfc2013-fonts-css'  href='<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-content/themes/futsalunitedsaigon.com/_assets/fonts/RobotoCondensed-Bold/styles.css?ver=3.7.3' type='text/css' media='all' />
@@ -20,8 +19,7 @@
 		<link rel='stylesheet' id='tsnfc2013-animate-css'  href='<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-content/themes/futsalunitedsaigon.com/_assets/animatecss/animate.css?ver=3.7.3' type='text/css' media='all' />
 		<link rel='stylesheet' id='tsnfc2013-main-css'  href='<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-content/themes/futsalunitedsaigon.com/_stylesheets/main.css?ver=3.7.3' type='text/css' media='all' />
 		<link rel='stylesheet' id='tablepress-default-css'  href='<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-content/plugins/tablepress/css/default.min.css?ver=1.2' type='text/css' media='all' />
-		<link rel='stylesheet'   href='<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-content/themes/futsalunitedsaigon.com/_stylesheets/match.css' type='text/css' media='screen' />
-		<script type='text/javascript' src=<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-includes/js/jquery/jquery.js?ver=1.10.2'></script>
+		<script type='text/javascript' src='<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-includes/js/jquery/jquery.js?ver=1.10.2'></script>
 		<script type='text/javascript' src='<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
 		<script type='text/javascript'>
 			/* <![CDATA[ */
@@ -29,6 +27,7 @@
 			/* ]]> */
 		</script>
 		<script type='text/javascript' src='<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-content/themes/futsalunitedsaigon.com/buddypress/js/buddypress.js?ver=1.8.1'></script>
+		<script type='text/javascript' src='<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-includes/js/comment-reply.min.js?ver=3.7.3'></script>
 		<script type='text/javascript' src='<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-content/themes/futsalunitedsaigon.com/_javascripts/modernizr.custom.js?ver=3.7.3'></script>
 		<script type='text/javascript' src='<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-content/themes/futsalunitedsaigon.com/_javascripts/browserdetect.js?ver=3.7.3'></script>
 		<script type='text/javascript' src='<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-content/themes/futsalunitedsaigon.com/_assets/jquery.bxslider/jquery.bxslider.js?ver=3.7.3'></script>
@@ -38,15 +37,13 @@
 		<script type='text/javascript' src='<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-content/themes/futsalunitedsaigon.com/_assets/bootstrap/js/bootstrap.min.js?ver=3.7.3'></script>
 		<script type='text/javascript' src='<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-content/themes/futsalunitedsaigon.com/_javascripts/scripts.js?ver=3.7.3'></script>
 		<script type='text/javascript' src='<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-content/plugins/sitepress-multilingual-cms/res/js/jquery.cookie.js?ver=2.6.0'></script>
-		<script type='text/javascript' src='<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-content/themes/futsalunitedsaigon.com/_javascripts/paging.js'></script>
 		<script type='text/javascript'>
 			/* <![CDATA[ */
-			var wpml_browser_redirect_params = {"pageLanguage":"vi","languageUrls":{"vi":"http:\/\/www.futsalunitedsaigon.com\/beta\/dang-ky-fb\/","en":"http:\/\/www.futsalunitedsaigon.com\/beta\/"},"cookie":{"name":"_icl_visitor_lang_js","domain":"www.futsalunitedsaigon.com","path":"\/","expiration":24}};
+			var wpml_browser_redirect_params = {"pageLanguage":"vi","languageUrls":{"vi":"http:\/\/www.futsalunitedsaigon.com\/ve-cau-lac-bo\/gioi-thieu-cau-lac-bo\/","en":"http:\/\/www.futsalunitedsaigon.com\/en\/club-information\/about-club\/"},"cookie":{"name":"_icl_visitor_lang_js","domain":"www.futsalunitedsaigon.com","path":"\/","expiration":24}};
 			/* ]]> */
 		</script>
 		<script type='text/javascript' src='<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-content/plugins/sitepress-multilingual-cms/res/js/browser-redirect.js?ver=2.6.0'></script>
 		
-		<meta name="generator" content="WordPress 3.7.3" />
 		<script type="text/javascript">
 			/* <![CDATA[ */
 						jQuery(document).ready( function() {
@@ -94,8 +91,7 @@
 			});
 						/* ]]> */
 		</script>
-		
-		<script type="text/javascript">var icl_lang = 'vi';var icl_home = 'http://www.futsalunitedsaigon.com/';</script>
+		<script type="text/javascript">var icl_lang = 'vi';var icl_home = '<?php echo base_url();?>template/ezwebvietnam/fust_home/';</script>
 		<script type="text/javascript" src="<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-content/plugins/sitepress-multilingual-cms/res/js/sitepress.js"></script>
 		<!-- WP-Mobilizer 1.0.6 by Kilukru Media (www.wp-mobilizer.com)-->
 		<!-- /WP-Mobilizer -->
@@ -120,7 +116,7 @@
 			<!-- browser wrapper -->
 			<div id="pf-browser" class="">
 				<!-- site-wrapper -->
-				<div id="pf-site-wrapper" class="archive category category-tin-tuc category-14 paged-4 category-paged-4 full-width custom-background-empty custom-font-enabled cls-panel-close no-js">
+				<div id="pf-site-wrapper" class="page page-id-264 page-child parent-pageid-18 page-template page-template-page-gioi-thieu-cau-lac-bo-php full-width custom-background-empty custom-font-enabled cls-panel-close no-js">
 					<!-- site-inner -->
 					<div id="pf-site-inner" class="vi">
 						<script type="text/javascript">
@@ -148,8 +144,8 @@
 									<div class="cls_headr_top">
 										<div class="cls_language cls_right">
 											<ul>
-												<li class="cls_bg_none"><a href="http://www.futsalunitedsaigon.com/category/tin-tuc/" class="cls_active">Vietnamese</a></li>
-												<li class=""><a href="http://www.futsalunitedsaigon.com/en/category/news/" >English</a></li>
+												<li class="cls_bg_none"><a href="<?php echo base_url();?>template/ezwebvietnam/fust_home/ve-cau-lac-bo/gioi-thieu-cau-lac-bo/" class="cls_active">Vietnamese</a></li>
+												<li class=""><a href="<?php echo base_url();?>template/ezwebvietnam/fust_home/en/club-information/about-club/" >English</a></li>
 											</ul>
 										</div>
 										<div class="cls_headr_members cls_right">
@@ -188,7 +184,7 @@
 														<div class="cls_headr_right_wrapper">
 															<div class="cls_headr_top_right_wrapper clearfix">
 																<div class="cls_search_form_wrapper cls_right clearfix">
-																	<form role="search" method="get" id="searchform" action="http://www.futsalunitedsaigon.com/">
+																	<form role="search" method="get" id="searchform" action="<?php echo base_url();?>template/ezwebvietnam/fust_home/">
 																		<div class="cls-input-wrapper">
 																			<input type="text" value="" name="s" id="s" placeholder="Tìm kiếm…" />
 																			<input type="submit" id="searchsubmit" value="" />
@@ -204,7 +200,7 @@
 																<div class="cls_top_menu_inner">
 																	<div class="menu-bottom-menu-container">
 																		<ul id="menu-bottom-menu" class="cls_top_menu">
-																			<li id="menu-item-309" class="menu-item menu-item-type-taxonomy menu-item-object-category current-menu-item current-menu-ancestor current-menu-parent menu-item-has-children menu-item-309">
+																			<li id="menu-item-309" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-309">
 																				<a href="<?php echo base_url();?>tin-tuc">Tin Tức</a>
 																				<ul class="sub-menu">
 																					<?php 
@@ -236,7 +232,7 @@
 																					
 																				</ul>
 																			</li>
-																			<li id="menu-item-280" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-has-children menu-item-280">
+																			<li id="menu-item-280" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor current-menu-ancestor current-menu-parent current-page-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-280">
 																				<a href="<?php echo base_url();?>doi-bong/gioi-thieu">Về Câu Lạc Bộ</a>
 																				<ul class="sub-menu">
 																					<li id="menu-item-281" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-264 current_page_item menu-item-281"><a href="<?php echo base_url();?>doi-bong/gioi-thieu">Giới thiệu Câu Lạc Bộ</a></li>
@@ -252,7 +248,7 @@
 																					<li id="menu-item-286" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-286"><a href="<?php echo base_url();?>media/hinh-anh">Ảnh đẹp</a></li>
 																				</ul>
 																			</li>
-																			<li id="menu-item-287" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-287"><a href="http://www.futsalunitedsaigon.com/forums/">Forum</a></li>
+																			<li id="menu-item-287" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-287"><a href="<?php echo base_url();?>template/ezwebvietnam/fust_home/forums/">Forum</a></li>
 																		</ul>
 																	</div>
 																</div>
@@ -268,251 +264,30 @@
 								</div>
 							</header>
 							<div class="cls_main_bg">
-								
 								<div class="cls_main_content clearfix">
 									<div class="cls_breadcrumb_wrapper">
 										<!-- Breadcrumb NavXT 4.4.0 -->
-										<a title="Go to Thai Son Nam FC." href="http://www.futsalunitedsaigon.com" class="home">Trang Chủ</a> &#047; <span class="cls_category">Tin Tức</span>
+										<a title="Go to Thai Son Nam FC." href="http://www.futsalunitedsaigon.com" class="home">Trang Chủ</a> &#047; <a title="Go to Về Câu Lạc Bộ." href="#" class="page">Về Câu Lạc Bộ</a> &#047; <span id="title_about"></span>
 									</div>
-									<div class="cls_layout_wrapper three_col_layout clearfix">
+									<div class="cls_layout_wrapper cls_layout_about_group_wrapper two_col_layout clearfix">
 										<div class="cls_layout_inner col1">
 											<div class="cls_left_panel_menu_wrapper">
-												<div class="menu-left-menu-news-container">
-													<ul id="menu-left-menu-news" class="cls_left_panel_menu">
-														<?php 
-																					foreach($list_cate as $l_cate)
-																					{
-																						$id_cate = $l_cate['id_cate'];
-																						if($l_cate['id_cate'] == $active)
-																						{
-																							
-																							$class = "current-menu-item menu-item-$id_cate";
-																						}
-																						else
-																						{
-																							$class = "menu-item-$id_cate";
-																						}
-																					?>
-														<li id="menu-item-<?php echo $id_cate;?>" class="menu-item menu-item-type-taxonomy menu-item-object-category <?php echo $class;?>"><a href="<?php echo base_url();?>c/<?php echo $l_cate['id_cate']?>-<?php echo  mb_strtolower(url_title(removesign($l_cate['title_cate'])))?>"><?php echo $l_cate['title_cate'] ?></a></li>
-														<?php } ?>
+												<div class="menu-left-about-club-menu-container">
+													<ul id="menu-left-about-club-menu" class="cls_left_panel_menu">
+														<li id="gioi-thieu" class="menu-item menu-item-type-post_type menu-item-object-page page_item page-item-264 current_page_item menu-item-370"><a href="<?php echo base_url();?>doi-bong/gioi-thieu">Giới thiệu CLB</a></li>
+														
+														<li id="nha-tai-tro" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-368"><a href="<?php echo base_url();?>doi-bong/nha-tai-tro">Nhà tài trợ</a></li>
+														<script>
+															jQuery(document).ready(function(){
+																jQuery("#<?php echo $this->uri->segment(2)?>").addClass('current-menu-item');
+															})
+														</script>
 													</ul>
 												</div>
-											</div>
-										</div>
-										<div class="cls_layout_inner col2">
-											<!-- box lastest news -->
-											<div class="cls_box_wrapper clearfix cls_list_news_in_cat_wrapper clearfix">
-												<div class="cls_box_inner">
-													<div class="cls_box_header_wrapper clearfix">
-														<div  class="cls_box_header_inner_left">
-															<div class="cls_box_header_inner_right">
-																<div class="cls_box_header_left_wrapper">
-																	<div class="cls_box_header_left_inner">
-																		
-																	</div>
-																</div>
-																<div class="cls_box_header_right_wrapper">
-																	<div class="cls_box_header_right_inner">
-																	</div>
-																</div>
-															</div>
-														</div>
-														<!-- /cls_box_header_inner -->
-													</div>
-													<?php echo $this->load->view($main_content);?>
-												</div>
-												<!--/cls_box_inner -->
-											</div>
-											<!--/cls_box_wrapper -->
-											<script type="text/javascript">
-												//var strText = jQuery('.cls_left_panel_menu_wrapper ul li:first-child a').html()
-												<?php 
-												if(isset($cate_detail))
-												{
-													?> 
-													var strText = "<?php echo $cate_detail[0]['title_cate']?>";
-													<?php } else { ?> 
-													var strText = 'Tin tức';
-													<?php
-														
-													}
 												
-												?>
-												
-												jQuery('.cls_list_news_in_cat_wrapper .cls_box_header_left_inner').html(strText);
-												jQuery('.cls_breadcrumb_wrapper span.cls_category').html(strText);
-											</script>
-											<!-- /End box lastest news -->
+											</div>
 										</div>
-										<div class="cls_layout_inner col3">
-											<!--box most read posts-->
-											<div class="cls_box_wrapper clearfix cls_most_read_wrapper clearfix">
-												<div class="cls_box_inner">
-													<div class="cls_box_header_wrapper clearfix">
-														<div  class="cls_box_header_inner_left">
-															<div class="cls_box_header_inner_right">
-																<div class="cls_box_header_left_wrapper">
-																	<div class="cls_box_header_left_inner">
-																		Tin đọc nhiều						
-																	</div>
-																</div>
-																<div class="cls_box_header_right_wrapper">
-																	<div class="cls_box_header_right_inner">
-																	</div>
-																</div>
-															</div>
-														</div>
-														<!-- /cls_box_header_inner -->
-													</div>
-													<!-- /cls_box_header_wrapper -->
-													<div class="cls_box_content_wrapper">
-														<div class="cls_box_content_inner">
-															<div class="cls_box_content_row cls_first_content">
-																<div class="cls-post-listing clearfix">
-																	<ul class="non-ajax clearfix">
-																	<?php 
-																	$i = 1;
-																	foreach($doc_nhieu as $d_n)
-																	{
-																	
-																	?>
-																		<li class="cls-item-no<?php echo $i?> cls-row<?php echo $i?> cls-item cls-first-in-line clearfix cls-last-in-line cls-only-in-line">
-																			<div class="cls_item_num"><?php echo $i?>.</div>
-																			<div class="group group cls_post_data clearfix ">
-																				<div class="cls-field-title">
-																					<div class="cls-item-value"><a href="<?php echo base_url();?>post/<?php echo $d_n['id_new']?>-<?php echo  mb_strtolower(url_title(removesign($d_n['title_new'])))?>" title="<?php echo $d_n['title_new']?>"><?php echo $d_n['title_new']?></a></div>
-																				</div>
-																			</div>
-																		</li>
-																	<?php $i++;} ?>	
-																	</ul>
-																</div>
-															</div>
-														</div>
-													</div>
-													<!-- /cls_box_content_wrapper -->
-													<div class="cls_box_footer_wrapper">
-													</div>
-													<!--/cls_box_footer_wrapper -->
-												</div>
-												<!--/cls_box_inner -->
-											</div>
-											<!--/cls_box_wrapper -->
-											<!--end box most read posts-->
-											<!--box next match-->
-											<div class="cls_box_wrapper clearfix cls_next_match_wrapper clearfix">
-												<div class="cls_box_inner">
-													<div class="cls_box_header_wrapper clearfix">
-														<div  class="cls_box_header_inner_left">
-															<div class="cls_box_header_inner_right">
-																<div class="cls_box_header_left_wrapper">
-																	<div class="cls_box_header_left_inner">
-																		Trận đấu sắp tới						
-																	</div>
-																</div>
-																<div class="cls_box_header_right_wrapper">
-																	<div class="cls_box_header_right_inner">
-																	</div>
-																</div>
-															</div>
-														</div>
-														<!-- /cls_box_header_inner -->
-													</div>
-													<!-- /cls_box_header_wrapper -->
-													<div class="cls_box_content_wrapper">
-														<div class="cls_box_content_inner">
-														<div class="main-width" id="next-match" data-event-id="1506174">
-                                 
-                                 <div class="date" title="Monday 12 May">
-                                    <?php
-                                    $date =  strtotime($next_match[0]['time']);
-                                    echo date('D d/m/Y',$date);
-                                    ?>
-                                 </div>
-                                 <div id="button-left">
-                                    
-                                 </div>
-                                 <div class="logo_team">
-                                    <div class="team_home" style="margin-right:3px;">
-                                       <img width="46" height="60" src="http://saigonfutsal.com/beta/file/uploads/teams/fust_logo.png" alt="Elche">
-                                    </div>
-                                    <div class="vs ">
-                                       <a href="#" target="_blank">
-                                       <?php 
-                                       echo date('H:i',$date);
-                                       ?></a>
-                                       <span title="Not started">
-                                       VS                    </span>
-                                    </div>
-                                    <div class="team_away" style="margin-left: 3px;">
-                                    <?php 
-                                    if(file_exists(PATH_FOLDER.ROT_DIR.'file/uploads/team/'.$next_match[0]['team_challenge_logo']) && is_file(PATH_FOLDER.ROT_DIR.'file/uploads/team/'.$next_match[0]['team_challenge_logo']) && $next_match[0]['team_challenge_logo']!='')
-                                    {
-                                    ?>
-                                       <img width="46" height="60" src="<?php echo base_url();?>file/uploads/team/<?php echo $next_match[0]['team_challenge_logo']?>" alt="<?php echo $next_match[0]['team_challenge']?>">
-                                       <?php } else {?>
-                                        <img width="46" height="60" src="<?php echo base_url();?>file/uploads/no_image.gif" alt="<?php echo $next_match[0]['team_challenge']?>" alt="<?php echo $next_match[0]['team_challenge']?>">
-                                       <?php } ?>
-                                    </div>
-                                    <p class="teams-names">
-                                       <span title="FUST">FUST</span> vs <span title="<?php echo $next_match[0]['team_challenge']?>"><?php echo $next_match[0]['team_challenge']?></span>
-                                    </p>
-                                 </div>
-                                 <div id="button-right">
-                                   
-                                 </div>
-                              </div>
-														</div>
-													</div>
-													<!-- /cls_box_content_wrapper -->
-													<div class="cls_box_footer_wrapper">
-													</div>
-													<!--/cls_box_footer_wrapper -->
-												</div>
-												<!--/cls_box_inner -->
-											</div>
-											<!--/cls_box_wrapper -->
-											<!--end box next match-->
-											<!--box live match-->
-											
-											<!--/cls_box_wrapper -->
-											<!--end box live match-->
-											<!--man of month-->
-											<div class="cls_box_wrapper clearfix cls_man_of_month_wrapper clearfix">
-												<div class="cls_box_inner">
-													<div class="cls_box_content_wrapper">
-														<div class="cls_box_content_inner">
-															<a href="<?php echo base_url();?>doi-bong/cau-thu-xuat-sac-nhat-thang">
-																<div class="cls-post-listing clearfix">
-																	<ul class="non-ajax clearfix">
-																		<li class="cls-item-no0 cls-row0 cls-item cls-first-in-line clearfix cls-last-in-line cls-only-in-line">
-																			<div class="cls-field-image">
-																				<div class="cls-item-value"><img width="300" height="300" src="<?php echo base_url();?>file/uploads/BCCTCT.jpg" class="attachment-ths_thumb wp-post-image" alt="Hãy bình chọn cho cầu thủ futsal hay nhất tháng" title="Hãy bình chọn cho cầu thủ futsal hay nhất tháng" /></div>
-																			</div>
-																			<div class="group group cls_post_data clearfix ">
-																				<div class="cls-field-title">
-																					<div class="cls-item-value">Bình chọn cầu thủ của tháng</div>
-																				</div>
-																			</div>
-																		</li>
-																	</ul>
-																</div>
-															</a>
-														</div>
-													</div>
-													<!-- /cls_box_content_wrapper -->
-													<div class="cls_box_footer_wrapper">
-													</div>
-													<!--/cls_box_footer_wrapper -->
-												</div>
-												<!--/cls_box_inner -->
-											</div>
-											<!--/cls_box_wrapper -->
-											<!--box forum-->
-											
-											<!--/cls_box_wrapper -->
-											<!--end forum-->
-										</div>
+										<?php echo $this->load->view($main_content);?>
 									</div>
 								</div>
 								<!-- / cls_main_content -->
@@ -530,7 +305,7 @@
 			<!-- /browser wrapper -->
 		</div>
 		<!-- /platform wrapper -->
-		<!-- Generated in 0.208 seconds. (311 q) -->
+		<!-- Generated in 1.180 seconds. (228 q) -->
 		<script type='text/javascript' src='<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-content/themes/futsalunitedsaigon.com/_javascripts/navigation.js?ver=1.0'></script>
 	</body>
 </html>
