@@ -70,6 +70,7 @@ class Challengeadmin extends MY_Controller
 		{
 			$message ="Tran dau giua FUST va $name vao luc $time tai san $san da bi huy. Cam on ban da gui loi moi giao huu toi chung toi";	
 		}
+		$message = removesign($message);
 		$this->load->library('esms');
 		$this->esms->sendsms($keo_detail[0]['phone_leader_challenge'],$message);
 	}
