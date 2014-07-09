@@ -141,7 +141,7 @@ $time_start = microtime_float();
                                                                 </a>
                                                             </li>
                                                             <li class="main">
-                                                                <a href="<?php echo base_url(); ?>admin/paymentadmin/list_payment" rel="payment" class="v_link">
+                                                                <a href="<?php echo base_url(); ?>admin/challengeadmin/list_challenge" rel="challenge" class="v_link">
                                                                     <div><img width="32" height="32" src="<?php echo base_url(); ?>template/ezwebvietnam/admin_cp/icon/ic_arrow_round_change.png" alt=""></div>
                                                                    Cáp kèo
                                                                 </a>
