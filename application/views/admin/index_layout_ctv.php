@@ -135,15 +135,15 @@ $time_start = microtime_float();
                                                                 </a>
                                                             </li>
                                                              <li class="main">
-                                                                <a href="<?php echo base_url(); ?>admin/orderadmin/list_order_detail" rel="order_detail" class="v_link">
+                                                                <a href="<?php echo base_url(); ?>admin/clubadmin/list_club" rel="club_admin" class="v_link">
                                                                     <div><img src="<?php echo base_url(); ?>template/ezwebvietnam/admin_cp/icon/order_detail.png" alt=""></div>
-                                                                    CT Hóa đơn
+                                                                    Câu lạc bộ
                                                                 </a>
                                                             </li>
                                                             <li class="main">
                                                                 <a href="<?php echo base_url(); ?>admin/paymentadmin/list_payment" rel="payment" class="v_link">
-                                                                    <div><img src="<?php echo base_url(); ?>template/ezwebvietnam/admin_cp/icon/bank.png" alt=""></div>
-                                                                   Tài khoản NH
+                                                                    <div><img width="32" height="32" src="<?php echo base_url(); ?>template/ezwebvietnam/admin_cp/icon/ic_arrow_round_change.png" alt=""></div>
+                                                                   Cáp kèo
                                                                 </a>
                                                             </li>
                                                             <li class="main">
