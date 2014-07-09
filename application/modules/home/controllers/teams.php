@@ -283,5 +283,47 @@ class Teams extends MY_Controller
 		$this->data['main_content'] = 'result_view';
 		$this->load->view('home_layout/home_list_team_layout',$this->data);
 	}
+	public function cap_keo()
+	{
+		if($this->input->post())
+		{
+			$team_challenge = $this->input->post('team_challenge');
+			$leader_challenge = $this->input->post('leader_challenge');
+			$email_leader_challenge = $this->input->post('email_leader_challenge');
+			$phone_leader_challenge = $this->input->post('phone_leader_challenge');
+			$courtyard_challenge = $this->input->post('courtyard_challenge');
+			$time = $this->input->post('time');
+			$time_= $this->input->post('time_');
+			if (strpos($time_,'pm') !== false) {
+			    $time_ = explode('pm',$time_);
+				if(isset($time_[0]))
+				{
+					$time_1 = explode(':',$time_[0]);
+					$time_save = $time_1[0]+12;
+					$time_save = $time_save.':'.$time_1[1];
+				}
+			}
+			else
+			{
+				$time_save = $time_;	
+			}
+			$time_save = $time.' '.$time_;
+			$keo= $this->input->post('keo');
+			$data_save = array('team_challenge'=>$team_challenge,'leader_challenge'=>$leader_challenge,'email_leader_challenge'=>$email_leader_challenge,'phone_leader_challenge'=>$phone_leader_challenge,'courtyard_challenge'=>$courtyard_challenge,'keo'=>$keo,'time'=>$time_save);
+			$id = $this->challengehomemodel->insert_challenge($data_save);
+			if($id>0)
+			{
+				$this->load->library('esms');
+				$message = "FUST nhận được kèo thi đấu từ $team_challenge tại website FutsalUnitedSaigon.com vui lòng login để xác nhận !";
+				$this->esms->sendsms('01667039939',$message);
+				redirect('..'.ROT_DIR);	
+			}
+		}
+		else
+		{
+			$this->data['main_content'] = 'cap_keo';
+			$this->load->view('home_layout/home_list_team_layout',$this->data);
+		}	
+	}
 }
 ?>

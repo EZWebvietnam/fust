@@ -231,6 +231,7 @@
 																					<li id="menu-item-274" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-274"><a href="<?php echo base_url();?>doi-bong/lich-thi-dau">Lịch thi đấu</a></li>
 																					<li id="menu-item-275" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-275"><a href="<?php echo base_url();?>doi-bong/noi-quy">Nội quy Câu Lạc Bộ</a></li>
 																					<li id="menu-item-275" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-276"><a href="<?php echo base_url();?>dang-ky-fb">Đăng ký gia nhập</a></li>
+																					<li id="menu-item-275" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-276"><a href="<?php echo base_url();?>doi-bong/cap-keo">Đăng ký giao hữu</a></li>
 																				</ul>
 																			</li>
 																			<li id="menu-item-632" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-632">
@@ -363,7 +364,11 @@
 													<div class="cls_box_content_wrapper">
 														<div class="cls_box_content_inner">
 														<div class="main-width" id="next-match" data-event-id="1506174">
-                                 
+                                 <?php 
+								 if(isset($next_match[0]))
+								 {
+								 
+								 ?>
                                  <div class="date" title="Monday 12 May">
                                     <?php
                                     $date =  strtotime($next_match[0]['time']);
@@ -399,9 +404,11 @@
                                        <span title="FUST">FUST</span> vs <span title="<?php echo $next_match[0]['team_challenge']?>"><?php echo $next_match[0]['team_challenge']?></span>
                                     </p>
                                  </div>
+								 <center><span style="color:red !important;"> <b>Đăng ký thi đấu giao hữu với FUST<a  href="<?php echo base_url();?>doi-bong/cap-keo"> tại đây</a></b></span></center>
                                  <div id="button-right">
                                    
                                  </div>
+								 <?php } ?>
                               </div>
 														</div>
 													</div>

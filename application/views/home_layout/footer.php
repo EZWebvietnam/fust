@@ -55,11 +55,12 @@
 																	<ul class="sub-menu">
 																					<li id="menu-item-271" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-248 current_page_item menu-item-271"><a href="<?php echo base_url();?>doi-bong/danh-sach/">Danh sách</a></li>
 																					<li id="menu-item-634" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-634"><a href="<?php echo base_url();?>doi-bong/ket-qua-thi-dau">Kết quả thi đấu</a></li>
-																					<li id="menu-item-272" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-272"><a href="http://www.futsalunitedsaigon.com/doi-bong/cau-thu-ghi-ban/">Cầu thủ ghi bàn</a></li>
+																					
 																					<li id="menu-item-273" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-273"><a href="<?php echo base_url();?>doi-bong/cau-thu-xuat-sac-nhat-thang">Cầu thủ của tháng</a></li>
 																					<li id="menu-item-274" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-274"><a href="<?php echo base_url();?>doi-bong/lich-thi-dau">Lịch thi đấu</a></li>
 																					<li id="menu-item-275" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-275"><a href="<?php echo base_url();?>doi-bong/noi-quy">Nội quy Câu Lạc Bộ</a></li>
 																					<li id="menu-item-275" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-276"><a href="<?php echo base_url();?>dang-ky-fb">Đăng ký gia nhập</a></li>
+																					<li id="menu-item-275" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-276"><a href="<?php echo base_url();?>doi-bong/cap-keo">Đăng ký giao hữu</a></li>
 																				</ul>
 																</li>
 																<li id="menu-item-632" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-632">
@@ -92,7 +93,7 @@
 													</div>
 													<!--/cls_footer_info -->
 													<div class="cls_footer_bottom clearfix">
-														<span style="height:15px;" class="address">
+														<span style="height:15px; background: black !important; " class="address">
 															<center>Copyright © 2013 futsalunitedsaigon.com - Design by Pi Communications</center>
 														</span>
 													</div>

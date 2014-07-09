@@ -55,6 +55,7 @@ $route['doi-bong/ket-qua-thi-dau'] = "home/teams/result_team";
 $route['doi-bong/ket-qua-thi-dau/page/(:any)'] = "home/teams/result_team";
 $route['doi-bong/gioi-thieu'] = "home/home/about";
 $route['doi-bong/nha-tai-tro'] = "home/home/tai_tro";
+$route['doi-bong/cap-keo'] = "home/teams/cap_keo";
 $route['media/clip'] = "home/home/list_clip";
 $route['media/clip/page/(:any)'] = "home/home/list_clip";
 $route['media/hinh-anh']="home/home/image";

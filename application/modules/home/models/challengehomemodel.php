@@ -19,5 +19,10 @@ class Challengehomemodel extends CI_Model
 		$query = $this->db->query($sql);
 		return $query->result_array();
 	}
+	public function insert_challenge(array $data)
+	{
+		$this->db->insert("$this->_name",$data);
+		return $this->db->insert_id();
+	}
 }
 ?>

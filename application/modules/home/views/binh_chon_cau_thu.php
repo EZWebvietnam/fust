@@ -68,4 +68,3 @@ $time = date('Y').'-'.date('m').'-20 00:00:00';
 											
 										</div>
 										
-</script>
