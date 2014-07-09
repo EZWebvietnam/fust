@@ -60,7 +60,7 @@ $route['media/clip/page/(:any)'] = "home/home/list_clip";
 $route['media/hinh-anh']="home/home/image";
 $route['logout']="home/teams/logout";
 $route['quan-tri'] = "admin/login/index";
-$route['quan-tri-vien'] = "admin/productadmin/index";
+$route['quan-tri-vien'] = "admin/accountadmin/index";
 $route['quen-mat-khau'] = "admin/login/reset_pass";
 $route['active-pass/(:any)/(:any)'] = "admin/login/active_pass";
 /* End of file routes.php */

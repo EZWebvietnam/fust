@@ -21,6 +21,13 @@ class Accountadmin extends MY_Controller
             exit;
         }
     }
+	public function index() {
+        if(!$this->tank_auth->is_login_admin(TRUE))
+        {
+           redirect('/quan-tri');
+        }
+        $this->load->view('admin/index_layout_ctv');
+    }
     public function list_account()
     {
         $this->load->helper('url');
@@ -185,7 +192,6 @@ class Accountadmin extends MY_Controller
     }
     public function deletes()
     {
-        $this->load->model('productmodel');
         $array = $this->input->post('ar_id');
         foreach ($array as $k => $v) {
             if($v!=1)

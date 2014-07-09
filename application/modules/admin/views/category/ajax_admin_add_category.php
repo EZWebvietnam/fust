@@ -22,61 +22,6 @@
                     <input id="title_" type="texbox" name="title"/>
                 </td>
             </tr>
-            
-			 <tr>
-                <td class="label">Parent Lable</td>
-                <td colspan="3">
-                    <select name="parent_lable" id="parent_lable">
-	                   <option value="1">Có</option>
-	                   <option value="0">Không</option>	
-                   </select>
-                </td>
-            </tr>
-            <tr>
-                <td class="label">Chạy trực tiếp vào sản phẩm</td>
-                <?php 
-                $this->load->model('productmodel');
-                $list_product = $this->productmodel->list_product_cate();
-                ?>
-                <td colspan="3">
-                    <select name="id_product" id="id_product" disabled="">
-	                   <option value="0">Không chạy trực tiếp</option>
-	                   <?php 
-	                   foreach($list_product as $l_product)
-	                   {
-					   
-	                   ?>
-	                   <option value="<?php echo $l_product['id_product']?>"><?php echo $l_product['title']?></option>	
-	                   <?php } ?>
-                   </select>
-                </td>
-            </tr>
-			<tr>
-				<?php 
-				$lable = $this->categorymodel->list_lable();
-				?>
-                <td class="label">Thuộc Lable</td>
-                <td colspan="3">
-                    <select name="lable" id="lable" disabled="">
-					<?php 
-					foreach($lable as $l_ble)
-					{
-					
-					?>
-	                   <option value="<?php echo $l_ble['id_cate']?>"><?php echo $l_ble['title']?></option>
-					<?php } ?>
-                   </select>
-                </td>
-            </tr>
-            <tr>
-                <td class="label">Hiện trang chủ</td>
-                <td colspan="3">
-                   <select name="radio" id="radio" disabled="">
-	                   <option value="1">Có</option>
-	                   <option value="0">Không</option>	
-                   </select>
-                </td>
-            </tr>
             <td><input class="bt100" type="submit" value="Thêm"></td>
 
             </tr>

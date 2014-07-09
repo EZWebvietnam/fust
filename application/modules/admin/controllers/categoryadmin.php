@@ -60,7 +60,6 @@ class Categoryadmin extends MY_Controller
     }
     public function deletes()
     {
-        $this->load->model('productmodel');
         $array = $this->input->post('ar_id');
         foreach ($array as $k => $v) {
         	$this->categorymodel->delete_ctv($v);
@@ -74,20 +73,8 @@ class Categoryadmin extends MY_Controller
     	{
 			$data_save = array();
 			$title = $this->input->post('title');
-			$parent_lable = $this->input->post('parent_lable');
-			$id_product = $this->input->post('id_product');
-			$data_save = array('title'=>$title,'product'=>$id_product);
-			if($parent_lable == 1)
-			{
-				$data_save['lable'] = 0;
-				$radio = 0;
-			}
-			else
-			{
-				$data_save['lable'] = $this->input->post('lable');
-				$radio = $this->input->post('radio');
-			}
-			$data_save['show_home'] = $radio;
+			
+			$data_save = array('title_cate'=>$title);
 			$id = $this->categorymodel->add($data_save);
 			if($id>0)
 			{
