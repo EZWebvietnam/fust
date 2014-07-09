@@ -6,6 +6,10 @@
         });
     });
 </script>
+<script>
+          $('#birth_day').datepicker({dateFormat:'yy-mm-dd'});
+          
+       </script>
 <div class="h-pop">
     <div class="h-icon"></div>
     <h3>Chi tiết Tài khoản</h3>
@@ -20,10 +24,48 @@
                     <input  type="text" value="<?php echo $detail_ctv[0]['full_name'] ?>" name="full_name"/>
                 </td>
             </tr>
+			<tr>
+                <td class="label">Email</td>
+                <td colspan="3">
+                     <input type="text" name="sEmail" value="<?php echo $detail_ctv[0]['email'] ?>" id="sEmail" maxlength="80" size="30">
+                </td>
+            </tr>
             <tr>
                 <td class="label">Password</td>
                 <td colspan="3">
                     <input type="password" value="" name="password"/>
+                </td>
+            </tr>
+			<tr>
+                <td class="label">Ngày sinh</td>
+                <td colspan="3">
+                    <input type="text" id="birth_day" name="birth_day" value="<?php echo $detail_ctv[0]['birthday'] ?>"/>
+                </td>
+            </tr>
+			<tr>
+                <td class="label">CMND</td>
+                <td colspan="3">
+                    <input type="text" id="cmnd" name="cmnd" value="<?php echo $detail_ctv[0]['cmnd'] ?>"/>
+                </td>
+            </tr>
+			<tr>
+                <td class="label">Tỉnh</td>
+                <td colspan="3">
+                    <select id="province" name="province">
+					<?php 
+					foreach($list_province_admin as $k=>$v)
+					{
+						if($k == $detail_ctv[0]['province'])
+						{
+							$seleted ='selected=""';
+						}
+						else
+						{
+							$seleted ="";
+						}
+											?>
+											<option  <?php echo $seleted;?> value="<?php echo $k?>"><?php echo $v?></option>
+											<?php  } ?>
                 </td>
             </tr>
             <tr>
@@ -40,6 +82,27 @@
                         <?php } else { ?> 
                             <option value="<?php echo $role['id']?>"><?php echo $role['name']?></option>
                             <?php  } } ?>
+                    </select>
+                </td>
+            </tr>
+			<tr>
+                <td class="label">Vị trí thi đấu</td>
+                <td colspan="3">
+                    <select name="vi_tri">
+                        <?php 
+                        foreach($vi_tri as $k=>$v)
+                        {
+							if($k == $detail_ctv[0]['vi_tri'])
+						{
+							$seleted ='selected=""';
+						}
+						else
+						{
+							$seleted ="";
+						}
+                        ?>
+                        <option <?php echo $seleted;?> value="<?php echo $k?>"><?php echo $v?></option>
+                        <?php } ?>
                     </select>
                 </td>
             </tr>

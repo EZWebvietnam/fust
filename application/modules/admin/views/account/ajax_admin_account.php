@@ -85,7 +85,7 @@
                         ?>
                      <tr class="row1 ">
                         <td align="center"><input  type="checkbox" name="ar_id[]" value="<?php echo $ctv_ref['id']?>"></td>
-                        <td><?php echo $ctv_ref['username']?></td>
+                        <td><?php echo $ctv_ref['full_name']?></td>
                         <td><?php echo $ctv_ref['phone']?></td>
                         <td><?php echo $ctv_ref['address']?></td>
                         <td><?php echo $ctv_ref['email']?></td>

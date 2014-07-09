@@ -5,7 +5,12 @@
             $("input.readonly").css('background-color', '#f2f2f2');
         });
     });
+	
 </script>
+<script>
+          $('#birth_day').datepicker({dateFormat:'yy-mm-dd'});
+          
+       </script>
 <div class="h-pop">
     <div class="h-icon"></div>
     <h3>Thêm tài khoản</h3>
@@ -43,11 +48,11 @@ $password = array(
                     <input  type="text" value="" name="full_name"/>
                 </td>
             </tr>
-            <tr>
-                <td class="label">Username</td>
+			<tr>
+                <td class="label">Email</td>
                 <td colspan="3">
-                    <?php echo form_input($username);?>
-                    <div id="error_user"></div>
+                     <?php echo form_input($email);?>
+                    <div id="error_email"></div>
                 </td>
             </tr>
             <tr>
@@ -56,11 +61,28 @@ $password = array(
                      <?php echo form_input($password);?>
                 </td>
             </tr>
-            <tr>
-                <td class="label">Email</td>
+			<tr>
+                <td class="label">Ngày sinh</td>
                 <td colspan="3">
-                     <?php echo form_input($email);?>
-                    <div id="error_email"></div>
+                    <input type="text" id="birth_day" name="birth_day"/>
+                </td>
+            </tr>
+			<tr>
+                <td class="label">CMND</td>
+                <td colspan="3">
+                    <input type="text" id="cmnd" name="cmnd"/>
+                </td>
+            </tr>
+			<tr>
+                <td class="label">Tỉnh</td>
+                <td colspan="3">
+                    <select id="province" name="province">
+					<?php 
+					foreach($list_province_admin as $k=>$v)
+					{
+											?>
+											<option value="<?php echo $k?>"><?php echo $v?></option>
+											<?php  } ?>
                 </td>
             </tr>
             <tr>
@@ -72,6 +94,19 @@ $password = array(
                         {
                         ?>
                         <option value="<?php echo $role['id']?>"><?php echo $role['name']?></option>
+                        <?php } ?>
+                    </select>
+                </td>
+            </tr>
+			<tr>
+                <td class="label">Vị trí thi đấu</td>
+                <td colspan="3">
+                    <select name="vi_tri">
+                        <?php 
+                        foreach($vi_tri as $k=>$v)
+                        {
+                        ?>
+                        <option value="<?php echo $k?>"><?php echo $v?></option>
                         <?php } ?>
                     </select>
                 </td>
@@ -106,7 +141,7 @@ if($_SERVER['SERVER_NAME'] == 'localhost')
  {
       ?> 
 	  <script>
-	  	var app_main_url = 'http://localhost/';
+	  	var app_main_url = 'http://localhost/fust';
 	  </script>
 	  <?php
  }
@@ -114,7 +149,7 @@ if($_SERVER['SERVER_NAME'] == 'localhost')
  {
      ?> 
 	   <script>
-	  	var app_main_url = 'http://tibimart.com';
+	  	var app_main_url = 'http://futsalunitedsaigon.com';
 	  </script>
 	 <?php
  }

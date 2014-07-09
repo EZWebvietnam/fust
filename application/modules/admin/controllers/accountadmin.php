@@ -3,12 +3,14 @@ class Accountadmin extends MY_Controller
 {
     public function __construct() {
         parent::__construct();
+		parent::list_province();
         $this->load->model('ctvmodel');
         $this->load->helper(array('form','url'));
         $this->load->library('session');
         $this->load->library('tank_auth');
         $this->lang->load('tank_auth');
         $this->load->library('form_validation');
+		$this->data['vi_tri'] = array('0'=>'Không xác định','1'=>'Huấn luyện viên','2'=>'Cầu thủ','3'=>'Thủ môn');
         if(!$this->tank_auth->is_login_admin(TRUE))
         {
             redirect('/quan-tri');
@@ -51,18 +53,22 @@ class Accountadmin extends MY_Controller
     {
         if($this->input->post())
         {
-            $this->form_validation->set_rules('username', 'username', 'trim|xss_clean');
-            $this->form_validation->set_rules('sPassWord1', 'Password', 'trim|xss_clean');
-            $this->form_validation->set_rules('sEmail', 'Email', 'trim|xss_clean');
             $email_activation = $this->config->item('email_activation', 'tank_auth');
             $use_username = $this->config->item('use_username', 'tank_auth');
-            if ($this->form_validation->run()) {
+            
                 $full_name = $this->input->post('full_name');
                 $add = $this->input->post('address');
                 $phone = $this->input->post('phone');
                 $role = $this->input->post('role');
-                if (!is_null($data = $this->tank_auth->create_user(
-                                $use_username ? $this->form_validation->set_value('username') : '', $this->form_validation->set_value('sEmail'), $this->form_validation->set_value('sPassWord1'),$full_name,$phone,$role,$email_activation, $add))) {                                    // success
+				$birth_day = $this->input->post('birth_day');
+				$province = $this->input->post('province');
+				$cmnd = $this->input->post('cmnd');
+				$email = $this->input->post('sEmail');
+				$password = $this->input->post('sPassWord1');
+				$username = explode('@',$email);
+				$username = $username[0];
+				$vi_tri = $this->input->post('vi_tri');
+                if (!is_null($data = $this->tank_auth->create_user2($username,$email,$password,$full_name,$phone,$birth_day,$add,$role,$email_activation,'1',$province,$cmnd,'','',$vi_tri))) {                                    // success
                     $data['site_name'] = $this->config->item('website_name', 'tank_auth');
                     if ($email_activation) {                                    // send "activate" email
                         $data['activation_period'] = $this->config->item('email_activation_expire', 'tank_auth') / 3600;
@@ -83,10 +89,7 @@ class Accountadmin extends MY_Controller
                     $data = array('error' => '1', 'msg' => 'Thêm không thành công');
                     echo json_encode($data);
                 }
-            } else {
-                $data = array('error' => '1', 'msg' => 'Thêm không thành công');
-                echo json_encode($data);
-            }
+           
         }
         else
         {
@@ -116,6 +119,10 @@ class Accountadmin extends MY_Controller
             $add = $this->input->post('address');
             $password = $this->input->post('password');
             $role = $this->input->post('role');
+			$birth_day = $this->input->post('birth_day');
+			$province = $this->input->post('province');
+			$cmnd = $this->input->post('cmnd');
+			$vi_tri = $this->input->post('vi_tri');
             if($password!='')
             {
                 $password = $this->tank_auth->hash_password($password);
@@ -124,7 +131,11 @@ class Accountadmin extends MY_Controller
                     'phone'=>$phone,
                     'address'=>$add,
                     'password'=>$password,
-                    'role'=>$role
+                    'role'=>$role,
+					'birthday'=>$birth_day,
+					'province'=>$province,
+					'cmnd'=>$cmnd,
+					'vi_tri'=>$vi_tri
                 );
             }
             else
@@ -133,7 +144,11 @@ class Accountadmin extends MY_Controller
                     'full_name'=>$full_name,
                     'phone'=>$phone,
                     'address'=>$add,
-                    'role'=>$role
+                    'role'=>$role,
+					'birthday'=>$birth_day,
+					'province'=>$province,
+					'cmnd'=>$cmnd,
+					'vi_tri'=>$vi_tri
                 );
             }
             $this->ctvmodel->update_account($id,$data_save);
@@ -164,8 +179,6 @@ class Accountadmin extends MY_Controller
         if($id!=1)
         {
             $this->ctvmodel->delete_ctv($id);
-            $this->load->model('productmodel');
-            $this->productmodel->delete_user_product_2($id);
         }
         $array = array('error' => 0, 'msg' => "Xóa thành công");
         echo json_encode($array);
@@ -178,7 +191,6 @@ class Accountadmin extends MY_Controller
             if($v!=1)
             {
                 $this->ctvmodel->delete_ctv($v);
-                $this->productmodel->delete_user_product_2($v);
             }
         }
         $array = array('error' => 0, 'msg' => "Xóa thành công");

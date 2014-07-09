@@ -101,12 +101,7 @@ $time_start = microtime_float();
                                                     ?>
                                                     <div class="box_menu_right">
                                                         <ul>
-                                                            <li class="main">
-                                                                <a href="<?php echo base_url(); ?>admin/productadmin/list_product" rel="khachhang" class="v_link">
-                                                                    <div><img src="http://quanlybanhang.360vnit.com/icon/customers.png" alt=""></div>
-                                                                    Sản phẩm
-                                                                </a>
-                                                            </li>
+                                                            
 															<li class="main">
                                                                 <a href="<?php echo base_url(); ?>admin/categoryadmin/list_cate" rel="category" class="v_link">
                                                                     <div><img src="http://quanlybanhang.360vnit.com/icon/customers.png" alt=""></div>
@@ -134,9 +129,9 @@ $time_start = microtime_float();
                                                     {
                                                     ?>
                                                             <li class="main">
-                                                                <a href="<?php echo base_url(); ?>admin/orderadmin/list_order" rel="khohang" class="v_link">
+                                                                <a href="<?php echo base_url(); ?>admin/newsadmin/list_new" rel="new" class="v_link">
                                                                     <div><img src="<?php echo base_url(); ?>template/ezwebvietnam/admin_cp/icon/unit-icon.png" alt=""></div>
-                                                                    Hóa đơn
+                                                                    Tin tức
                                                                 </a>
                                                             </li>
                                                              <li class="main">

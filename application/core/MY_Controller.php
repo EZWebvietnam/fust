@@ -50,5 +50,16 @@ class MY_Controller extends CI_Controller
         }
         $this->data['header']=$data_setting;
     }
+	public function list_province()
+	{
+		$this->load->model('home/provincehomemodel');
+		$list_province = $this->provincehomemodel->list_province();
+		$province = array();
+		foreach($list_province as $p_vince)
+		{
+			$province[$p_vince['provinceid']] = $p_vince['name'];
+		}
+		$this->data['list_province_admin'] = $province;
+	}
 }
 ?>
