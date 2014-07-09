@@ -68,66 +68,6 @@ class Home extends MY_Controller {
         }
         echo json_encode($data);
     }
-
-    public function register() {
-        $this->load->model('productmodel');
-            $this->data['list_product_sale'] = $this->productmodel->get_list_product_sale_off();
-        if ($this->input->post()) {
-            $username = $this->input->post('username');
-            $full_name = $this->input->post('full_name');
-            $password = $this->input->post('password');
-            $sex = $this->input->post('radio');
-            $birth_day = $this->input->post('birth_day');
-            $address = $this->input->post('address');
-            $phone = $this->input->post('mobi');
-            $email = $this->input->post('email');
-            $yahoo = $this->input->post('yahoo');
-            $skype = $this->input->post('skype');
-            $bank = $this->input->post('bank');
-            $email_bank = $this->input->post('stk');
-            $province = $this->input->post('province');
-            $email_activation = $this->config->item('email_activation', 'tank_auth');
-            if (!is_null($data = $this->tank_auth->create_user2($username, $email, $password, $full_name, $phone, $sex, $birth_day, $address, $yahoo, $skype, $bank, $email_bank, '4', $email_activation,0,$province))) {
-                if ($email_activation) {
-                    $data['site_name'] = $this->config->item('website_name', 'tank_auth');
-                    $data['activation_period'] = $this->config->item('email_activation_expire', 'tank_auth') / 3600;
-                    $this->_send_email('activate', $email, $email, $data, 'Đăng Ký Tài Khoản Thành Công');
-                }
-                
-                $this->data['main_content'] = 'register_success';
-                $this->load->view('home/layout_detail', $this->data);
-            }
-
-        } else {
-            
-            $this->data['main_content'] = 'register_ctv';
-            $this->load->view('home/layout_detail', $this->data);
-        }
-    }
-
-    function activate() {
-        $this->load->model('productmodel');
-        $this->data['list_product_sale'] = $this->productmodel->get_list_product_sale_off();
-        $user_id = $this->uri->segment(2);
-        $user_id = addslashes($user_id);
-        $user_id = intval($user_id);
-        $new_email_key = $this->uri->segment(3);
-        $new_email_key = addslashes($new_email_key);
-        // Activate user
-        if ($this->tank_auth->activate_user($user_id, $new_email_key)) {
-            if ($this->tank_auth->is_logged_in()) {
-                $this->tank_auth->logout();
-            }
-            $this->data['main_content'] = 'active_success';
-            $this->load->view('home/layout_detail', $this->data);
-            //$this->_show_message($this->lang->line('auth_message_activation_completed') . ' ' . anchor('/home/auth/login/', 'Login'));
-            
-        } else {                                                                // fail
-            $this->data['main_content'] = 'active_success';
-            $this->load->view('home/layout_detail', $this->data);
-        }
-    }
-
     function _show_message($message) {
         $this->session->set_flashdata('message', $message);
         redirect('/');
