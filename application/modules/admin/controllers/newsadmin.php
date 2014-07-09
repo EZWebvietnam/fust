@@ -85,8 +85,8 @@ class Newsadmin extends MY_Controller {
             $content = stripslashes($this->input->post('editor2'));
             $data_update = array();
             if ($file != '') {
-                if (file_exists($_SERVER['DOCUMENT_ROOT'] . ROT_DIR . 'file/uploads/new/' . $this->data['detail'][0]['img']) && is_file($_SERVER['DOCUMENT_ROOT'] . ROT_DIR . 'file/uploads/new/' . $this->data['detail'][0]['img'])) {
-                    unlink($_SERVER['DOCUMENT_ROOT'] . ROT_DIR . 'file/uploads/new/' . $this->data['detail'][0]['img']);
+                if (file_exists($_SERVER['DOCUMENT_ROOT'] . ROT_DIR . 'file/uploads/new/' . $this->data['detail'][0]['image_new']) && is_file($_SERVER['DOCUMENT_ROOT'] . ROT_DIR . 'file/uploads/new/' . $this->data['detail'][0]['image_new'])) {
+                    unlink($_SERVER['DOCUMENT_ROOT'] . ROT_DIR . 'file/uploads/new/' . $this->data['detail'][0]['image_new']);
                 }
                 $data_update = array(
                     'title_new' => $title,
@@ -124,8 +124,8 @@ class Newsadmin extends MY_Controller {
         }
         $this->newsmodel->delete($id);
         $data = array('error' => 0, 'msg' => 'Xóa thành công');
-        if (file_exists($_SERVER['DOCUMENT_ROOT'] . ROT_DIR . 'file/uploads/new/' . $this->data['detail'][0]['img']) && is_file($_SERVER['DOCUMENT_ROOT'] . ROT_DIR . 'file/uploads/new/' . $this->data['detail'][0]['img'])) {
-            unlink($_SERVER['DOCUMENT_ROOT'] . ROT_DIR . 'file/uploads/new/' . $this->data['detail'][0]['img']);
+        if (file_exists($_SERVER['DOCUMENT_ROOT'] . ROT_DIR . 'file/uploads/new/' . $this->data['detail'][0]['image_new']) && is_file($_SERVER['DOCUMENT_ROOT'] . ROT_DIR . 'file/uploads/new/' . $this->data['detail'][0]['image_new'])) {
+            unlink($_SERVER['DOCUMENT_ROOT'] . ROT_DIR . 'file/uploads/new/' . $this->data['detail'][0]['image_new']);
         }
         echo json_encode($data);
     }
@@ -136,8 +136,8 @@ class Newsadmin extends MY_Controller {
             $detail = $this->newsmodel->detail($v);
             if(!empty($detail))
             {
-                if (file_exists($_SERVER['DOCUMENT_ROOT'] . ROT_DIR . 'file/uploads/new/' . $detail[0]['img']) && is_file($_SERVER['DOCUMENT_ROOT'] . ROT_DIR . 'file/uploads/new/' . $detail[0]['img'])) {
-                    unlink($_SERVER['DOCUMENT_ROOT'] . ROT_DIR . 'file/uploads/new/' . $detail[0]['img']);
+                if (file_exists($_SERVER['DOCUMENT_ROOT'] . ROT_DIR . 'file/uploads/new/' . $detail[0]['image_new']) && is_file($_SERVER['DOCUMENT_ROOT'] . ROT_DIR . 'file/uploads/new/' . $detail[0]['image_new'])) {
+                    unlink($_SERVER['DOCUMENT_ROOT'] . ROT_DIR . 'file/uploads/new/' . $detail[0]['image_new']);
                 }
                 $this->newsmodel->delete($v);
             }
