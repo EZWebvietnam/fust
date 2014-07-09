@@ -76,6 +76,7 @@
                            <th>SĐT</th>
                            <th>Đia chỉ</th>
                            <th>Email</th>
+						   <th>Duyệt</th>
                            <th class="publish">Chức năng</th>
                         </tr>
                      </thead>
@@ -89,6 +90,14 @@
                         <td><?php echo $ctv_ref['phone']?></td>
                         <td><?php echo $ctv_ref['address']?></td>
                         <td><?php echo $ctv_ref['email']?></td>
+						 <td>
+						 	<?php if($ctv_ref['activated']==0)
+                            {?>
+                            <img width="16" height="16" src="<?php echo base_url();?>template/ezwebvietnam/admin_cp/0.png" style="cursor: pointer;" title="Chưa duyệt" onclick="change_status_order(<?php echo $ctv_ref['id']?>,<?php echo $page?>)"/>
+                            <?php } else {?>
+                            <img width="16" height="16" src="<?php echo base_url();?>template/ezwebvietnam/admin_cp/1.png" title="Đã duyệt"/>
+                            <?php } ?>
+						 </td>
                         <td align="center">
                             
                             <a class="grouped_elements" href="<?php echo base_url();?>admin/accountadmin/edit/<?php echo $ctv_ref['id']?>" title="Sửa"><img width="16" height="16" src="<?php echo base_url();?>template/ezwebvietnam/admin_cp/icon/edit.png"></a>
@@ -142,6 +151,13 @@
                </form>
                 
                <script type="text/javascript">
+			   	function change_status_order(id,page)
+                   {
+                       $.post("<?php echo base_url();?>admin/accountadmin/activated",{'id':id},function(data){
+                           khachhang(page);
+                      });
+                      
+                   }
                   function khachhang(page_no){  
                       load_show();   
                       $.post("<?php echo base_url();?>admin/accountadmin/list_account",{'page_no':page_no},function(data){

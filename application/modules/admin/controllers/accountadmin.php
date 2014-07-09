@@ -222,5 +222,12 @@ class Accountadmin extends MY_Controller
             echo json_encode(array('error' => '1', 'msg' => '<font color="red">Email đã tồn tại trong hệ thống</font>'));
         }
     }
+	public function activated()
+	{
+		$id = $this->input->post('id');
+		$data_save = array('activated'=>1);
+		$this->ctvmodel->update_account($id,$data_save);
+		echo json_encode(array('error' => '0', 'msg' => 'Duyệt thành công'));
+	}
 }
 ?>
