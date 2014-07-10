@@ -56,6 +56,18 @@ class Newsadmin extends MY_Controller {
 				'id_cate'=>$this->input->post('category'),
 				'id_user'=>$this->session->userdata('user_id')
             );
+		
+			if($this->input->post('radio_1') == 1)
+			{
+				$list_match = $this->newsmodel->list_match_review($this->input->post('match_review'));
+				foreach($list_match as $v)
+				{
+					$data_review = array('match_review'=>0);
+					$this->newsmodel->update($v['id_new'],$data_review);	
+				}
+				$data_save['match_review'] = $this->input->post('match_review');
+			}
+			
             $id = $this->newsmodel->insert($data_save);
             if ($id > 0) {
                 $data = array('error' => 0, 'msg' => 'Thêm thành công');
@@ -103,6 +115,17 @@ class Newsadmin extends MY_Controller {
 					'id_user'=>$this->session->userdata('user_id')
                 );
             }
+			if($this->input->post('radio_1')==1)
+			{
+				$list_match = $this->newsmodel->list_match_review($this->input->post('match_review'));
+				foreach($list_match as $v)
+				{
+					$data_review = array('match_review'=>0);
+					$this->newsmodel->update($v['id_new'],$data_review);	
+				}
+				$data_update['match_review'] = $this->input->post('match_review');
+			}
+			
             $this->newsmodel->update($id, $data_update);
             $data_update = array();
             $data = array('error' => 0, 'msg' => 'Update thành công');

@@ -33,5 +33,11 @@ class Challengemodel extends CI_Model
 	{
 		$this->db->delete("$this->_name",array('id_challenge'=>$id));	
 	}
+	public function list_challenge_result()
+	{
+		$sql = "SELECT * FROM {$this->_name} INNER JOIN result ON result.id_challenge = {$this->_name}.id_challenge";
+        $query = $this->db->query($sql);
+        return $query->result_array();
+	}
 }
 ?>

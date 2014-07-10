@@ -40,6 +40,8 @@ class News extends MY_Controller
 		$this->data['list'] = $array_sv;
 		$this->data['main_content'] = 'list_new_view';
 		$this->data['active'] = '0';
+		
+		$this->data['header']['title'] = "Tin tức | Futsal United Saigon";
 		$this->load->view('home_layout/home_new_layout',$this->data);
 	}
 	public function list_post_by_id($id_cate = null)
@@ -47,6 +49,11 @@ class News extends MY_Controller
 		$id_cate = explode('-',$id_cate);
 		$id_cate = $id_cate[0];
 		if(empty($id_cate))
+		{
+			show_404();
+			exit;	
+		}
+		if(!is_numeric($id_cate))
 		{
 			show_404();
 			exit;	
@@ -75,11 +82,19 @@ class News extends MY_Controller
 		$this->data['list'] = $array_sv;
 		$this->data['main_content'] = 'list_new_cate';
 		$this->data['active'] = $id_cate;
+		$title = $this->data['cate_detail'][0]['title_cate'];
+		$this->data['header']['title'] = "$title | Futsal United Saigon";
 		$this->load->view('home_layout/home_new_layout',$this->data);
 	}
 	public function detail_new($id_new)
 	{
+		$id_new = explode('-',$id_new);
+		$id_new = $id_new[0];
 		if(empty($id_new))
+		{
+			show_404();exit;	
+		}
+		if(!is_numeric($id_new))
 		{
 			show_404();exit;	
 		}
@@ -94,6 +109,8 @@ class News extends MY_Controller
 		$this->data['active'] = $new_detail[0]['id_cate'];
 		$this->data['new_detail'] = $new_detail;
 		$this->data['list_new_by_cate'] = $this->newshomemodel->list_new_by_cate($new_detail[0]['id_cate'],$id_new);
+		$title = $new_detail[0]['title_new'];
+		$this->data['header']['title'] = "$title | Futsal United Saigon";
 		$this->data['main_content'] = 'new_detail';
 		$this->load->view('home_layout/home_new_detail_layout',$this->data);
 	}

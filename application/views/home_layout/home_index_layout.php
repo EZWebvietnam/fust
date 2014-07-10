@@ -1085,7 +1085,7 @@
                                        <img width="46" height="60" src="http://saigonfutsal.com/beta/file/uploads/teams/fust_logo.png" alt="Elche">
                                     </div>
                                     <div class="vs ">
-                                       <a href="#" target="_blank">
+                                       <a href="<?php echo base_url();?>prepare-match/<?php echo $next_match[0]['id_challenge']?>-fust-vs-<?php echo mb_strtolower(url_title(removesign($next_match[0]['team_challenge'])))?>" target="_blank">
                                        <?php 
                                        echo date('H:i',$date);
                                        ?></a>

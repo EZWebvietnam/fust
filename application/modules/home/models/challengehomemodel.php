@@ -19,6 +19,12 @@ class Challengehomemodel extends CI_Model
 		$query = $this->db->query($sql);
 		return $query->result_array();
 	}
+	public function detail($id = null)
+	{
+		$sql="SELECT * FROM {$this->_name} WHERE  confirm = 1 AND id_challenge = ?";
+		$query = $this->db->query($sql,array($id));
+		return $query->result_array();
+	}
 	public function insert_challenge(array $data)
 	{
 		$this->db->insert("$this->_name",$data);

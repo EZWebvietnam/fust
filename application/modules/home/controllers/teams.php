@@ -132,6 +132,7 @@ class Teams extends MY_Controller
 					$token = $provider->access($this->input->get('code'));
 					$this->data['noi_quy'] = $this->abouthomemodel->get_about(2);
 					$this->data['token'] = $token->access_token;
+					$this->data['header']['title'] = 'Đăng ký thành viên | Futsal United Saigon';
 					$this->load->view('home_layout/home_member_register_layout',$this->data);
 					
 				}
@@ -152,6 +153,7 @@ class Teams extends MY_Controller
 		$this->data['list_user_1'] = $list_user_1;
 		$this->data['list_user_2'] = $list_user_2;
 		$this->data['list_user_3'] = $list_user_3;
+		$this->data['header']['title'] = 'Danh sách thành viên đội bóng | Futsal United Saigon';
 		$this->load->view('home_layout/home_list_team_layout',$this->data);
 	}
 	public function logout()
@@ -165,6 +167,7 @@ class Teams extends MY_Controller
 		$this->data['new_detail'] = $this->abouthomemodel->get_about(2);
 		$this->data['main_content'] = 'noi_quy';
 		$this->data['active']= 0;
+		$this->data['header']['title'] = 'Nội quy và các quy định của đội bóng | Futsal United Saigon';
 		$this->load->view('home_layout/home_new_detail_layout',$this->data);
 	}
 	public function lich_thi_dau()
@@ -174,6 +177,7 @@ class Teams extends MY_Controller
 		$lastmonth_end = date('Y-m-d',mktime(1,1,1,++$m,0,date('Y')));
 		$this->data['list'] = $this->challengehomemodel->get_challenge_month($lastmonth_start,$lastmonth_end);
 		$this->data['main_content'] = 'lich_thi_dau';
+		$this->data['header']['title'] = 'Lịch thi đấu | Futsal United Saigon';
 		$this->load->view('home_layout/home_list_team_layout',$this->data);
 	}
 	public function binh_chon()
@@ -213,6 +217,7 @@ class Teams extends MY_Controller
 		}
 		else
 		{
+			$this->data['header']['title'] = 'Bình chọn cầu thủ xuất sắc | Futsal United Saigon';
 			$this->load->model('users');
 			$this->data['list_mem'] = $this->users->get_mem_all($id_user);
 			$this->data['main_content'] = 'binh_chon_cau_thu';
@@ -281,6 +286,7 @@ class Teams extends MY_Controller
 		$this->data['total'] = $config['total_rows'];
 		$this->data['list'] = $array_sv;
 		$this->data['main_content'] = 'result_view';
+		$this->data['header']['title'] = 'Kết quả thi đấu | Futsal United Saigon';
 		$this->load->view('home_layout/home_list_team_layout',$this->data);
 	}
 	public function cap_keo()
@@ -292,6 +298,9 @@ class Teams extends MY_Controller
 			$email_leader_challenge = $this->input->post('email_leader_challenge');
 			$phone_leader_challenge = $this->input->post('phone_leader_challenge');
 			$courtyard_challenge = $this->input->post('courtyard_challenge');
+			$lat = $this->input->post('lat');
+			$long = $this->input->post('lng');
+			$address = $this->input->post('address');
 			$time = $this->input->post('time');
 			$time_= $this->input->post('time_');
 			if (strpos($time_,'pm') !== false) {
@@ -309,7 +318,7 @@ class Teams extends MY_Controller
 			}
 			$time_save = $time.' '.$time_;
 			$keo= $this->input->post('keo');
-			$data_save = array('team_challenge'=>$team_challenge,'leader_challenge'=>$leader_challenge,'email_leader_challenge'=>$email_leader_challenge,'phone_leader_challenge'=>$phone_leader_challenge,'courtyard_challenge'=>$courtyard_challenge,'keo'=>$keo,'time'=>$time_save);
+			$data_save = array('team_challenge'=>$team_challenge,'leader_challenge'=>$leader_challenge,'email_leader_challenge'=>$email_leader_challenge,'phone_leader_challenge'=>$phone_leader_challenge,'courtyard_challenge'=>$courtyard_challenge,'keo'=>$keo,'time'=>$time_save,'lat'=>$lat,'long'=>$lng,'address'=>$address);
 			$id = $this->challengehomemodel->insert_challenge($data_save);
 			if($id>0)
 			{
@@ -322,9 +331,29 @@ class Teams extends MY_Controller
 		}
 		else
 		{
+			$this->data['header']['title'] = 'Cáp kèo thi đấu giao hữu với FUST | Futsal United Saigon';
 			$this->data['main_content'] = 'cap_keo';
 			$this->load->view('home_layout/home_list_team_layout',$this->data);
 		}	
+	}
+	public function prepare_match($id = null)
+	{
+		$id = explode('-',$id);
+		$id = $id[0];
+		if(empty($id))
+		{
+			show_404();exit;	
+		}
+		if(!is_numeric($id))
+		{
+			show_404();
+			exit;	
+		}
+		
+		$this->data['detail_next_match'] = $this->challengehomemodel->detail($id);
+		$this->data['header']['title'] = 'FUST vs '.$this->data['detail_next_match'][0]['team_challenge'].' | Futsal United Saigon';
+		$this->data['main_content'] = 'next_match_view';
+		$this->load->view('home_layout/home_list_team_layout',$this->data);
 	}
 }
 ?>

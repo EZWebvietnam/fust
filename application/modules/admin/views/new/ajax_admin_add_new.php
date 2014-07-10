@@ -64,6 +64,27 @@
 					</select>
                 </td>
             </tr>
+			<tr>
+                <td class="label">Loại bài</td>
+				<td colspan="3">
+				<input type="radio" id="radio_1" name="radio"/>Match Review<input type="radio" id="radio_2" name="radio" checked=""/>Bài viết thường</td>
+            </tr>
+			<tr>
+                <td class="label">Trận đấu</td>
+				<td colspan="3">
+				<select name="match_review" id="match_review">
+				<?php 
+				$this->load->model('challengemodel');
+				$list_match = $this->challengemodel->list_challenge_result();
+				foreach($list_match as $l_result)
+				{
+				
+				?>
+				<option value="<?php echo $l_result['id_result']?>">FUST vs <?php echo $l_result['team_challenge']?> - <?php echo $l_result['team_home']?>:<?php echo $l_result['team_visit']?></option>
+				<?php } ?>
+				</select>
+				</td>
+            </tr>
             <tr>
                 <td class="label">Hình ảnh</td>
                 <td colspan="3">
@@ -95,6 +116,20 @@
 </div>
 <script type="text/javascript">
     $(document).ready(function() {
+		$('#match_review').attr('disabled','disabled');
+		$('#radio_2').val(1);
+		$('#radio_1').click(function(){
+			$('#match_review').attr('disabled',false);
+			$('#radio_1').val(1);
+			$('#radio_2').val(0);
+			
+		})
+		$('#radio_2').click(function(){
+			$('#match_review').attr('disabled','disabled');
+			$('#radio_2').val(1);
+			$('#radio_1').val(0);
+			
+		})
         $("#adminform").validate({
             rules: {
                 title: "required"
@@ -106,10 +141,19 @@
                 var page = 1;
                 dataString = $("#adminform").serialize();
                 var content = CKEDITOR.instances['editor2'].getData();
+				if(radio_1 == 1)
+				{
+					match_review = $('#match_review').val();
+				}
+				else
+				{
+					match_review = 0;	
+				}
+				
                 $.ajax({
                     type: "POST",
                     url: $("#adminform").attr('action'),
-                    data: {title:$('#title_').val(),file:$('#file').val(),content:content,category:$('#category').val()},
+                    data: {title:$('#title_').val(),file:$('#file').val(),content:content,category:$('#category').val(),radio_1:$('#radio_1').val(),radio_2:$('#radio_2').val(),match_review:$('#match_review').val()},
                     mimeType: "multipart/form-data",
                     dataType: "json",
                     cache: false,

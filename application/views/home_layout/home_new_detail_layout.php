@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>Giải vô địch futsal TPHCM 2014: Các đội đầu bảng toàn thắng | FUST | Futsal United Saigon</title>
+		<title><?php echo $header['title']?></title>
 		<link rel="stylesheet" href="<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-content/plugins/sitepress-multilingual-cms/res/css/language-selector.css?v=2.6.0" type="text/css" media="all" />
 		<link rel="shortcut icon" href="<?php echo base_url();?>template/ezwebvietnam/fust_home/wp-content/uploads/2013/12/favicon.ico" type="image/x-icon" />
 		<meta name='robots' content='noindex,nofollow' />

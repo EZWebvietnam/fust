@@ -38,5 +38,11 @@ class Newsmodel extends CI_Model
     {
         $this->db->delete("{$this->_name}",array('id_new'=>$id));
     }
+	public function list_match_review($id)
+    {
+        $sql="SELECT * FROM {$this->_name} WHERE match_review = ?";
+        $query = $this->db->query($sql,array($id));
+        return $query->result_array();
+    }
 }
 ?>

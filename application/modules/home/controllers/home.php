@@ -75,13 +75,13 @@ class Home extends MY_Controller {
     public function about()
     {
 		$this->data['main_content'] = 'about_view';
-		$this->data['title'] = 'Giới thiệu về CLB';
+		$this->data['header']['title'] = 'Giới thiệu về CLB | Futsal United Saigon';
 		$this->data['about'] = $this->abouthomemodel->get_about(1);
        $this->load->view('home_layout/home_about_layout',$this->data);		
     }
     public function tai_tro()
     {
-		$this->data['title'] = 'Nhà tài trợ';
+		$this->data['header']['title'] = 'Nhà tài trợ | Futsal United Saigon';
 		$this->data['main_content'] = 'about_view';
 		$this->data['about'][0]['content_about'] = '';
        $this->load->view('home_layout/home_about_layout',$this->data);		
@@ -109,7 +109,8 @@ class Home extends MY_Controller {
 		$this->data['offset'] = $page1;
 		$this->data['page'] = $page;
 		$this->data['total'] = $config['total_rows'];
-		$this->data['list'] = $array_sv;
+		$this->data['list'] = $array_sv;		
+		$this->data['header']['title'] = "Clip | Futsal United Saigon";
 		$this->data['main_content'] = 'list_video_view';
 		$this->load->view('home_layout/home_media_layout',$this->data);	
 	}
@@ -137,6 +138,7 @@ class Home extends MY_Controller {
 		$this->data['total'] = $config['total_rows'];
 		$this->data['list'] = $array_sv;
 		$this->data['main_content'] = 'list_picture_view';
+		$this->data['header']['title'] = "Hình ảnh | Futsal United Saigon";
 		$this->load->view('home_layout/home_media_layout',$this->data);		
 	}
 	
