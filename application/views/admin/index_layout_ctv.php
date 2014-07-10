@@ -150,34 +150,11 @@ $time_start = microtime_float();
                                                                    Cáp kèo
                                                                 </a>
                                                             </li>
-                                                            <li class="main">
-                                                                <a href="<?php echo base_url(); ?>admin/yahooadmin/list_yahoo" rel="yahoo" class="v_link">
-                                                                    <div><img width="32" height="32" src="<?php echo base_url(); ?>template/ezwebvietnam/admin_cp/icon/yahoo.png" alt=""></div>
-                                                                  Yahoo
-                                                                </a>
-                                                            </li>
+                                                            
 															<li class="main">
                                                                 <a href="<?php echo base_url(); ?>admin/imageadmin/list_image" rel="image" class="v_link">
                                                                     <div><img width="32" height="32" src="<?php echo base_url(); ?>template/ezwebvietnam/admin_cp/icon/pics_2.png" alt=""></div>
                                                                   Hình ảnh
-                                                                </a>
-                                                            </li>
-                                                            <li class="main">
-                                                                <a href="<?php echo base_url(); ?>admin/addressadmin/address" rel="address" class="v_link">
-                                                                    <div><img width="32" height="32" src="<?php echo base_url(); ?>template/ezwebvietnam/admin_cp/icon/address.png" alt=""></div>
-                                                                  Địa chỉ
-                                                                </a>
-                                                            </li>
-															<li class="main">
-                                                                <a href="<?php echo base_url(); ?>admin/saleadmin/list_sale" rel="sale" class="v_link">
-                                                                    <div><img width="32" height="32" src="<?php echo base_url(); ?>template/ezwebvietnam/admin_cp/icon/sale.png" alt=""></div>
-                                                                    Khuyến mại
-                                                                </a>
-                                                            </li>
-                                                            <li class="main">
-                                                                <a href="<?php echo base_url(); ?>admin/faqadmin/list_faq" rel="faq" class="v_link">
-                                                                    <div><img src="<?php echo base_url(); ?>template/ezwebvietnam/admin_cp/icon/faq.png" width="32" height="32" alt=""></div>
-                                                                    Hỏi đáp
                                                                 </a>
                                                             </li>
                                                             <li class="main">
