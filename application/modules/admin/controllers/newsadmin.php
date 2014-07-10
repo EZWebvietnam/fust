@@ -54,7 +54,8 @@ class Newsadmin extends MY_Controller {
                 'image_new' => $this->input->post('file'),
                 'create_date' => strtotime('now'),
 				'id_cate'=>$this->input->post('category'),
-				'id_user'=>$this->session->userdata('user_id')
+				'id_user'=>$this->session->userdata('user_id'),
+				'des'=>$this->input->post('desc')
             );
 		
 			if($this->input->post('radio_1') == 1)
@@ -67,7 +68,11 @@ class Newsadmin extends MY_Controller {
 				}
 				$data_save['match_review'] = $this->input->post('match_review');
 			}
-			
+			if($this->input->post('radio_3') == 1)
+			{
+				
+				$data_save['noi_bat'] = 1;
+			}
             $id = $this->newsmodel->insert($data_save);
             if ($id > 0) {
                 $data = array('error' => 0, 'msg' => 'Thêm thành công');
@@ -97,22 +102,24 @@ class Newsadmin extends MY_Controller {
             $content = stripslashes($this->input->post('editor2'));
             $data_update = array();
             if ($file != '') {
-                if (file_exists($_SERVER['DOCUMENT_ROOT'] . ROT_DIR . 'file/uploads/new/' . $this->data['detail'][0]['image_new']) && is_file($_SERVER['DOCUMENT_ROOT'] . ROT_DIR . 'file/uploads/new/' . $this->data['detail'][0]['image_new'])) {
-                    unlink($_SERVER['DOCUMENT_ROOT'] . ROT_DIR . 'file/uploads/new/' . $this->data['detail'][0]['image_new']);
+                if (file_exists(PATH_FOLDER . ROT_DIR . 'file/uploads/new/' . $this->data['detail'][0]['image_new']) && is_file(PATH_FOLDER . ROT_DIR . 'file/uploads/new/' . $this->data['detail'][0]['image_new'])) {
+                    unlink(PATH_FOLDER . ROT_DIR . 'file/uploads/new/' . $this->data['detail'][0]['image_new']);
                 }
                 $data_update = array(
                     'title_new' => $title,
                     'content_new' => $content,
                     'image_new' => $file,
 					'id_cate'=>$this->input->post('category'),
-					'id_user'=>$this->session->userdata('user_id')
+					'id_user'=>$this->session->userdata('user_id'),
+					'des'=>$this->input->post('desc')
                 );
             } else {
                 $data_update = array(
                     'title_new' => $title,
                     'content_new' => $content,
 					'id_cate'=>$this->input->post('category'),
-					'id_user'=>$this->session->userdata('user_id')
+					'id_user'=>$this->session->userdata('user_id'),
+					'des'=>$this->input->post('desc')
                 );
             }
 			if($this->input->post('radio_1')==1)
@@ -125,7 +132,10 @@ class Newsadmin extends MY_Controller {
 				}
 				$data_update['match_review'] = $this->input->post('match_review');
 			}
-			
+			if($this->input->post('radio_3') == 1)
+			{
+				$data_update['noi_bat'] = 1;
+			}
             $this->newsmodel->update($id, $data_update);
             $data_update = array();
             $data = array('error' => 0, 'msg' => 'Update thành công');
@@ -147,8 +157,8 @@ class Newsadmin extends MY_Controller {
         }
         $this->newsmodel->delete($id);
         $data = array('error' => 0, 'msg' => 'Xóa thành công');
-        if (file_exists($_SERVER['DOCUMENT_ROOT'] . ROT_DIR . 'file/uploads/new/' . $this->data['detail'][0]['image_new']) && is_file($_SERVER['DOCUMENT_ROOT'] . ROT_DIR . 'file/uploads/new/' . $this->data['detail'][0]['image_new'])) {
-            unlink($_SERVER['DOCUMENT_ROOT'] . ROT_DIR . 'file/uploads/new/' . $this->data['detail'][0]['image_new']);
+        if (file_exists(PATH_FOLDER . ROT_DIR . 'file/uploads/new/' . $this->data['detail'][0]['image_new']) && is_file(PATH_FOLDER . ROT_DIR . 'file/uploads/new/' . $this->data['detail'][0]['image_new'])) {
+            unlink(PATH_FOLDER . ROT_DIR . 'file/uploads/new/' . $this->data['detail'][0]['image_new']);
         }
         echo json_encode($data);
     }
@@ -159,8 +169,8 @@ class Newsadmin extends MY_Controller {
             $detail = $this->newsmodel->detail($v);
             if(!empty($detail))
             {
-                if (file_exists($_SERVER['DOCUMENT_ROOT'] . ROT_DIR . 'file/uploads/new/' . $detail[0]['image_new']) && is_file($_SERVER['DOCUMENT_ROOT'] . ROT_DIR . 'file/uploads/new/' . $detail[0]['image_new'])) {
-                    unlink($_SERVER['DOCUMENT_ROOT'] . ROT_DIR . 'file/uploads/new/' . $detail[0]['image_new']);
+                if (file_exists(PATH_FOLDER . ROT_DIR . 'file/uploads/new/' . $detail[0]['image_new']) && is_file(PATH_FOLDER . ROT_DIR . 'file/uploads/new/' . $detail[0]['image_new'])) {
+                    unlink(PATH_FOLDER . ROT_DIR . 'file/uploads/new/' . $detail[0]['image_new']);
                 }
                 $this->newsmodel->delete($v);
             }
@@ -168,6 +178,34 @@ class Newsadmin extends MY_Controller {
         $data = array('error' => 0, 'msg' => 'Xóa thành công');
         echo json_encode($data);
     }
+	public function push_to_page()
+	{
+		if($this->input->post())
+		{
+			$id = $this->input->post('id_new');
+			$detail = $this->newsmodel->detail($id);
+			
+			
+			
+			if (file_exists(PATH_FOLDER . ROT_DIR . 'file/uploads/new/' . $detail[0]['image_new']) && is_file(PATH_FOLDER . ROT_DIR . 'file/uploads/new/' . $detail[0]['image_new'])) {
+					$picture = base_url().'file/uploads/new/'.$detail[0]['image_new'];
+				}
+				else
+				{
+					$picture = base_url().'file/uploads/no_image.gif';
+				}
+				$link = base_url().'post/'.$detail[0]['id_new'].'-'.mb_strtolower(url_title(removesign($detail[0]['title_new'])));
+				$message = sub_string($detail[0]['des'],500)."... >> Đọc tiếp tại $link";
+			$this->load->library('messagefb');
+			$this->messagefb->push_fanpage($message,$picture,$link,'CAAG8bSDPIpIBAN1iEgIi14wvpQGssxqqOK2o9MXxKnXZCekxsIWCQW33ziVfWN4YsShvHCTwtg26PDc2THcRANMWVeXZAVtA4J0mQe02I01wZAVrPpnqCMZAOswOFUNiefjaCHCtAFIyHly44CvXbWEl67qf1R6e6nKCuL3JNd8uaWmPuzYTgvch6P5Q6q4ZD');
+		}
+		else
+		{
+			$this->data['list_new'] = $this->newsmodel->list_new_fb();
+			$this->load->view('new/push_to_fanpage',$this->data);
+		}
+		
+	}
 
 }
 ?>

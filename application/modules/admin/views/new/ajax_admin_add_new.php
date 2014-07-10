@@ -29,6 +29,7 @@
             'type': 'ajax'
         });
     });
+	
 </script>
 
 <div class="h-pop">
@@ -65,6 +66,11 @@
                 </td>
             </tr>
 			<tr>
+                <td class="label">Nổi bật</td>
+				<td colspan="3">
+				<input type="radio" id="radio_3" name="noi_bat"/>Có<input type="radio" id="radio_4" name="noi_bat" checked=""/>Không</td>
+            </tr>
+			<tr>
                 <td class="label">Loại bài</td>
 				<td colspan="3">
 				<input type="radio" id="radio_1" name="radio"/>Match Review<input type="radio" id="radio_2" name="radio" checked=""/>Bài viết thường</td>
@@ -95,6 +101,13 @@
                     </div>
                     <input type='hidden' name='file' id='file'/>
                   
+                    
+                </td>
+            </tr>
+			<tr>
+                <td class="label">Tóm tắt (Post lên facebook)</td>
+                <td colspan="3">
+                    <textarea style="margin: 2px; width: 1027px; height: 117px;" id="tom_tat" name="tom_tat"></textarea>
                     
                 </td>
             </tr>
@@ -130,6 +143,16 @@
 			$('#radio_1').val(0);
 			
 		})
+		$('#radio_3').click(function(){
+			$('#radio_3').val(1);
+			$('#radio_4').val(0);
+			
+		})
+		$('#radio_4').click(function(){
+			$('#radio_4').val(1);
+			$('#radio_3').val(0);
+			
+		})
         $("#adminform").validate({
             rules: {
                 title: "required"
@@ -153,7 +176,7 @@
                 $.ajax({
                     type: "POST",
                     url: $("#adminform").attr('action'),
-                    data: {title:$('#title_').val(),file:$('#file').val(),content:content,category:$('#category').val(),radio_1:$('#radio_1').val(),radio_2:$('#radio_2').val(),match_review:$('#match_review').val()},
+                    data: {title:$('#title_').val(),file:$('#file').val(),content:content,category:$('#category').val(),radio_1:$('#radio_1').val(),radio_2:$('#radio_2').val(),match_review:$('#match_review').val(),desc:$('#tom_tat').val(),radio_3:$('#radio_3').val(),radio_4:$('#radio_4').val()},
                     mimeType: "multipart/form-data",
                     dataType: "json",
                     cache: false,

@@ -53,6 +53,12 @@
                 </td>
             </tr>
 			<tr>
+                <td class="label">Địa chỉ</td>
+                <td colspan="3">
+                    <input id="title_" type="texbox" name="title" value="<?php echo $challenge_detail[0]['address']?>"/>
+                </td>
+            </tr>
+			<tr>
                 <td class="label">Kèo</td>
                 <td colspan="3">
                     <input id="title_" type="texbox" name="title" value="<?php echo $challenge_detail[0]['keo']?>"/>
@@ -64,7 +70,7 @@
                     <input id="title_" type="texbox" name="title" value="<?php echo $challenge_detail[0]['time']?>"/>
                 </td>
             </tr>
-            </tr>
+            
 
         </table>
     </form>

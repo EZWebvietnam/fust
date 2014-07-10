@@ -75,6 +75,7 @@
                            <th class="checkbox"><input type="checkbox" name="sa" id="sa" onclick="check_chose('sa', 'ar_id[]', 'admindata_new')"></th>
                            <th class="id">Tiêu đề</th>
                            <th>Nội dung</th>
+						   <th>PUSH</th>
                            <th class="publish">Chức năng</th>
                         </tr>
                      </thead>
@@ -86,6 +87,7 @@
                         <td align="center"><input  type="checkbox" name="ar_id[]" value="<?php echo $new['id_new']?>"></td>
                         <td><?php echo $new['title_new']?></td>
                         <td><?php echo sub_string(loaibohtmltrongvanban($new['content_new']),300);?></td>
+						 <td><a target="_blank" href="<?php echo base_url(); ?>admin/newsadmin/push_to_page">Đăng bài lên fanpage</a></td>
                         <td align="center"><a class="grouped_elements" href="<?php echo base_url();?>admin/newsadmin/edit/<?php echo $new['id_new']?>" title="Sửa"><img width="16" height="16" src="<?php echo base_url();?>template/ezwebvietnam/admin_cp/icon/edit.png"></a>
                             
                            <a class="delete_record" href="<?php echo base_url();?>admin/newsadmin/delete/<?php echo $new['id_new']?>" title="Xóa"><img src="<?php echo base_url();?>template/ezwebvietnam/admin_cp/icon/del.png"></a>        

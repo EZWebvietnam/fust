@@ -9,7 +9,7 @@ $time_start = microtime_float();
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
 <html>
     <head>
-        <title>Quản lý bán hàng</title>
+        <title>Hệ thống quản trị Futsal United Saigon</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
             <meta name="description" content=""/>
                 <meta name="keywords" content=""/>
@@ -47,7 +47,11 @@ $time_start = microtime_float();
 
                             });
                          </script>
-    
+    <script type="text/javascript">
+		$(function() {
+			CKEDITOR.config.extraPlugins = 'justify';
+		});		
+	</script>
                             </head>
                     
                             <body>

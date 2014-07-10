@@ -14,7 +14,7 @@
             var input = $('input[type=submit]');
             var form = input.length > 0 ? $(input[0].form) : $();
            
-            fileUpload(input[0].form,'<?php echo base_url();?>upload/do_upload_new','upload','<?php echo base_url(); ?>admin/newsadmin/edit/'+<?php echo $detail[0]['id']?>); 
+            fileUpload(input[0].form,"<?php echo base_url();?>upload/do_upload_new",'upload',"<?php echo base_url(); ?>admin/newsadmin/edit/"+<?php echo $detail[0]['id_new']?>); 
             return false;
         });
         $("a.grouped_elements").fancybox({
@@ -73,6 +73,20 @@
                 </td>
             </tr>
 			<tr>
+                <td class="label">Nổi bật</td>
+				<td colspan="3">
+				<?php 
+				if($detail[0]['noi_bat']==1)
+				{
+				?>
+				<input type="radio" id="radio_3" name="noi_bat" checked=""/>Có<input type="radio" id="radio_4" name="noi_bat"/>Không
+				<?php } else { ?>
+				<input type="radio" id="radio_3" name="noi_bat"/>Có<input type="radio" id="radio_4" name="noi_bat" checked=""/>Không
+				<?php } ?>	
+					
+				</td>
+            </tr>
+			<tr>
                 <td class="label">Loại bài</td>
 				<td colspan="3">
 				<?php 
@@ -121,6 +135,13 @@
                     
                 </td>
             </tr>
+			<tr>
+                <td class="label">Tóm tắt (Post lên facebook)</td>
+                <td colspan="3">
+                    <textarea style="margin: 2px; width: 1027px; height: 117px;" id="tom_tat" name="tom_tat"><?php echo $detail[0]['des']?></textarea>
+                    
+                </td>
+            </tr>
             <tr>
                 <td class="label">Nội dung</td>
                 <td colspan="3">
@@ -158,6 +179,16 @@
 			$('#radio_1').val(0);
 			
 		})
+		$('#radio_3').click(function(){
+			$('#radio_3').val(1);
+			$('#radio_4').val(0);
+			
+		})
+		$('#radio_4').click(function(){
+			$('#radio_4').val(1);
+			$('#radio_3').val(0);
+			
+		})
         $("#adminform").validate({
             rules: {
                 title: "required"
@@ -180,7 +211,7 @@
                 $.ajax({
                     type: "POST",
                     url: $("#adminform").attr('action'),
-                    data: {file:$('#file').val(),editor2:content,title:$('#title_').val(),category:$('#category').val(),radio_1:$('#radio_1').val(),radio_2:$('#radio_2').val(),match_review:match_review},
+                    data: {file:$('#file').val(),editor2:content,title:$('#title_').val(),category:$('#category').val(),radio_1:$('#radio_1').val(),radio_2:$('#radio_2').val(),match_review:match_review,desc:$('#tom_tat').val(),radio_3:$('#radio_3').val(),radio_4:$('#radio_4').val()},
                     dataType: "json",
                     cache: false,
                     success: function(data) {

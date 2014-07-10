@@ -44,5 +44,11 @@ class Newsmodel extends CI_Model
         $query = $this->db->query($sql,array($id));
         return $query->result_array();
     }
+	public function list_new_fb()
+    {
+        $sql="SELECT * FROM {$this->_name}";
+        $query = $this->db->query($sql);
+        return $query->result_array();
+    }
 }
 ?>

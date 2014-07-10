@@ -1,6 +1,6 @@
 <div class="cls_breadcrumb_wrapper">
 										<!-- Breadcrumb NavXT 4.4.0 -->
-										<a title="Go to Futsal United Saigon FC." href="http://www.futsalunitedsaigon.com" class="home">Trang Chủ</a> &#047; <a title="Go to the Tin Tức category archives." href=<?php echo base_url();?>tin-tuc" class="category">Tin Tức</a> &#047;<a title="Go to the Futsal trong Nước category archives." href="<?php echo base_url();?>c/<?php echo $cate_detail[0]['id_cate']?>-<?php echo  mb_strtolower(url_title(removesign($cate_detail[0]['title_cate'])))?>" class="category"><?php echo $cate_detail[0]['title_cate']?></a> &#047; <?php echo $new_detail[0]['title_new']?>
+										<a title="Go to Futsal United Saigon FC." href="http://www.futsalunitedsaigon.com" class="home">Trang Chủ</a> &#047; <a title="Go to the Tin Tức category archives." href="<?php echo base_url();?>tin-tuc" class="category">Tin Tức</a> &#047;<a title="Go to the Futsal trong Nước category archives." href="<?php echo base_url();?>c/<?php echo $cate_detail[0]['id_cate']?>-<?php echo  mb_strtolower(url_title(removesign($cate_detail[0]['title_cate'])))?>" class="category"><?php echo $cate_detail[0]['title_cate']?></a> &#047; <?php echo $new_detail[0]['title_new']?>
 									</div>
 									<div class="cls_layout_wrapper three_col_layout clearfix">
 										<div class="cls_layout_inner col1">

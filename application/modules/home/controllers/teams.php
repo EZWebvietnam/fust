@@ -168,6 +168,7 @@ class Teams extends MY_Controller
 		$this->data['main_content'] = 'noi_quy';
 		$this->data['active']= 0;
 		$this->data['header']['title'] = 'Nội quy và các quy định của đội bóng | Futsal United Saigon';
+		$this->data['header']['description'] = 'Nội quy và các quy định của đội bóng | Futsal United Saigon';
 		$this->load->view('home_layout/home_new_detail_layout',$this->data);
 	}
 	public function lich_thi_dau()

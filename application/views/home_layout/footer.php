@@ -94,7 +94,7 @@
 													<!--/cls_footer_info -->
 													<div class="cls_footer_bottom clearfix">
 														<span style="height:15px; background: black !important; " class="address">
-															<center>Copyright © 2013 futsalunitedsaigon.com - Design by Pi Communications</center>
+															<center>Copyright © 2013 futsalunitedsaigon.com - Design by <a style="color:white;" target="_blank" href="https://www.facebook.com/ezwebvietnam">EZWeb Việt Nam</a> </center>
 														</span>
 													</div>
 												</div>

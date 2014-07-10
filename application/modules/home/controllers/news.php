@@ -112,6 +112,7 @@ class News extends MY_Controller
 		$title = $new_detail[0]['title_new'];
 		$this->data['header']['title'] = "$title | Futsal United Saigon";
 		$this->data['main_content'] = 'new_detail';
+		$this->data['header']['description'] = sub_string($new_detail[0]['des'],500);
 		$this->load->view('home_layout/home_new_detail_layout',$this->data);
 	}
 	public function push_message_to_group()
