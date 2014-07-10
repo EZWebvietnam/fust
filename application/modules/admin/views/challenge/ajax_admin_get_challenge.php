@@ -97,7 +97,13 @@
                             <img width="16" height="16" src="<?php echo base_url();?>template/ezwebvietnam/admin_cp/0.png" style="cursor: pointer;" title="Duyệt kèo" onclick="change_challenge_confirm(<?php echo $new['id_challenge']?>,<?php echo $page?>)"/>
                             <?php } else {?>
                             <img style="cursor: pointer;" width="16" height="16" src="<?php echo base_url();?>template/ezwebvietnam/admin_cp/1.png" title="Hủy kèo" onclick="change_challenge_confirm(<?php echo $new['id_challenge']?>,<?php echo $page?>)"/>
-                            <?php } ?>
+                            <?php } 
+							$list_result = $this->challengemodel->check_challenge_result($new['id_challenge']);
+							if(empty($list_result) && $new['confirm']==1)
+							{
+							?>
+							<a class="grouped_elements" href="<?php echo base_url();?>admin/challengeadmin/score/<?php echo $new['id_challenge']?>" title="Xác nhận tỉ số"><img width="16" height="16" src="<?php echo base_url();?>template/ezwebvietnam/admin_cp/icon/score.png"></a>
+							<?php } ?>
                             <a class="grouped_elements" href="<?php echo base_url();?>admin/challengeadmin/view/<?php echo $new['id_challenge']?>" title="Xem chi tiết"><img width="16" height="16" src="<?php echo base_url();?>template/ezwebvietnam/admin_cp/icon/view.png"></a>
                            <a class="delete_record" href="<?php echo base_url();?>admin/challengeadmin/delete/<?php echo $new['id_challenge']?>" title="Xóa"><img src="<?php echo base_url();?>template/ezwebvietnam/admin_cp/icon/del.png"></a>        
                         </td>

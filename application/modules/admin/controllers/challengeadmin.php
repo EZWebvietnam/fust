@@ -102,5 +102,31 @@ class Challengeadmin extends MY_Controller
         $array = array('error' => 0, 'msg' => "Xóa thành công");
         echo json_encode($array);
     }
+	public function score($id)
+	{
+		if($this->input->post())
+		{
+			$team_home = $this->input->post('team_home');
+			$team_visit = $this->input->post('team_visit');
+			$data_save = array('id_challenge'=>$id,'team_home'=>$team_home,'team_visit'=>$team_visit);
+			$id = $this->challengemodel->insert_result($data_save);
+			if($id>0)
+			{
+				 $array = array('error' => 0, 'msg' => "Thêm thành cống");
+        		
+			}
+			else
+			{
+				 $array = array('error' => 1, 'msg' => "Thêm thất bại");
+       			
+			}
+			 echo json_encode($array);
+		}
+		else
+		{
+			$this->data['challenge_detail'] = $this->challengemodel->view($id);
+			$this->load->view('challenge/ajax_admin_score', $this->data);
+		}
+	}
 }
 ?>

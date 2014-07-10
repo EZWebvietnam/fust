@@ -39,5 +39,16 @@ class Challengemodel extends CI_Model
         $query = $this->db->query($sql);
         return $query->result_array();
 	}
+	public function check_challenge_result($id)
+	{
+		$sql = "SELECT * FROM result WHERE id_challenge = ?";
+        $query = $this->db->query($sql,array($id));
+        return $query->result_array();
+	}
+	public function insert_result(array $data)
+	{
+		$this->db->insert("result",$data);	
+		return $this->db->insert_id();
+	}
 }
 ?>
