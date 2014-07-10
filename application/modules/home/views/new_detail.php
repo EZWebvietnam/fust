@@ -66,10 +66,10 @@
 																			</div>
 																			
 																		</li>
-																		<div class="fb-like" data-href="<?php echo full_url_($_SERVER);?>" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
+																		<div class="fb-like" data-href="<?php echo base_url(); ?>post/<?php echo $new_detail[0]['id_new'] ?>-<?php echo mb_strtolower(url_title(removesign($new_detail[0]['title_new']))) ?>" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
 																		<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
 <g:plusone></g:plusone>
-<div class="fb-comments" data-href="<?php echo full_url_($_SERVER);?>" data-width="455" data-numposts="5" data-colorscheme="light"></div>
+<div class="fb-comments" data-href="<?php echo base_url(); ?>post/<?php echo $new_detail[0]['id_new'] ?>-<?php echo mb_strtolower(url_title(removesign($new_detail[0]['title_new']))) ?>" data-width="455" data-numposts="5" data-colorscheme="light"></div>
 																	</ul>
 																</div>
 															</article>

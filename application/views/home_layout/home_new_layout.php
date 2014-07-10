@@ -253,7 +253,7 @@
 																					<li id="menu-item-286" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-286"><a href="<?php echo base_url();?>media/hinh-anh">Ảnh đẹp</a></li>
 																				</ul>
 																			</li>
-																			<li id="menu-item-287" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-287"><a href="http://www.futsalunitedsaigon.com/forums/">Forum</a></li>
+																			<li id="menu-item-287" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-287"><a href="http://www.futsalunitedsaigon.com/forums/">Game</a></li>
 																		</ul>
 																	</div>
 																</div>

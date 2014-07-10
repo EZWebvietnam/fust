@@ -279,7 +279,7 @@
 																					<li id="menu-item-286" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-286"><a href="<?php echo base_url();?>media/hinh-anh">Ảnh đẹp</a></li>
 																				</ul>
 																			</li>
-																		<li id="menu-item-287" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-287"><a href="<?php echo base_url();?>template/ezwebvietnam/fust_home/forums/">Forum</a></li>
+																		<li id="menu-item-287" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-287"><a href="<?php echo base_url();?>template/ezwebvietnam/fust_home/forums/">Game</a></li>
 																	</ul>
 																</div>
 															</div>
@@ -303,7 +303,7 @@
 											<div class="entry-content">
 												<div id="bbpress-forums">
 													<div class="bbp-breadcrumb">
-														<p><a href="<?php echo base_url();?>template/ezwebvietnam/fust_home/" class="bbp-breadcrumb-home">Home</a> <span class="bbp-breadcrumb-sep">&#47;</span> <a href="<?php echo base_url();?>template/ezwebvietnam/fust_home/forums/" class="bbp-breadcrumb-root">Forums</a> <span class="bbp-breadcrumb-sep">&#47;</span> <span class="bbp-breadcrumb-current">Thành viên đăng nhập</span></p>
+														<p><a href="<?php echo base_url();?>template/ezwebvietnam/fust_home/" class="bbp-breadcrumb-home">Home</a> <span class="bbp-breadcrumb-sep">&#47;</span> <a href="<?php echo base_url();?>template/ezwebvietnam/fust_home/forums/" class="bbp-breadcrumb-root">Game</a> <span class="bbp-breadcrumb-sep">&#47;</span> <span class="bbp-breadcrumb-current">Thành viên đăng nhập</span></p>
 													</div>
 													<form method="post" id="form_register" name="form_register" class="bbp-login-form">
 														<fieldset class="bbp-form">
