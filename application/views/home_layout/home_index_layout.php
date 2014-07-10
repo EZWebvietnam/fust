@@ -1263,7 +1263,7 @@
 															<div class="cls_box_header_inner_right">
 																<div class="cls_box_header_left_wrapper">
 																	<div class="cls_box_header_left_inner">
-																		<a href="http://www.futsalunitedsaigon.com/ve-cau-lac-bo/lich-su-hinh-thanh/">Lịch sử thành lập</a>
+																		<a href="<?php echo base_url();?>doi-bong/gioi-thieu">Giới thiệu đội bóng</a>
 																	</div>
 																</div>
 																<div class="cls_box_header_right_wrapper">
