@@ -1164,7 +1164,7 @@
 															<div class="cls_box_header_inner_right">
 																<div class="cls_box_header_left_wrapper">
 																	<div class="cls_box_header_left_inner">
-																		<a href="http://www.futsalunitedsaigon.com/category/tin-tuc/truyen-thong/">Truyền Thông</a>						
+																		<a href="#">Truyền Thông</a>						
 																	</div>
 																</div>
 																<div class="cls_box_header_right_wrapper">
@@ -1205,7 +1205,7 @@
 																					<div class="cls-item-value"><a href="<?php echo base_url();?>post/<?php echo $_tr['id_new']?>-<?php echo  mb_strtolower(url_title(removesign($_tr['title_new'])))?>" title="<?php echo $_tr['title_new'];?>"><?php echo $_tr['title_new'];?></a></div>
 																				</div>
 																				<div class="cls-field-date">
-																					<div class="cls-item-value">2<?php echo date('h:i',$_tr['create_date']);?> | <?php echo date('d/m/Y',$_tr['create_date']);?></div>
+																					<div class="cls-item-value"><?php echo date('H:i',$_tr['create_date']);?> | <?php echo date('d/m/Y',$_tr['create_date']);?></div>
 																				</div>
 																			</div>
 																		</li>
