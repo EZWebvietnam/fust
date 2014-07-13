@@ -9,7 +9,7 @@ class Youtubehomemodel extends CI_Model
 	}	
 	public function list_youtube()
 	{
-		$sql ="SELECT * FROM {$this->_name}";
+		$sql ="SELECT * FROM {$this->_name} ORDER BY id_youtube DESC";
 		$query = $this->db->query($sql);
 		return $query->result_array();	
 	}
