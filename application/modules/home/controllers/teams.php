@@ -345,6 +345,7 @@ class Teams extends MY_Controller
 				$this->load->library('esms');
 				$message = "FUST nhận được kèo thi đấu từ $team_challenge tại website FutsalUnitedSaigon.com vui lòng login để xác nhận !";
 				$message = removesign($message);
+				$this->esms->sendsms('0963222844',$message);
 				$this->esms->sendsms('01667039939',$message);
 				redirect('..'.ROT_DIR);	
 			}
