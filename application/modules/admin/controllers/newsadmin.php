@@ -184,7 +184,7 @@ class Newsadmin extends MY_Controller {
 		{
 			$id = $this->input->post('id_new');
 			$detail = $this->newsmodel->detail($id);
-			
+			$radio = $this->input->post('radio');
 			
 			
 			if (file_exists(PATH_FOLDER . ROT_DIR . 'file/uploads/new/' . $detail[0]['image_new']) && is_file(PATH_FOLDER . ROT_DIR . 'file/uploads/new/' . $detail[0]['image_new'])) {
@@ -197,7 +197,7 @@ class Newsadmin extends MY_Controller {
 				$link = base_url().'post/'.$detail[0]['id_new'].'-'.mb_strtolower(url_title(removesign($detail[0]['title_new'])));
 				$message = sub_string($detail[0]['des'],500)."... >> Đọc tiếp tại $link";
 			$this->load->library('messagefb');
-			$this->messagefb->push_fanpage($message,$picture,$link,'CAAG8bSDPIpIBAN1iEgIi14wvpQGssxqqOK2o9MXxKnXZCekxsIWCQW33ziVfWN4YsShvHCTwtg26PDc2THcRANMWVeXZAVtA4J0mQe02I01wZAVrPpnqCMZAOswOFUNiefjaCHCtAFIyHly44CvXbWEl67qf1R6e6nKCuL3JNd8uaWmPuzYTgvch6P5Q6q4ZD');
+			$this->messagefb->push_fanpage($message,$picture,$link,'CAAG8bSDPIpIBAN1iEgIi14wvpQGssxqqOK2o9MXxKnXZCekxsIWCQW33ziVfWN4YsShvHCTwtg26PDc2THcRANMWVeXZAVtA4J0mQe02I01wZAVrPpnqCMZAOswOFUNiefjaCHCtAFIyHly44CvXbWEl67qf1R6e6nKCuL3JNd8uaWmPuzYTgvch6P5Q6q4ZD',$radio);
 		}
 		else
 		{

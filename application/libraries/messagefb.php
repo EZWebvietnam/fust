@@ -71,7 +71,7 @@ class messagefb
 			//echo "<br><a href = 'logout.php'>Logout</a>";
 			
 		}
-		public function push_fanpage($message,$picture,$link,$access_token)
+		public function push_fanpage($message,$picture,$link,$access_token,$radio)
 	{
 		
 		$facebook = new Facebook(array(
@@ -80,7 +80,31 @@ class messagefb
 		  'scope' => 'user_groups,manage_pages,publish_actions,publish_stream'
 		));
 		$facebook->setAccessToken($access_token);
-		
+		if($radio == 0)
+		{
+			$id = '216190778579114';
+			$api = $facebook->api($id. '/feed', 'POST', array(
+					'access_token'=>$access_token,
+					'picture' => $picture,
+					'link' => $link,
+					'message' => $message,
+					'caption' => $message
+			));
+		}
+		else
+		{
+			//posting to pages
+			$pages = $facebook->api('me/accounts');
+			$id = '683122905088156';
+			//$token = $pages['data']['0']['access_token'];
+			$token = $pages['data']['0']['access_token'];
+			$api = $facebook->api($id . '/feed', 'POST', array(
+				'access_token' => $token,
+				'link' => $link,
+				'message' => $message,
+				'picture' => $picture
+			));
+		}
 		/*
 		$groups = $facebook->api('me/groups');
 		$id = '216190778579114';
@@ -92,16 +116,7 @@ class messagefb
 				'caption' => "Test login"
 		));
 			*/
-			//posting to pages
-			$pages = $facebook->api('me/accounts');
-			$id = '683122905088156';
-			$token = $pages['data']['0']['access_token'];
-			$api = $facebook->api($id . '/feed', 'POST', array(
-				'access_token' => $token,
-				'link' => $link,
-				'message' => $message,
-				'picture' => $picture
-			));
+			
 			//posting to profile
 			/*
 			$api = $facebook->api('me/feed', 'POST', array(

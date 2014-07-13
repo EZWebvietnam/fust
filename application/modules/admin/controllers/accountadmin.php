@@ -10,7 +10,7 @@ class Accountadmin extends MY_Controller
         $this->load->library('tank_auth');
         $this->lang->load('tank_auth');
         $this->load->library('form_validation');
-		$this->data['vi_tri'] = array('0'=>'Không xác định','1'=>'Huấn luyện viên','2'=>'Cầu thủ','3'=>'Thủ môn');
+		$this->data['vi_tri'] = array('0'=>'Không xác định','1'=>'Huấn luyện viên','2'=>'Cầu thủ','3'=>'Thủ môn','4'=>'Quản lý');
         if(!$this->tank_auth->is_login_admin(TRUE))
         {
             redirect('/quan-tri');

@@ -150,9 +150,11 @@ class Teams extends MY_Controller
 		$list_user_1 = $this->users->get_mem_team(1);
 		$list_user_2 = $this->users->get_mem_team(2);
 		$list_user_3 = $this->users->get_mem_team(3);
+		$list_user_4 = $this->users->get_mem_team(4);
 		$this->data['list_user_1'] = $list_user_1;
 		$this->data['list_user_2'] = $list_user_2;
 		$this->data['list_user_3'] = $list_user_3;
+		$this->data['list_user_4'] = $list_user_4;
 		$this->data['header']['title'] = 'Danh sách thành viên đội bóng | Futsal United Saigon';
 		$this->load->view('home_layout/home_list_team_layout',$this->data);
 	}
@@ -199,9 +201,26 @@ class Teams extends MY_Controller
 			$id_vote = $this->input->post('radio');
 			$detail_vote = $this->votehomemodel->get_vote($lastmonth_start,$lastmonth_end,$id_user);
 			$time = date('Y-m-d H:i:s');
+			$vi_tri = $this->votehomemodel->get_point_vote($id_user,4);
+			if(!empty($vi_tri))
+			{
+				$point = 5;	
+			}
+			else
+			{
+				$vi_tri_1 = $this->votehomemodel->get_point_vote($id_user,1);
+				if(!empty($vi_tri_1))
+				{
+						$point = 3;	
+				}
+				else
+				{
+					$point = 1;	
+				}
+			}
 			if(empty($detail_vote))
 			{
-				$data_save = array('id_user'=>$id_user,'id_vote'=>$id_vote,'time'=>$time);
+				$data_save = array('id_user'=>$id_user,'id_vote'=>$id_vote,'time'=>$time,'point'=>$point);
 				$id = $this->votehomemodel->vote_insert($data_save);
 				if($id>0)
 				{

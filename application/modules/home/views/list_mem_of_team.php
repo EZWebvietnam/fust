@@ -31,7 +31,7 @@
 															<div class="cls-field-content">
 																<div class="cls-item-value">
 																	<div id="attachment_3839" style="width: 510px" class="wp-caption aligncenter">
-																		<a href="https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-xap1/t1.0-9/10325561_1445071755745876_3058295760812569024_n.jpg"><img class="size-medium wp-image-3839" alt="Futsal United Saigon" src="https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-xap1/t1.0-9/10325561_1445071755745876_3058295760812569024_n.jpg" width="500" height="281" /></a>
+																		<a href="https://scontent-b-sin.xx.fbcdn.net/hphotos-xpf1/v/t1.0-9/10407830_743377702396009_6066699068295508338_n.jpg?oh=ef9622d5c9ae9fe97257d0d4fa4c3d3a&oe=544380F1"><img class="size-medium wp-image-3839" alt="Futsal United Saigon" src="https://scontent-b-sin.xx.fbcdn.net/hphotos-xpf1/v/t1.0-9/10407830_743377702396009_6066699068295508338_n.jpg?oh=ef9622d5c9ae9fe97257d0d4fa4c3d3a&oe=544380F1" width="500" height="281" /></a>
 																		<p class="wp-caption-text">Futsal United Saigon</p>
 																	</div>
 																</div>
@@ -40,6 +40,73 @@
 														<!--End cls_team_info_inner-->
 													</div>
 													<!--End cls_team_info_wrapper-->
+													<div class="cls_box_wrapper clearfix cls_list_players_in_position clearfix">
+														<div class="cls_box_inner">
+															<div class="cls_header_title_wrapper clearfix">
+																<h2>Quản lý</h2>
+															</div>
+															<!-- /cls_header_title_wrapper -->
+															<div class="cls_box_content_wrapper">
+																<div class="cls_box_content_inner">
+																	<div class="cls_box_content_row cls_first_content">
+																		<div class="cls-post-listing clearfix">
+																			<ul class="non-ajax clearfix">
+																			<?php
+																			$i = 0; 
+																			$j = 0;
+																			foreach($list_user_4 as $h_l_v)
+																			{
+																				if($i == 0)
+																				{
+																					$class ="cls-first-in-line";
+																				}
+																				else 
+																				{
+																					if($i == 2)
+																					{
+																						$class ="cls-last-in-line";
+																					}	
+																					else
+																					{
+																						$class ="";
+																					}
+																				}
+																			?>
+																				<li class="cls-item-no<?php echo $j;?> cls-row0 cls-item <?php echo $class;?> clearfix">
+																					<div class="cls-field-image">
+																						<div class="cls-item-value"><a target="_blank" href="https://www.facebook.com/<?php echo $h_l_v['login_id']?>" title="<?php echo $h_l_v['full_name']?>"><img width="300" height="168" src="http://graph.facebook.com/<?php echo $h_l_v['login_id']?>/picture?type=large" class="attachment-ths_thumb wp-post-image" alt="<?php echo $h_l_v['full_name']?>" title="<?php echo $h_l_v['full_name']?>" /></a></div>
+																					</div>
+																					<div class="group group cls_post_data clearfix ">
+																						<div class="cls-field-title">
+																							<div class="cls-item-value"><a target="_blank" href="https://www.facebook.com/<?php echo $h_l_v['login_id']?>" title="<?php echo $h_l_v['full_name']?>"><?php echo $h_l_v['full_name']?></a></div>
+																						</div>
+																					</div>
+																				</li>
+																				<?php 
+																					if($i<2)
+																					{
+																					$i++;
+																					}
+																					else
+																					{
+																						$i = 0;	
+																					}
+																					$j++;
+																				} ?>
+																			</ul>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<!-- /cls_box_content_wrapper -->
+															<div class="cls_box_footer_wrapper">
+																<div class="cls_box_footer_inner">
+																</div>
+															</div>
+															<!--/cls_box_footer_wrapper -->
+														</div>
+														<!--/cls_box_inner -->
+													</div>
 													<div class="cls_box_wrapper clearfix cls_list_players_in_position clearfix">
 														<div class="cls_box_inner">
 															<div class="cls_header_title_wrapper clearfix">
@@ -142,7 +209,7 @@
 																			?>
 																				<li class="cls-item-no<?php echo $j;?> cls-row0 cls-item <?php echo $class;?> clearfix">
 																					<div class="cls-field-image">
-																						<div class="cls-item-value"><a target="_blank" href="https://www.facebook.com/<?php echo $tm['login_id']?>" title="<?php echo $tm['full_name']?>"><img width="300" height="168" src="http://graph.facebook.com/<?php echo $tm['login_id']?>/picture?type=large" class="attachment-ths_thumb wp-post-image" alt="<?php echo $tm['full_name']?>" title="<?php echo $tm['full_name']?>" /></a></div>
+																						<div class="cls-item-value"><a target="_blank" href="https://www.facebook.com/<?php echo $tm['login_id']?>" title="<?php echo $tm['full_name']?>"><img width="350" height="168" src="http://graph.facebook.com/<?php echo $tm['login_id']?>/picture?type=large" class="attachment-ths_thumb wp-post-image" alt="<?php echo $tm['full_name']?>" title="<?php echo $tm['full_name']?>" /></a></div>
 																					</div>
 																					<div class="group group cls_post_data clearfix ">
 																						<div class="cls-field-title">

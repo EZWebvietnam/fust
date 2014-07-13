@@ -24,5 +24,11 @@ class Votehomemodel extends CI_Model
 		$query = $this->db->query($sql);
 		return $query->result_array();
 	}
+	public function get_point_vote($id_user,$id_vitri)
+	{
+		$sql="SELECT * FROM users WHERE id = $id_user AND vi_tri = $id_vitri";
+		$query = $this->db->query($sql);
+		return $query->result_array();
+	}
 }
 ?>
